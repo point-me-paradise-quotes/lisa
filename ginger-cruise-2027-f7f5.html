@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnival Jubilee — Pace Family Cruise · July 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ───────────────────────────────────────────── */
+  .pmtp-hero {
+    position: relative;
+    background-image:
+      linear-gradient(to bottom, rgba(27,40,45,0.55) 0%, rgba(27,40,45,0.25) 50%, rgba(27,40,45,0.62) 100%),
+      url('https://www.cruisemapper.com/images/ports/27-72f3b37d64549.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    padding: 88px 32px 72px;
+    text-align: center;
+  }
+
+  .pmtp-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--aqua-pale);
+    margin-bottom: 28px;
+    opacity: 0.92;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--aqua-pale);
+    opacity: 0.88;
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--aqua-pale);
+    opacity: 0.9;
+    margin-bottom: 32px;
+  }
+
+  .hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-chip {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(196,228,225,0.38);
+    border-radius: 100px;
+    padding: 7px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+  }
+
+  /* ── LAYOUT ─────────────────────────────────────────── */
+  .pmtp-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 52px 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* ── COMMITMENT BANNER (top) ─────────────────────────── */
+  .commitment-top {
+    background: var(--aqua-pale);
+    padding: 20px 32px;
+    text-align: center;
+  }
+
+  .commitment-top p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--aqua-dark);
+    line-height: 1.55;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ── SECTION LABELS ──────────────────────────────────── */
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 10px;
+  }
+
+  .section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .section-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+  }
+
+  .body-copy {
+    font-size: 15px;
+    line-height: 1.72;
+    color: var(--ink-soft);
+  }
+
+  /* ── TRIP OVERVIEW GRID ──────────────────────────────── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .overview-card {
+    background: var(--aqua-mist);
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+  }
+
+  .overview-card .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 6px;
+  }
+
+  .overview-card .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  /* ── OCCASION CALLOUT ────────────────────────────────── */
+  .occasion-callout {
+    background: var(--aqua-pale);
+    border-left: 4px solid var(--aqua-dark);
+    border-radius: 0 10px 10px 0;
+    padding: 18px 24px;
+    margin-top: 24px;
+  }
+
+  .occasion-callout p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .occasion-callout strong {
+    font-weight: 600;
+  }
+
+  /* ── ITINERARY ───────────────────────────────────────── */
+  .itinerary-band {
+    background: var(--aqua-mist);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 28px;
+  }
+
+  .itinerary-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .itinerary-table th {
+    background: var(--aqua-dark);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 12px 18px;
+    text-align: left;
+  }
+
+  .itinerary-table td {
+    padding: 13px 18px;
+    font-size: 14px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+
+  .itinerary-table tr:last-child td { border-bottom: none; }
+  .itinerary-table tr:nth-child(even) td { background: rgba(255,255,255,0.55); }
+
+  .day-badge {
+    display: inline-block;
+    background: var(--aqua-dark);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .port-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .sea-day {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  .port-time {
+    font-size: 13px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  /* ── CABIN SECTION ───────────────────────────────────── */
+  .cabin-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 28px;
+    box-shadow: 0 2px 16px rgba(79,138,140,0.07);
+  }
+
+  .cabin-photo-rail {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    height: 220px;
+    gap: 3px;
+    overflow: hidden;
+  }
+
+  .cabin-photo-rail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cabin-photo-rail img:first-child {
+    border-radius: 0;
+  }
+
+  .cabin-body {
+    padding: 28px 30px;
+  }
+
+  .cabin-h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .cabin-detail-tag {
+    display: inline-block;
+    background: var(--aqua-mist);
+    color: var(--aqua-dark);
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+
+  .cabin-desc {
+    font-size: 14px;
+    line-height: 1.68;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+
+  .obc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--aqua-pale);
+    border: 1px solid var(--aqua);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--aqua-dark);
+  }
+
+  .obc-badge span { font-size: 15px; }
+
+  /* ── PRICING BAR ─────────────────────────────────────── */
+  .pricing-section {
+    background: var(--aqua-mist);
+    padding: 36px 0;
+  }
+
+  .pricing-block {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 32px;
+    box-shadow: 0 2px 20px rgba(79,138,140,0.08);
+  }
+
+  .pricing-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .pricing-label-group {}
+
+  .pricing-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 4px;
+  }
+
+  .pricing-trip-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .pricing-total {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--aqua-dark);
+    line-height: 1;
+  }
+
+  .pricing-basis {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    text-align: right;
+  }
+
+  .pricing-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 18px 0;
+  }
+
+  .pricing-commitment {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+
+  .pricing-disclaimer {
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.75;
+    font-style: italic;
+  }
+
+  /* ── BOTTOM COMMITMENT ───────────────────────────────── */
+  .commitment-bottom {
+    background: var(--aqua-pale);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .commitment-bottom p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  /* ── CONTACT FORM ────────────────────────────────────── */
+  .form-section {
+    background: var(--white);
+  }
+
+  .form-wrap {
+    background: var(--aqua-mist);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 36px 36px 32px;
+    margin-top: 28px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 580px) {
+    .form-row { grid-template-columns: 1fr; }
+    .cabin-photo-rail { grid-template-columns: 1fr; height: auto; }
+    .cabin-photo-rail img { height: 180px; }
+    .cabin-photo-rail img:nth-child(2),
+    .cabin-photo-rail img:nth-child(3) { display: none; }
+    .overview-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-total { font-size: 30px; }
+    .form-wrap { padding: 24px 20px; }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--aqua);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-submit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--aqua-dark);
+    border: none;
+    border-radius: 8px;
+    padding: 13px 32px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    width: 100%;
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .form-submit:hover { background: var(--aqua); }
+  .form-submit:active { transform: scale(0.99); }
+
+  .thank-you {
+    display: none;
+    text-align: center;
+    padding: 32px;
+  }
+
+  .thank-you h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--aqua-dark);
+    margin-bottom: 10px;
+  }
+
+  .thank-you p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  .pmtp-footer {
+    background: var(--sand-light);
+    border-top: 1px solid var(--line);
+    padding: 36px 24px;
+    text-align: center;
+  }
+
+  .footer-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--aqua-dark);
+    margin-bottom: 12px;
+  }
+
+  .footer-advisor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+
+  .footer-contact {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .footer-contact a {
+    color: var(--aqua-dark);
+    text-decoration: none;
+  }
+
+  .footer-copy {
+    margin-top: 20px;
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.55;
+  }
+
+  /* ── DIVIDER ORNAMENT ────────────────────────────────── */
+  .ornament {
+    text-align: center;
+    color: var(--aqua);
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    margin: 0 0 24px;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<div class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-eyebrow">A quote prepared for Ginger &amp; Roger Pace</div>
+  <h1 class="hero-h1">Carnival Jubilee<br>Western Caribbean</h1>
+  <div class="hero-sub">Galveston · Nassau · Half Moon Cay · Celebration Key · July 2027</div>
+  <div class="hero-chips">
+    <div class="hero-chip">8 Nights</div>
+    <div class="hero-chip">5 Adults</div>
+    <div class="hero-chip">Galveston Departure</div>
+    <div class="hero-chip">Group Block · 8–10 Cabins</div>
+    <div class="hero-chip">Graduation Celebration</div>
+  </div>
+</div>
+
+<!-- ── TOP COMMITMENT ────────────────────────────────────── -->
+<div class="commitment-top">
+  <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+</div>
+
+<!-- ── TRIP OVERVIEW ─────────────────────────────────────── -->
+<section>
+  <div class="pmtp-container">
+    <div class="section-label">Trip Overview</div>
+    <h2 class="section-h2">The Big Picture</h2>
+    <div class="section-tagline">Eight nights, three ports, and exactly zero reasons to set an alarm.</div>
+    <p class="body-copy">
+      The Carnival Jubilee departs Galveston on the afternoon of July 24 and doesn't come back until the morning of August 1 — giving your group two full sea days to settle in, three port days to actually do things, and two more sea days to pretend none of it is ending. This is Carnival's newest, largest ship, sailing out of the closest major cruise port to Houston. The convenience is almost suspicious.
+    </p>
+
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="label">Cruise Line</div>
+        <div class="value">Carnival Cruises</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Ship</div>
+        <div class="value">Carnival Jubilee</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Departure</div>
+        <div class="value">Galveston, TX</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Sail Dates</div>
+        <div class="value">July 24 – Aug 1, 2027</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Duration</div>
+        <div class="value">8 Nights / 9 Days</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Travelers</div>
+        <div class="value">5 Adults</div>
+      </div>
+    </div>
+
+    <div class="occasion-callout">
+      <p><strong>🎓 A note on the occasion:</strong> This is a graduation celebration — which means everyone's about to scatter to college and this trip is the last hurrah before they do. That context shapes everything: the group block, the connecting cabins, the ports that can hold a crew of 8–10 cabins without losing anyone. We've got the logistics handled. You just need to show up.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── ITINERARY ─────────────────────────────────────────── -->
+<section>
+  <div class="pmtp-container">
+    <div class="section-label">Day by Day</div>
+    <h2 class="section-h2">The Itinerary</h2>
+    <div class="section-tagline">Where you'll be, and when. Everything else is up to you.</div>
+
+    <div class="itinerary-band">
+      <table class="itinerary-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Port / Activity</th>
+            <th>Arrives</th>
+            <th>Departs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="day-badge">Day 1 · Sat</span></td>
+            <td><span class="port-name">Galveston, Texas</span><br><small style="color:var(--ink-soft);font-size:12px;">Embarkation day — find your sea legs</small></td>
+            <td class="port-time">—</td>
+            <td class="port-time">3:30 PM</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 2 · Sun</span></td>
+            <td><span class="sea-day">Fun Day at Sea</span></td>
+            <td class="port-time">—</td>
+            <td class="port-time">—</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 3 · Mon</span></td>
+            <td><span class="sea-day">Fun Day at Sea</span></td>
+            <td class="port-time">—</td>
+            <td class="port-time">—</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 4 · Tue</span></td>
+            <td><span class="port-name">Nassau, Bahamas</span><br><small style="color:var(--ink-soft);font-size:12px;">History, beaches, and the color blue done correctly</small></td>
+            <td class="port-time">8:00 AM</td>
+            <td class="port-time">5:00 PM</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 5 · Wed</span></td>
+            <td><span class="port-name">Half Moon Cay™</span><br><small style="color:var(--ink-soft);font-size:12px;">Carnival's private island — RelaxAway beach club</small></td>
+            <td class="port-time">8:00 AM</td>
+            <td class="port-time">5:00 PM</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 6 · Thu</span></td>
+            <td><span class="port-name">Celebration Key™</span><br><small style="color:var(--ink-soft);font-size:12px;">Carnival's newest private destination in the Bahamas</small></td>
+            <td class="port-time">8:00 AM</td>
+            <td class="port-time">4:00 PM</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 7 · Fri</span></td>
+            <td><span class="sea-day">Fun Day at Sea</span></td>
+            <td class="port-time">—</td>
+            <td class="port-time">—</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 8 · Sat</span></td>
+            <td><span class="sea-day">Fun Day at Sea</span></td>
+            <td class="port-time">—</td>
+            <td class="port-time">—</td>
+          </tr>
+          <tr>
+            <td><span class="day-badge">Day 9 · Sun</span></td>
+            <td><span class="port-name">Galveston, Texas</span><br><small style="color:var(--ink-soft);font-size:12px;">Disembarkation — start lying about how relaxed you feel</small></td>
+            <td class="port-time">8:00 AM</td>
+            <td class="port-time">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CABIN OPTION ───────────────────────────────────────── -->
+<section>
+  <div class="pmtp-container">
+    <div class="section-label">Your Cabin</div>
+    <h2 class="section-h2">Cabin Option</h2>
+    <div class="section-tagline">Connecting rooms, because apparently proximity matters on a 9-day sailing.</div>
+
+    <div class="cabin-card">
+      <div class="cabin-photo-rail">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Carnival_Jubilee_Panorama_Cozumel_2024.jpg" alt="Carnival Jubilee" loading="lazy">
+        <img src="https://www.cruisedeckplans.com/DP/cabinpics/397/org/CarInt435-38575-1733686491.jpg" alt="Interior cabin" loading="lazy">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUPqr2XzMjxO3W8Ayv1OT6Uy18-FR14Ddbew&s" alt="Cabin interior" loading="lazy">
+      </div>
+      <div class="cabin-body">
+        <h3 class="cabin-h3">Interior Connecting Cabin 4A</h3>
+        <div class="cabin-detail-tag">Carnival Jubilee · Deck 4</div>
+        <p class="cabin-desc">
+          Interior cabins have a quiet logic to them: you're on a ship surrounded by water on all sides — you don't need a window to prove it. What you do need is a connecting door, which is exactly what this category provides. Five adults across connecting interiors means everyone has a bed and nobody has to knock to borrow sunscreen. The Carnival Jubilee is the line's newest Excel-class ship, which translates to more to do, better food options, and the kind of ship design that makes a sea day feel like an event rather than a wait.
+        </p>
+        <div class="obc-badge">
+          <span>💳</span>
+          Includes $50 Onboard Credit per cabin — that's real money toward drinks, specialty dining, or shore excursions.
+        </div>
+      </div>
+    </div>
+
+    <!-- PORT DESCRIPTIONS -->
+    <div style="margin-top:40px;">
+      <div class="ornament">· · ·</div>
+      <div class="section-label">The Ports</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:24px;">Where You'll Actually Get Off the Ship</h3>
+
+      <div style="display:grid;gap:20px;">
+
+        <div style="background:var(--aqua-mist);border-radius:12px;padding:24px 26px;border:1px solid var(--line);">
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:var(--ink);margin-bottom:6px;">Nassau, Bahamas</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin-bottom:10px;">Tuesday · 8:00 AM – 5:00 PM</div>
+          <p style="font-size:14px;line-height:1.68;color:var(--ink-soft);">Nassau is the kind of place that rewards the people who actually walk away from the pier. The colonial architecture in the old town, the fish fry at Arawak Cay, the water so clear it looks like someone forgot to add the realistic detail — all of it is within reach. For a group with graduation energy, the beach clubs at Cable Beach are a strong call. For the parents who'd like a quieter morning, the straw market and Queen's Staircase are a half-hour walk and genuinely interesting.</p>
+        </div>
+
+        <div style="background:var(--aqua-mist);border-radius:12px;padding:24px 26px;border:1px solid var(--line);">
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:var(--ink);margin-bottom:6px;">RelaxAway Beach Club, Half Moon Cay™</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin-bottom:10px;">Wednesday · 8:00 AM – 5:00 PM</div>
+          <p style="font-size:14px;line-height:1.68;color:var(--ink-soft);">Carnival owns this island. Which means the beach chairs are already arranged, the water sports are pre-organized, and the bar is open before you've dried off from the tender. Half Moon Cay is consistently ranked among the top private island experiences at sea — not because it's trying hard, but because it doesn't need to. The RelaxAway section ups the ante with a calmer vibe, reserved chairs, and direct cabana access. Bring a book you'll pretend to read.</p>
+        </div>
+
+        <div style="background:var(--aqua-mist);border-radius:12px;padding:24px 26px;border:1px solid var(--line);">
+          <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:var(--ink);margin-bottom:6px;">Celebration Key™</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--ink-soft);margin-bottom:10px;">Thursday · 8:00 AM – 4:00 PM</div>
+          <p style="font-size:14px;line-height:1.68;color:var(--ink-soft);">This is Carnival's newest private destination, launched in 2024 in the Bahamas. Where Half Moon Cay leans classic, Celebration Key leans new: a lagoon pool that fits four thousand people without feeling crowded, a beach club, swim-up bars, and a waterslide situation that no one is too old for regardless of what they told themselves this morning. For a graduation group, this is the day that earns the most photos.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ────────────────────────────────────────────── -->
+<section class="pricing-section">
+  <div class="pmtp-container">
+    <div class="section-label">Investment</div>
+    <h2 class="section-h2">Your Quote</h2>
+
+    <div class="pricing-block">
+      <div class="pricing-row">
+        <div class="pricing-label-group">
+          <div class="pricing-label">Interior Connecting 4A · 5 Adults</div>
+          <div class="pricing-trip-name">Carnival Jubilee — July 24–Aug 1, 2027</div>
+        </div>
+        <div>
+          <div class="pricing-total">Est. $6,534</div>
+          <div class="pricing-basis">Total · all travelers included</div>
+        </div>
+      </div>
+
+      <hr class="pricing-divider">
+
+      <p class="pricing-commitment">
+        We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+      </p>
+
+      <p class="pricing-disclaimer">
+        Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Group block pricing for 8–10 cabins may unlock additional amenities or group rates — ask Lisa for details.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOTTOM COMMITMENT ──────────────────────────────────── -->
+<section>
+  <div class="pmtp-container">
+    <div class="commitment-bottom">
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="section-label">Ready to Move Forward?</div>
+    <h2 class="section-h2">Let's Talk</h2>
+    <div class="section-tagline">Questions, tweaks, or a simple "let's do it" — all work here.</div>
+
+    <div class="form-wrap">
+      <div id="form-container">
+        <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+          <input type="hidden" name="subject" value="Quote Inquiry — Ginger & Roger Pace · Carnival Jubilee 2027">
+          <input type="hidden" name="from_name" value="PMTP Quote Form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your Name *</label>
+              <input type="text" id="f-name" name="name" required placeholder="Ginger or Roger Pace">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-phone">Phone Number (optional)</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="(555) 000-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="f-message">Message (optional)</label>
+            <textarea id="f-message" name="message" placeholder="Questions about the group block, cabin options, excursions, or anything else — drop it here."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send My Message to Lisa →</button>
+        </form>
+      </div>
+
+      <div class="thank-you" id="thank-you">
+        <h3>You're all set.</h3>
+        <p>Lisa will be in touch shortly. In the meantime, feel free to start planning what you'll do on those sea days — that's basically a full-time job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="pmtp-footer">
+  <div class="footer-wordmark">Point Me to Paradise Travel</div>
+  <div class="footer-advisor-name">Lisa Darling</div>
+  <div class="footer-title">Travel Advisor</div>
+  <div class="footer-contact" id="footer-contact"></div>
+  <div class="footer-copy">© 2027 Point Me to Paradise Travel · This quote is prepared exclusively for Ginger &amp; Roger Pace and is not transferable.</div>
+</footer>
+
+<script>
+  // ── Email obfuscation ────────────────────────────────────
+  (function() {
+    var u = 'lisa';
+    var d = 'pointmeto' + 'paradise' + '.com';
+    var e = u + '\u0040' + d;
+    var el = document.getElementById('footer-contact');
+    if (el) {
+      el.innerHTML =
+        '<a href="mailto:' + e + '">' + e + '</a><br>' +
+        'Point Me to Paradise Travel';
+    }
+  })();
+
+  // ── Form submit ──────────────────────────────────────────
+  document.getElementById('quote-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        btn.textContent = 'Send My Message to Lisa →';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email Lisa directly.');
+      }
+    })
+    .catch(function() {
+      btn.textContent = 'Send My Message to Lisa →';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again or email Lisa directly.');
+    });
+  });
+</script>
+
+</body>
+</html>
