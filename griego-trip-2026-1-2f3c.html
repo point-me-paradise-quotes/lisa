@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Juan | Jessica Griego | Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale: #C4E4E1;
+  --aqua-mist: #EAF3F2;
+  --aqua: #75AFB1;
+  --aqua-dark: #4F8A8C;
+  --sand: #ECE7DC;
+  --sand-light: #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white: #FFFFFF;
+  --paper: #FBFDFD;
+  --ink: #2B2420;
+  --ink-soft: #6B6359;
+  --line: #E5E9E8;
+  --warm-alert: #FDF6F0;
+  --warm-border: #F0E0D0;
+  --warm-text: #9B5E3A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
+a{color:var(--aqua-dark);text-decoration:none}
+
+/* HERO */
+.hero{position:relative;background-image:url('https://deih43ym53wif.cloudfront.net/large_puerto-rico-san-juan-shutterstock_1367693927_124e38eb4c.jpeg');background-size:cover;background-position:center 40%;padding:90px 32px 72px;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(22,45,50,0.62) 0%,rgba(15,38,42,0.78) 100%)}
+.hero-inner{position:relative;z-index:1}
+.wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-pale);margin-bottom:28px;display:block}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:600;color:#fff;line-height:1.15;margin-bottom:14px}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--aqua-pale);font-weight:400;margin-bottom:32px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
+.hero-chip{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.82);border:1px solid rgba(196,228,225,0.38);border-radius:40px;padding:6px 16px}
+
+/* LAYOUT */
+.container{max-width:800px;margin:0 auto;padding:0 24px}
+section{padding:52px 0}
+section+section{border-top:1px solid var(--line)}
+h2{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink)}
+.section-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--aqua-dark);margin-bottom:16px;display:block}
+
+/* CALLOUTS */
+.callout{background:var(--aqua-pale);border-left:3px solid var(--aqua-dark);border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+.callout p{font-size:0.9rem;font-weight:500;color:var(--ink);line-height:1.55}
+
+/* OVERVIEW */
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:24px 0}
+.ov-card{background:var(--aqua-mist);border-radius:10px;padding:16px 18px}
+.ov-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:4px}
+.ov-val{font-size:0.95rem;font-weight:500;color:var(--ink)}
+
+/* FLIGHTS */
+.flight-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:16px 0}
+.flight-route{display:flex;align-items:center;flex-wrap:wrap}
+.flight-city{text-align:center;min-width:80px}
+.flight-city .code{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--ink)}
+.flight-city .time{font-size:0.85rem;color:var(--ink-soft);margin-top:2px}
+.flight-city .city{font-size:0.78rem;color:var(--ink-soft)}
+.flight-line{flex:1;display:flex;flex-direction:column;align-items:center;padding:0 16px;min-width:120px}
+.flight-line .airline{font-size:0.75rem;color:var(--ink-soft);margin-bottom:4px}
+.flight-line .bar{width:100%;height:1px;background:var(--aqua);position:relative}
+.flight-line .bar::after{content:'▶';position:absolute;right:-6px;top:-7px;font-size:10px;color:var(--aqua)}
+.flight-line .dur{font-size:0.78rem;color:var(--aqua-dark);margin-top:4px;font-weight:500}
+.flight-badge{display:inline-block;background:var(--aqua-mist);color:var(--aqua-dark);font-size:11px;font-weight:600;letter-spacing:0.06em;border-radius:20px;padding:3px 10px;margin-right:6px}
+.flight-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.flight-dir{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:12px}
+.baggage-note{font-size:0.78rem;color:var(--ink-soft);margin-top:10px;font-style:italic}
+
+/* HOTEL PHOTOS */
+.photo-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;border-radius:12px;overflow:hidden;margin:20px 0}
+.photo-strip img{width:100%;height:200px;object-fit:cover;display:block}
+.photo-strip img:first-child{grid-column:span 2;height:240px}
+
+/* HOTEL */
+.hotel-stars{color:var(--aqua-dark);font-size:1rem;letter-spacing:2px;margin-bottom:8px}
+.hotel-badge{display:inline-block;background:var(--aqua-pale);color:var(--aqua-dark);font-size:11px;font-weight:600;letter-spacing:0.06em;border-radius:20px;padding:3px 10px;margin-bottom:12px}
+.hotel-desc{color:var(--ink-soft);font-size:0.95rem;line-height:1.7;margin:14px 0}
+.hotel-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
+.detail-item{padding:14px 16px;background:var(--white);border:1px solid var(--line);border-radius:8px}
+.detail-item .label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-soft);margin-bottom:4px}
+.detail-item .val{font-size:0.9rem;font-weight:500;color:var(--ink)}
+
+/* INCLUDED / NOT */
+.include-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.include-box{padding:16px 18px;border-radius:10px}
+.include-box.yes{background:var(--aqua-mist)}
+.include-box.no{background:var(--warm-alert);border:1px solid var(--warm-border)}
+.include-box h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
+.include-box.yes h4{color:var(--aqua-dark)}
+.include-box.no h4{color:var(--warm-text)}
+.include-box ul{list-style:none;padding:0}
+.include-box ul li{font-size:0.87rem;color:var(--ink-soft);padding:3px 0;padding-left:16px;position:relative}
+.include-box ul li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%}
+.include-box.yes ul li::before{background:var(--aqua)}
+.include-box.no ul li::before{background:#C97B4B}
+
+/* TRANSFER */
+.transfer-band{background:var(--aqua-mist);border-radius:12px;padding:20px 24px;margin:20px 0;display:flex;align-items:flex-start;gap:16px}
+.transfer-band .icon{font-size:1.5rem;flex-shrink:0}
+.transfer-band p{font-size:0.9rem;color:var(--ink-soft);margin-top:4px}
+.transfer-band strong{color:var(--ink);display:block;margin-bottom:4px}
+
+/* PRICING */
+.pricing-section-band{background:var(--aqua-mist);padding:52px 0}
+.price-meet{background:var(--white);border-radius:8px;padding:14px 18px;margin-bottom:20px;border:1px solid var(--line)}
+.price-meet p{font-size:0.85rem;color:var(--ink-soft);line-height:1.55}
+
+.pricing-total-bar{background:var(--white);border:1.5px solid var(--aqua);border-radius:12px;padding:24px 28px;margin-bottom:20px}
+.pricing-total-bar .ptb-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-soft);margin-bottom:4px}
+.pricing-total-bar .ptb-amount{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:600;color:var(--aqua-dark);line-height:1.1}
+.pricing-total-bar .ptb-sub{font-size:0.85rem;color:var(--ink-soft);margin-top:6px}
+
+.breakdown-table{width:100%;border-collapse:collapse;margin:20px 0}
+.breakdown-table td{padding:10px 0;font-size:0.9rem;vertical-align:top;border-bottom:1px solid var(--line)}
+.breakdown-table td:last-child{text-align:right;font-weight:500;white-space:nowrap}
+.breakdown-table tr.subtotal td{color:var(--ink-soft);font-size:0.85rem}
+.breakdown-table tr.promo td{color:#3A7A4A;font-weight:600}
+.breakdown-table tr.grand td{font-size:1rem;font-weight:700;color:var(--ink);border-bottom:none;border-top:2px solid var(--ink);padding-top:14px}
+
+.payment-schedule{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:20px 0}
+.payment-schedule .ps-head{background:var(--aqua-dark);color:#fff;font-size:0.85rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:12px 20px}
+.payment-schedule table{width:100%;border-collapse:collapse}
+.payment-schedule table td{padding:13px 20px;font-size:0.9rem;border-bottom:1px solid var(--line)}
+.payment-schedule table td:last-child{text-align:right;font-weight:600;color:var(--aqua-dark)}
+.payment-schedule table tr:last-child td{border-bottom:none;font-weight:700;font-size:0.95rem;color:var(--ink)}
+.payment-schedule table tr:last-child td:last-child{color:var(--aqua-dark)}
+.payment-schedule .ps-note{padding:12px 20px;font-size:0.78rem;color:var(--ink-soft);background:var(--sand-light);border-top:1px solid var(--line)}
+
+.pricing-disclaimer{font-size:0.78rem;color:var(--ink-soft);margin-top:14px;font-style:italic;line-height:1.55}
+
+/* ID NOTICE */
+.id-notice{background:var(--warm-alert);border:1px solid var(--warm-border);border-radius:10px;padding:16px 20px;margin:20px 0}
+.id-notice h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--warm-text);margin-bottom:8px}
+.id-notice p{font-size:0.87rem;color:var(--ink-soft);line-height:1.6}
+
+/* FORM */
+.form-section{background:var(--sand-light)}
+.form-callout{background:var(--aqua-pale);border-radius:12px;padding:22px 26px;margin-bottom:28px}
+.form-callout p{font-size:0.92rem;font-weight:500;color:var(--ink);line-height:1.6}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-soft)}
+input,textarea{font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:8px;padding:11px 14px;width:100%;outline:none;transition:border-color 0.2s}
+input:focus,textarea:focus{border-color:var(--aqua)}
+textarea{resize:vertical;min-height:100px}
+.btn-submit{display:inline-block;background:var(--aqua-dark);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:0.04em;border:none;border-radius:40px;padding:14px 36px;cursor:pointer;transition:background 0.2s;margin-top:8px}
+.btn-submit:hover{background:var(--aqua)}
+.thank-you{display:none;text-align:center;padding:40px 24px}
+.thank-you h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--aqua-dark);margin-bottom:10px}
+.thank-you p{color:var(--ink-soft);font-size:0.95rem}
+
+/* FOOTER */
+footer{background:var(--sand-light);border-top:1px solid var(--gold-whisper);padding:40px 0 32px}
+.footer-inner{max-width:800px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+.footer-brand{font-family:'Playfair Display',serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:6px}
+.footer-name{font-size:1rem;font-weight:600;color:var(--ink)}
+.footer-title{font-size:0.85rem;color:var(--ink-soft)}
+.footer-contact{font-size:0.85rem;color:var(--ink-soft);line-height:1.9}
+.footer-contact a{color:var(--aqua-dark);font-weight:500}
+.footer-legal{max-width:800px;margin:0 auto;padding:20px 24px 0;border-top:1px solid var(--line);text-align:center;font-size:0.75rem;color:var(--ink-soft);line-height:1.6}
+
+@media(max-width:600px){
+  .form-grid{grid-template-columns:1fr}
+  .include-grid{grid-template-columns:1fr}
+  .photo-strip{grid-template-columns:1fr}
+  .photo-strip img:first-child{grid-column:span 1;height:200px}
+  .photo-strip img{height:160px}
+  .footer-inner{flex-direction:column;text-align:center}
+  .breakdown-table td{font-size:0.82rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="wordmark">Point Me to Paradise Travel</span>
+    <h1>San Juan, Puerto Rico</h1>
+    <p class="hero-sub">A custom quote for Jessica Griego &amp; family</p>
+    <div class="hero-meta">
+      <span class="hero-chip">July 19–23, 2026</span>
+      <span class="hero-chip">4 Nights · 4 Travelers</span>
+      <span class="hero-chip">Fairmont El San Juan Hotel</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRIP OVERVIEW -->
+<section>
+  <div class="container">
+    <span class="section-label">Your itinerary at a glance</span>
+    <h2>Trip Overview</h2>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Travelers</div><div class="ov-val">3 Adults · 1 Child (age 14)</div></div>
+      <div class="ov-card"><div class="ov-label">Depart</div><div class="ov-val">Sun, July 19, 2026</div></div>
+      <div class="ov-card"><div class="ov-label">Return</div><div class="ov-val">Thu, July 23, 2026</div></div>
+      <div class="ov-card"><div class="ov-label">Hotel</div><div class="ov-val">Fairmont El San Juan · 4 Nights</div></div>
+      <div class="ov-card"><div class="ov-label">Origin</div><div class="ov-val">Houston (IAH)</div></div>
+      <div class="ov-card"><div class="ov-label">Cabin</div><div class="ov-val">Economy — Fully Refundable</div></div>
+    </div>
+    <div class="callout">
+      <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section>
+  <div class="container">
+    <span class="section-label">Getting there &amp; back</span>
+    <h2>Flights</h2>
+    <p style="color:var(--ink-soft);font-size:0.9rem;margin-bottom:8px">Economy · Fully Refundable · United Airlines both directions</p>
+
+    <div class="flight-card">
+      <div class="flight-dir">✈ Outbound · Sunday, July 19</div>
+      <div class="flight-route">
+        <div class="flight-city">
+          <div class="code">IAH</div>
+          <div class="time">10:03 AM</div>
+          <div class="city">Houston</div>
+        </div>
+        <div class="flight-line">
+          <div class="airline">United Airlines · UA1192 · Coach W</div>
+          <div class="bar"></div>
+          <div class="dur">4h 39m</div>
+        </div>
+        <div class="flight-city">
+          <div class="code">SJU</div>
+          <div class="time">3:42 PM</div>
+          <div class="city">San Juan</div>
+        </div>
+      </div>
+      <div class="flight-meta">
+        <span class="flight-badge">Fully Refundable</span>
+        <span class="flight-badge">Economy</span>
+      </div>
+      <p class="baggage-note">Additional baggage charges may apply — not included in package price.</p>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-dir">✈ Return · Thursday, July 23</div>
+      <div class="flight-route">
+        <div class="flight-city">
+          <div class="code">SJU</div>
+          <div class="time">2:55 PM</div>
+          <div class="city">San Juan</div>
+        </div>
+        <div class="flight-line">
+          <div class="airline">United Airlines · UA668 · Coach V</div>
+          <div class="bar"></div>
+          <div class="dur">4h 56m</div>
+        </div>
+        <div class="flight-city">
+          <div class="code">IAH</div>
+          <div class="time">6:51 PM</div>
+          <div class="city">Houston</div>
+        </div>
+      </div>
+      <div class="flight-meta">
+        <span class="flight-badge">Fully Refundable</span>
+        <span class="flight-badge">Economy</span>
+      </div>
+      <p class="baggage-note">Additional baggage charges may apply — not included in package price.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section>
+  <div class="container">
+    <span class="section-label">Where you'll stay</span>
+
+    <div class="photo-strip">
+      <img src="https://www.elsanjuanhotel.com/content/uploads/2023/05/guest-rooms-fairmont-el-san-juan-hotel-deluxe-oceanview-2-queen.jpg" alt="Signature Ocean View room at Fairmont El San Juan" loading="lazy">
+      <img src="https://m.ahstatic.com/is/image/accorhotels/aja_p_5944-01:4by3?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1.5&wid=335&hei=251&qlt=80" alt="Room interior detail" loading="lazy">
+      <img src="https://www.elsanjuanhotel.com/content/uploads/2026/03/Fairmont-El-San-Juan-Hotel-Pools-and-Beach-scaled.jpg" alt="Pool and beach at Fairmont El San Juan" loading="lazy">
+    </div>
+
+    <div class="hotel-stars">★★★★½</div>
+    <h2 style="margin-bottom:4px">Fairmont El San Juan Hotel</h2>
+    <p style="color:var(--ink-soft);font-size:0.9rem;margin-bottom:12px">Isla Verde Beach · San Juan, Puerto Rico · Beachfront</p>
+    <span class="hotel-badge">Signature Ocean View · 2 Queen Beds</span>
+
+    <p class="hotel-desc">The Fairmont El San Juan sits directly on Isla Verde's Atlantic-facing shore — one of the island's longest stretches of open beach — roughly 10 minutes from the airport and about 20 minutes by cab from Old San Juan's cobblestone plazas. This isn't a boutique escape; it's a full-service resort built around the water, with the personality to match.</p>
+    <p class="hotel-desc">Your Signature Ocean View room puts the Atlantic straight ahead: two queen beds, generous proportions, and unobstructed sightlines from the moment you open the curtains. The view doesn't require a corner upgrade or an app-based lottery — it's the category. Full resort access is included, covering pools, beach service, and multiple dining venues on-property.</p>
+    <p class="hotel-desc">When you want to leave the grounds, Isla Verde's strip of restaurants, beach bars, and shops is walkable. Old San Juan — the 16th-century walled city with its fortresses, rum distilleries, and narrow streets — is a short ride west and worth at least one full day with the family.</p>
+
+    <div class="hotel-details">
+      <div class="detail-item"><div class="label">Check-in</div><div class="val">Sun, July 19, 2026</div></div>
+      <div class="detail-item"><div class="label">Check-out</div><div class="val">Thu, July 23, 2026</div></div>
+      <div class="detail-item"><div class="label">Duration</div><div class="val">4 Nights</div></div>
+      <div class="detail-item"><div class="label">Room</div><div class="val">Signature Ocean View · 2 Queens</div></div>
+      <div class="detail-item"><div class="label">Guests</div><div class="val">3 Adults · 1 Child</div></div>
+      <div class="detail-item"><div class="label">Meal Plan</div><div class="val">European Plan (room only)</div></div>
+    </div>
+
+    <div class="include-grid">
+      <div class="include-box yes">
+        <h4>What's included</h4>
+        <ul>
+          <li>4 nights accommodation</li>
+          <li>Atlantic ocean view, 2 queen beds</li>
+          <li>Full resort &amp; pool access</li>
+          <li>Beach service</li>
+          <li>Fitness center access</li>
+          <li>Roundtrip airport transfers</li>
+        </ul>
+      </div>
+      <div class="include-box no">
+        <h4>Not included in rate</h4>
+        <ul>
+          <li>Meals &amp; dining (European Plan — no meals bundled)</li>
+          <li>Beverages &amp; bar charges</li>
+          <li>Spa treatments</li>
+          <li>Checked baggage fees (airline)</li>
+          <li>Gratuities</li>
+          <li>Personal incidentals</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TRANSFERS -->
+    <div class="transfer-band">
+      <div class="icon">🚐</div>
+      <div>
+        <strong>Roundtrip Airport Transfers — Included</strong>
+        <p>Shared transportation between San Juan (SJU) and the Fairmont El San Juan, both arrival and departure. Covers all 4 travelers ($63 per person, already in your package total).</p>
+      </div>
+    </div>
+
+    <!-- ID NOTICE -->
+    <div class="id-notice">
+      <h4>Identification required for travel</h4>
+      <p>Puerto Rico is a U.S. territory — no passport required for U.S. citizens, but valid government-issued photo ID is required for all travelers. A passport is always accepted and recommended. The child (age 14) will need valid ID as well. Confirm current TSA requirements with your advisor before departure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section-band">
+  <div class="container">
+    <span class="section-label">Investment</span>
+    <h2>Pricing &amp; Payment Schedule</h2>
+
+    <div class="price-meet">
+      <p>We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+    </div>
+
+    <div class="pricing-total-bar">
+      <div class="ptb-label">Package Total (includes taxes &amp; fees)</div>
+      <div class="ptb-amount">Est. $6,883</div>
+      <div class="ptb-sub">Flights · Hotel (4 nights) · Roundtrip Airport Transfers · All taxes &amp; fees</div>
+    </div>
+
+    <!-- PAYMENT SCHEDULE -->
+    <div class="payment-schedule">
+      <div class="ps-head">Payment Schedule</div>
+      <table>
+        <tr>
+          <td>Deposit due</td>
+          <td style="color:var(--ink-soft);font-size:0.85rem">by May 24, 2026</td>
+          <td>$1,000.00</td>
+        </tr>
+        <tr>
+          <td>Balance due</td>
+          <td style="color:var(--ink-soft);font-size:0.85rem">by June 4, 2026</td>
+          <td>$5,882.79</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td></td>
+          <td>$6,882.79</td>
+        </tr>
+      </table>
+      <div class="ps-note">⚠ Deposit of $1,000 is due by May 24, 2026 to hold this booking. Full payment is due June 4, 2026 — before departure. Contact Lisa to initiate payment.</div>
+    </div>
+
+    <p class="pricing-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Pay in Destination charges are $0.00 for this booking. All prices in USD and include applicable taxes and fees.</p>
+  </div>
+</section>
+
+<!-- BOTTOM CALLOUT + FORM -->
+<section class="form-section">
+  <div class="container">
+    <div class="form-callout">
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+
+    <h2 style="margin-bottom:6px">Ready to move forward?</h2>
+    <p style="color:var(--ink-soft);font-size:0.9rem;margin-bottom:28px">Send a note to Lisa and she'll lock in your dates. Remember: deposit is due May 24.</p>
+
+    <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7b40d437-1004-48e2-9031-171a8b0ef4f1">
+      <input type="hidden" name="subject" value="Quote Request — Jessica Griego · San Juan 2026">
+      <input type="hidden" name="from_name" value="PMTP Quote Form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Jessica Griego" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label for="timing">Best time to reach you</label>
+          <input type="text" id="timing" name="best_time" placeholder="e.g. Weekday afternoons">
+        </div>
+        <div class="form-group full">
+          <label for="message">Questions or notes (optional)</label>
+          <textarea id="message" name="message" placeholder="Anything you'd like Lisa to know — questions about the room, dietary needs, special occasions..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Send to Lisa →</button>
+    </form>
+
+    <div class="thank-you" id="thank-you">
+      <h3>We've got it — thank you.</h3>
+      <p>Lisa will be in touch shortly to confirm details and next steps.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Point Me to Paradise Travel</div>
+      <div class="footer-name">Lisa Darling</div>
+      <div class="footer-title">Travel Advisor</div>
+    </div>
+    <div class="footer-contact" id="footer-contact"></div>
+  </div>
+  <div class="footer-legal">
+    This quote is prepared exclusively for Jessica Griego. Rates and availability are subject to change until deposit is received and booking is confirmed in writing. All prices in USD and include applicable taxes and fees. &copy; 2026 Point Me to Paradise Travel.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = document.getElementById('footer-contact');
+  var u = 'lisa', d = 'pointmeparadise.com', at = '\u0040';
+  el.innerHTML = '<a href="mailto:' + u + at + d + '">' + u + at + d + '</a><br>Point Me to Paradise Travel';
+})();
+
+document.getElementById('quote-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form = this;
+  fetch('https://api.web3forms.com/submit', {method:'POST', body: new FormData(form)})
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if(res.success){
+        form.style.display = 'none';
+        document.getElementById('thank-you').style.display = 'block';
+      } else {
+        alert('Something went wrong. Please email Lisa directly.');
+      }
+    })
+    .catch(function(){ alert('Something went wrong. Please email Lisa directly.'); });
+});
+</script>
+</body>
+</html>
