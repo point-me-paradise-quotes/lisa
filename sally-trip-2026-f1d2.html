@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel quote — Oʻahu 2026 — Sample Sally — Point Me to Paradise Travel">
+  <title>Oʻahu 2026 · Sample Sally | Point Me to Paradise Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ── CSS VARIABLES ── */
+    :root {
+      --aqua-pale:    #C4E4E1;
+      --aqua-mist:    #EAF3F2;
+      --aqua:         #75AFB1;
+      --aqua-dark:    #4F8A8C;
+      --sand:         #ECE7DC;
+      --sand-light:   #F4F1E9;
+      --gold-whisper: #D6C8A8;
+      --white:        #FFFFFF;
+      --paper:        #FBFDFD;
+      --ink:          #2B2420;
+      --ink-soft:     #6B6359;
+      --line:         #E5E9E8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .pmtp-hero {
+      position: relative;
+      background-image:
+        linear-gradient(180deg,
+          rgba(24,19,15,0.58) 0%,
+          rgba(24,19,15,0.18) 46%,
+          rgba(24,19,15,0.70) 100%),
+        url('https://res.cloudinary.com/pleasant-holidays/image/upload/v1733347948/Destinations/Hawaii/Oahu/haw-oahu-diamond-head-crater-as.jpg');
+      background-size: cover;
+      background-position: center 38%;
+      padding: 88px 24px 72px;
+      text-align: center;
+    }
+
+    .pmtp-wordmark {
+      font-family: 'Playfair Display', serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--aqua-pale);
+      margin-bottom: 30px;
+      opacity: 0.92;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: rgba(255,255,255,0.80);
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 7.5vw, 70px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.11;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 28px rgba(0,0,0,0.28);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 21px;
+      color: rgba(255,255,255,0.76);
+      margin-bottom: 34px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-pills {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 60px;
+      padding: 9px 22px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── LAYOUT ── */
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-paper {
+      background: var(--paper);
+      padding: 54px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-mist {
+      background: var(--aqua-mist);
+      padding: 54px 0;
+      border-bottom: 1px solid rgba(117,175,177,0.20);
+    }
+
+    /* ── LABELS & HEADINGS ── */
+    .section-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 29px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.24;
+      margin-bottom: 5px;
+    }
+
+    .section-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink-soft);
+      margin-bottom: 22px;
+    }
+
+    .body-copy {
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.76;
+    }
+
+    .body-copy + .body-copy { margin-top: 12px; }
+
+    /* ── CALLOUT BLOCKS ── */
+    .callout-accent {
+      background: var(--aqua-pale);
+      border-left: 3px solid var(--aqua-dark);
+      border-radius: 0 7px 7px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+    }
+
+    .callout-accent p {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.66;
+    }
+
+    .callout-box {
+      background: var(--aqua-pale);
+      border-radius: 10px;
+      padding: 26px 30px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(79,138,140,0.16);
+    }
+
+    .callout-box p {
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.72;
+    }
+
+    /* ── OVERVIEW GRID ── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
+      gap: 14px;
+      margin: 24px 0 28px;
+    }
+
+    .overview-cell {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 15px 18px;
+    }
+
+    .overview-cell-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+
+    .overview-cell-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    /* ── FLIGHT CARDS ── */
+    .flight-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .flight-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 13px 22px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flight-direction {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+    }
+
+    .flight-date-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .flight-legs-wrap { padding: 18px 22px; }
+
+    .flight-leg {
+      display: grid;
+      grid-template-columns: 96px 1fr 96px;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 0;
+    }
+
+    .flight-leg + .flight-leg {
+      border-top: 1px dashed var(--line);
+    }
+
+    .fl-time {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .fl-ampm {
+      font-size: 11px;
+      color: var(--ink-soft);
+      line-height: 1;
+    }
+
+    .fl-plusone {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--aqua-dark);
+      letter-spacing: 0.06em;
+    }
+
+    .fl-code {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+      margin-top: 7px;
+    }
+
+    .fl-city {
+      font-size: 11px;
+      color: var(--ink-soft);
+      line-height: 1.3;
+    }
+
+    .fl-right { text-align: right; }
+    .fl-right .fl-code { text-align: right; }
+    .fl-right .fl-city { text-align: right; }
+    .fl-right .fl-ampm { text-align: right; }
+    .fl-right .fl-plusone { text-align: right; }
+
+    .fl-mid { text-align: center; }
+
+    .fl-duration {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--aqua-dark);
+      letter-spacing: 0.05em;
+      margin-bottom: 5px;
+    }
+
+    .fl-route-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 3px 0;
+    }
+
+    .fl-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--aqua);
+      flex-shrink: 0;
+    }
+
+    .fl-bar {
+      flex: 1;
+      height: 1px;
+      background: var(--aqua);
+    }
+
+    .fl-plane { font-size: 12px; line-height: 1; }
+
+    .fl-airline {
+      font-size: 11px;
+      color: var(--ink-soft);
+      margin-top: 3px;
+    }
+
+    .layover-strip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--sand-light);
+      border-radius: 6px;
+      padding: 9px 15px;
+      margin: 2px 0;
+    }
+
+    .layover-text {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .layover-text strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .flight-meta-bar {
+      border-top: 1px solid var(--line);
+      padding: 10px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .flight-meta-item {
+      font-size: 12px;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .flight-class-badge {
+      display: inline-block;
+      background: var(--aqua-pale);
+      color: var(--aqua-dark);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 11px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+    }
+
+    .overnight-badge {
+      background: rgba(43,36,32,0.08);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 11px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── HOTEL PHOTO GRID ── */
+    .hotel-photo-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: 185px 185px;
+      gap: 4px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .hotel-photo-main {
+      grid-row: 1 / 3;
+    }
+
+    .hotel-photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hotel-desc-body {
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.76;
+      margin-bottom: 12px;
+    }
+
+    .rate-basis-note {
+      background: var(--sand-light);
+      border-left: 3px solid var(--gold-whisper);
+      border-radius: 0 7px 7px 0;
+      padding: 13px 18px;
+      margin: 18px 0 22px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+
+    .rate-basis-note strong { color: var(--ink); font-weight: 600; }
+
+    /* ── ROOM CARD ── */
+    .room-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .room-card-header {
+      padding: 18px 22px 15px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .room-category-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 4px;
+    }
+
+    .room-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .room-sqft {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--ink-soft);
+      margin-top: 2px;
+    }
+
+    .room-card-body {
+      padding: 20px 22px 22px;
+    }
+
+    .room-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 14px 0 20px;
+    }
+
+    .room-tag {
+      background: var(--aqua-pale);
+      color: var(--aqua-dark);
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 4px 13px;
+      border-radius: 20px;
+    }
+
+    .room-desc {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.74;
+    }
+
+    .room-desc + .room-desc { margin-top: 12px; }
+
+    .room-photos-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      height: 98px;
+    }
+
+    .room-photos-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── RENTAL CAR ── */
+    .car-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      align-items: flex-start;
+      margin-top: 18px;
+    }
+
+    .car-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--aqua-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .car-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .car-type {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+
+    .car-desc {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.70;
+      margin-bottom: 14px;
+    }
+
+    .car-note-pill {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: var(--aqua-mist);
+      border: 1px solid rgba(79,138,140,0.14);
+      border-radius: 7px;
+      padding: 10px 15px;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .car-note-pill strong { color: var(--ink); font-weight: 600; }
+
+    /* ── PRICING BAR ── */
+    .pricing-outer {
+      background: var(--paper);
+      padding: 54px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pricing-bar {
+      background: var(--ink);
+      border-radius: 12px;
+      padding: 28px 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 20px 0 16px;
+    }
+
+    .pb-left {}
+
+    .pb-kicker {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.58);
+      margin-bottom: 4px;
+    }
+
+    .pb-total {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .pb-per-person {
+      font-size: 12px;
+      color: rgba(255,255,255,0.52);
+      margin-top: 6px;
+    }
+
+    .pb-right { text-align: right; }
+
+    .pb-line {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.66);
+      line-height: 2.0;
+    }
+
+    .pb-line strong { color: rgba(255,255,255,0.92); }
+
+    .pb-car-footnote {
+      font-size: 11px;
+      color: rgba(255,255,255,0.38);
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    .rate-pledge {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.66;
+      margin-bottom: 8px;
+    }
+
+    .rate-pledge strong { color: var(--ink); }
+
+    .pricing-disclaimer {
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      font-style: italic;
+      line-height: 1.62;
+      opacity: 0.85;
+    }
+
+    /* ── FORM ── */
+    .form-outer {
+      background: var(--aqua-mist);
+      padding: 54px 0;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 36px;
+      margin-top: 24px;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .form-intro {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 26px;
+      line-height: 1.66;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .form-group label .req {
+      color: var(--aqua-dark);
+      margin-left: 2px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 12px 15px;
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--aqua);
+      box-shadow: 0 0 0 3px rgba(117,175,177,0.14);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .btn-submit {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      background: var(--aqua-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 7px;
+      padding: 15px 42px;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.10s;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .btn-submit:hover { background: var(--aqua); }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    #thank-you-message {
+      display: none;
+      text-align: center;
+      padding: 52px 20px;
+    }
+
+    .ty-icon { font-size: 44px; margin-bottom: 16px; }
+
+    .ty-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .ty-body {
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.66;
+    }
+
+    /* ── FOOTER ── */
+    .pmtp-footer {
+      background: var(--sand-light);
+      padding: 50px 24px 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 11px;
+    }
+
+    .footer-agent-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .footer-agent-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+
+    .footer-links { display: flex; flex-direction: column; gap: 5px; }
+
+    .footer-links a {
+      font-size: 13.5px;
+      color: var(--aqua-dark);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--aqua); text-decoration: underline; }
+
+    .footer-right { text-align: right; }
+
+    .footer-pmtp-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--aqua-dark);
+      margin-bottom: 5px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    .footer-rule {
+      height: 1px;
+      background: var(--line);
+      margin-bottom: 18px;
+    }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: var(--ink-soft);
+      line-height: 1.66;
+      opacity: 0.78;
+    }
+
+    /* ── UTILITY ── */
+    .mt-8  { margin-top:  8px; }
+    .mt-12 { margin-top: 12px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-24 { margin-top: 24px; }
+    .mb-4  { margin-bottom:  4px; }
+    .mb-8  { margin-bottom:  8px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .pmtp-hero { padding: 62px 18px 54px; }
+      .hero-pills { flex-direction: column; align-items: center; }
+      .overview-grid { grid-template-columns: 1fr 1fr; }
+
+      .flight-leg {
+        grid-template-columns: 76px 1fr 76px;
+        gap: 6px;
+      }
+      .fl-time { font-size: 21px; }
+
+      .hotel-photo-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 210px 115px 115px;
+        height: auto;
+      }
+      .hotel-photo-main { grid-row: 1; }
+
+      .room-photos-strip {
+        grid-template-columns: 1fr 1fr;
+        height: 160px;
+      }
+
+      .car-card { grid-template-columns: 1fr; }
+
+      .pricing-bar {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 22px;
+      }
+      .pb-right { text-align: center; }
+
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      .form-card { padding: 24px 20px; }
+
+      .footer-top { flex-direction: column; }
+      .footer-right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════
+       HERO
+  ════════════════════════════════ -->
+  <header class="pmtp-hero">
+    <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+    <p class="hero-eyebrow">A Personalized Quote for the Sally Family</p>
+    <h1 class="hero-title">Oʻahu, Hawaiʻi</h1>
+    <p class="hero-subtitle">North Shore &nbsp;·&nbsp; June 2 – 12, 2026</p>
+    <div class="hero-pills">
+      <span class="hero-pill">✈&nbsp; Round-Trip Flights</span>
+      <span class="hero-pill">🏨&nbsp; 10 Nights, North Shore</span>
+      <span class="hero-pill">👨‍👩‍👧‍👦&nbsp; 4 Travelers</span>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════
+       TRIP OVERVIEW
+  ════════════════════════════════ -->
+  <section class="section-paper">
+    <div class="wrap">
+      <p class="section-label">Trip Overview</p>
+      <h2 class="section-title">Ten Days on Oʻahu's North Shore</h2>
+      <p class="section-subtitle">Family Summer · June 2026</p>
+
+      <div class="overview-grid">
+        <div class="overview-cell">
+          <div class="overview-cell-label">Travelers</div>
+          <div class="overview-cell-value">4</div>
+        </div>
+        <div class="overview-cell">
+          <div class="overview-cell-label">Departure</div>
+          <div class="overview-cell-value">Jun 2, 2026</div>
+        </div>
+        <div class="overview-cell">
+          <div class="overview-cell-label">Return Home</div>
+          <div class="overview-cell-value">Jun 13, 2026</div>
+        </div>
+        <div class="overview-cell">
+          <div class="overview-cell-label">Hotel Nights</div>
+          <div class="overview-cell-value">10 Nights</div>
+        </div>
+        <div class="overview-cell">
+          <div class="overview-cell-label">Cabin Class</div>
+          <div class="overview-cell-value">Economy</div>
+        </div>
+        <div class="overview-cell">
+          <div class="overview-cell-label">Trip Type</div>
+          <div class="overview-cell-value">Family</div>
+        </div>
+      </div>
+
+      <p class="body-copy">The North Shore of Oʻahu doesn't compete with Waikiki — and that's entirely the point. Roughly 35 miles from Honolulu, it occupies a different register: a working agricultural coast where the shrimp trucks have been running longer than any hotel has been open, the horizon from the beach runs unbroken to the northwest, and the pace slows the moment you clear the city's orbit. Haleiwa town sits a few miles from the hotel, with the right density of good food, surf shops, and local character without tipping into the fully tourist-saturated.</p>
+      <p class="body-copy mt-12">June is the right month to be here. The winter swells that pull the international surf circuit to Pipeline and Sunset Beach have flattened into gentle rollers — 2 to 4 feet, approachable for swimmers of all levels. Water temperature holds around 78°F. You'll be traveling at the start of summer without the peak August crowds, which means shorter lines and better energy everywhere you go.</p>
+
+      <div class="callout-accent">
+        <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       FLIGHTS
+  ════════════════════════════════ -->
+  <section class="section-mist">
+    <div class="wrap">
+      <p class="section-label">Your Flights</p>
+      <h2 class="section-title">Houston ↔ Honolulu</h2>
+      <p class="section-subtitle">Round-Trip · Economy · Southwest Airlines · 4 Travelers</p>
+      <p class="body-copy mb-24">Both directions operate on Southwest — standard Economy (no basic economy restrictions apply). Free Wi-Fi, in-seat USB charging, and media streaming on every leg. Your outbound routes through Oakland with a comfortable 2½-hour layover. The return is an overnight out of Honolulu, connecting through Phoenix before landing at Hobby late morning.</p>
+
+      <!-- Outbound Flight -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <span class="flight-direction">Outbound</span>
+          <span class="flight-date-label">Tuesday, June 2, 2026</span>
+        </div>
+        <div class="flight-legs-wrap">
+
+          <!-- Leg 1: HOU → OAK -->
+          <div class="flight-leg">
+            <div>
+              <div class="fl-time">8:55</div>
+              <div class="fl-ampm">AM</div>
+              <div class="fl-code mt-8">HOU</div>
+              <div class="fl-city">Houston Hobby</div>
+            </div>
+            <div class="fl-mid">
+              <div class="fl-duration">4 hr 15 min</div>
+              <div class="fl-route-line">
+                <div class="fl-dot"></div>
+                <div class="fl-bar"></div>
+                <div class="fl-plane">✈</div>
+                <div class="fl-bar"></div>
+                <div class="fl-dot"></div>
+              </div>
+              <div class="fl-airline">WN 2161 &middot; Boeing 737 MAX 8</div>
+            </div>
+            <div class="fl-right">
+              <div class="fl-time">11:10</div>
+              <div class="fl-ampm">AM</div>
+              <div class="fl-code mt-8">OAK</div>
+              <div class="fl-city">Oakland / SF Bay</div>
+            </div>
+          </div>
+
+          <!-- Layover -->
+          <div class="layover-strip">
+            <span style="font-size:14px;">⏱</span>
+            <div class="layover-text"><strong>2 hr 30 min layover</strong> in Oakland (OAK) &nbsp;&mdash;&nbsp; enough time to clear the terminal and eat</div>
+          </div>
+
+          <!-- Leg 2: OAK → HNL -->
+          <div class="flight-leg">
+            <div>
+              <div class="fl-time">1:40</div>
+              <div class="fl-ampm">PM</div>
+              <div class="fl-code mt-8">OAK</div>
+              <div class="fl-city">Oakland / SF Bay</div>
+            </div>
+            <div class="fl-mid">
+              <div class="fl-duration">5 hr 25 min</div>
+              <div class="fl-route-line">
+                <div class="fl-dot"></div>
+                <div class="fl-bar"></div>
+                <div class="fl-plane">✈</div>
+                <div class="fl-bar"></div>
+                <div class="fl-dot"></div>
+              </div>
+              <div class="fl-airline">WN 808 &middot; Boeing 737 MAX 8</div>
+            </div>
+            <div class="fl-right">
+              <div class="fl-time">4:05</div>
+              <div class="fl-ampm">PM</div>
+              <div class="fl-code mt-8">HNL</div>
+              <div class="fl-city">Daniel K. Inouye Intl</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="flight-meta-bar">
+          <span class="flight-meta-item"><span class="flight-class-badge">Economy</span></span>
+          <span class="flight-meta-item">📶&nbsp;Free Wi-Fi</span>
+          <span class="flight-meta-item">🔌&nbsp;USB Outlets</span>
+          <span class="flight-meta-item">📺&nbsp;Streaming</span>
+        </div>
+      </div>
+
+      <!-- Return Flight -->
+      <div class="flight-card">
+        <div class="flight-card-header">
+          <span class="flight-direction">Return — Overnight</span>
+          <span class="flight-date-label">Fri Jun 12, 9:00 PM → Sat Jun 13</span>
+        </div>
+        <div class="flight-legs-wrap">
+
+          <!-- Leg 1: HNL → PHX -->
+          <div class="flight-leg">
+            <div>
+              <div class="fl-time">9:00</div>
+              <div class="fl-ampm">PM</div>
+              <div class="fl-code mt-8">HNL</div>
+              <div class="fl-city">Daniel K. Inouye Intl</div>
+            </div>
+            <div class="fl-mid">
+              <div class="fl-duration">5 hr 55 min</div>
+              <div class="fl-route-line">
+                <div class="fl-dot"></div>
+                <div class="fl-bar"></div>
+                <div class="fl-plane">✈</div>
+                <div class="fl-bar"></div>
+                <div class="fl-dot"></div>
+              </div>
+              <div class="fl-airline">WN 2277 &middot; Boeing 737 MAX 8</div>
+            </div>
+            <div class="fl-right">
+              <div class="fl-time">5:55</div>
+              <div class="fl-ampm">AM</div>
+              <div class="fl-plusone">+1 · Jun 13</div>
+              <div class="fl-code mt-8">PHX</div>
+              <div class="fl-city">Phoenix Sky Harbor</div>
+            </div>
+          </div>
+
+          <!-- Layover -->
+          <div class="layover-strip">
+            <span style="font-size:14px;">⏱</span>
+            <div class="layover-text"><strong>1 hr 10 min layover</strong> in Phoenix (PHX) &nbsp;&mdash;&nbsp; Saturday, June 13</div>
+          </div>
+
+          <!-- Leg 2: PHX → HOU -->
+          <div class="flight-leg">
+            <div>
+              <div class="fl-time">7:05</div>
+              <div class="fl-ampm">AM</div>
+              <div class="fl-code mt-8">PHX</div>
+              <div class="fl-city">Phoenix Sky Harbor</div>
+            </div>
+            <div class="fl-mid">
+              <div class="fl-duration">2 hr 35 min</div>
+              <div class="fl-route-line">
+                <div class="fl-dot"></div>
+                <div class="fl-bar"></div>
+                <div class="fl-plane">✈</div>
+                <div class="fl-bar"></div>
+                <div class="fl-dot"></div>
+              </div>
+              <div class="fl-airline">WN 2833 &middot; Boeing 737 MAX 8</div>
+            </div>
+            <div class="fl-right">
+              <div class="fl-time">11:40</div>
+              <div class="fl-ampm">AM</div>
+              <div class="fl-code mt-8">HOU</div>
+              <div class="fl-city">Houston Hobby</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="flight-meta-bar">
+          <span class="flight-meta-item"><span class="flight-class-badge">Economy</span></span>
+          <span class="flight-meta-item"><span class="overnight-badge">🌙 Overnight</span></span>
+          <span class="flight-meta-item">📶&nbsp;Free Wi-Fi</span>
+          <span class="flight-meta-item">🔌&nbsp;USB Outlets</span>
+          <span class="flight-meta-item">📺&nbsp;Streaming</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       HOTEL
+  ════════════════════════════════ -->
+  <section class="section-paper">
+    <div class="wrap">
+      <p class="section-label">Your Accommodation</p>
+      <h2 class="section-title">Courtyard by Marriott Oahu North Shore</h2>
+      <p class="section-subtitle">North Shore, Oʻahu &nbsp;·&nbsp; 10 Nights</p>
+
+      <div class="hotel-photo-grid">
+        <div class="hotel-photo-main">
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-room-famz-wide--36692-82976:Wide-Hor?wid=1140&fit=constrain" alt="Spacious family room" loading="lazy">
+        </div>
+        <div>
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-room-338-two-15916-79485:Classic-Hor?wid=1140&fit=constrain" alt="Guest room interior" loading="lazy" style="height:100%;display:block;object-fit:cover;">
+        </div>
+        <div>
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-bathroom-final-26035:Classic-Hor?wid=1140&fit=constrain" alt="Bathroom" loading="lazy" style="height:100%;display:block;object-fit:cover;">
+        </div>
+      </div>
+
+      <p class="hotel-desc-body">The Courtyard by Marriott Oahu North Shore puts you in the agricultural corridor that runs along the island's northern coast — the same stretch where the Kahuku shrimp trucks have been operating since before this corner of Oʻahu became a travel category. Giovanni's is the benchmark everyone else gets measured against, and it's a few minutes from the hotel. The property reads as a proper Marriott mid-tier: reliable, well-maintained, and staffed by people who know where to send you when you ask what's worth doing.</p>
+      <p class="hotel-desc-body mt-12">The location is the real asset. You're within a short drive of Haleiwa town, Waimea Bay, Sunset Beach, the Pūpūkea tide pools, and the trail networks on the leeward side of the Koʻolau Range. Honolulu is accessible — roughly 45 minutes on the H2 — but you're unlikely to feel the pull. The North Shore has enough of its own gravity to hold a family for ten days without repeating a beach.</p>
+
+      <div class="rate-basis-note">
+        <strong>Rate basis: Room only.</strong> No meals are included in this rate. Breakfast, lunch, and dinner are entirely yours to discover — which on the North Shore is a feature, not a gap. Açaí bowls in Haleiwa, fresh poke from the counter at Foodland, Giovanni's garlic shrimp, and the occasional proper sit-down dinner at Haleiwa's better restaurants cover every mood and budget.
+      </div>
+
+      <!-- Room Card -->
+      <div class="room-card">
+        <div class="room-card-header">
+          <div class="room-category-label">Selected Room Category</div>
+          <div class="room-name">Larger Guest Room, King</div>
+          <div class="room-sqft">506 sq ft &nbsp;/&nbsp; 46 m²</div>
+        </div>
+        <div class="room-card-body">
+          <div class="room-tags">
+            <span class="room-tag">King Bed</span>
+            <span class="room-tag">506 sq ft</span>
+            <span class="room-tag">Full-Size Microwave</span>
+            <span class="room-tag">Mini Fridge</span>
+            <span class="room-tag">Free Wi-Fi</span>
+            <span class="room-tag">Chromecast &amp; Netflix</span>
+            <span class="room-tag">Coffee Maker</span>
+            <span class="room-tag">USB Outlets</span>
+            <span class="room-tag">Max Occupancy: 6</span>
+            <span class="room-tag">Cribs Available</span>
+            <span class="room-tag">Non-Smoking</span>
+          </div>
+          <p class="room-desc">At 506 square feet, this room is genuinely spacious — meaningfully larger than the category average for Oʻahu hotels at this price point, and noticeable the moment you walk in. A full-size microwave and mini fridge make practical use of the excellent local produce: stock the fridge from Haleiwa's farmers' market on Saturday morning, reheat leftover shrimp plate for lunch without a second thought, and keep drinks and snacks cold without touching the resort minibar. A coffeemaker handles 6:00 a.m. before the beach.</p>
+          <p class="room-desc mt-12">In-room Chromecast and Netflix are available for the evenings when the family wants to wind down without going anywhere. USB outlets throughout mean phones and tablets charge overnight without digging for adapters. With a maximum occupancy of six, a family of four has floor space that doesn't require careful navigation — room to spread out after a full day outside. Cribs are available on request at no extra charge.</p>
+          <p class="room-desc mt-12"><strong>Note on room configuration:</strong> Connecting rooms are not available at this property. For a family of four, the room's 506 square feet and occupancy ceiling of six means that's a non-issue.</p>
+        </div>
+        <div class="room-photos-strip">
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-room-famz-wide--36692-82976:Wide-Hor?wid=1140&fit=constrain" alt="Room wide angle" loading="lazy">
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-room-338-two-15916-79485:Classic-Hor?wid=1140&fit=constrain" alt="Room detail" loading="lazy">
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-bathroom-final-26035:Classic-Hor?wid=1140&fit=constrain" alt="Bathroom" loading="lazy">
+          <img src="https://cache.marriott.com/is/image/marriotts7prod/cy-hnloa-cy-room-359-famz--19277-19718:Classic-Hor?wid=1140&fit=constrain" alt="Family room view" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       RENTAL CAR
+  ════════════════════════════════ -->
+  <section class="section-mist">
+    <div class="wrap">
+      <p class="section-label">Getting Around</p>
+      <h2 class="section-title">Rental Car — Chevrolet Tahoe</h2>
+      <p class="section-subtitle">Full-Size SUV &nbsp;·&nbsp; 10-Day Rental &nbsp;·&nbsp; Paid at Pickup</p>
+
+      <div class="car-card">
+        <div class="car-icon">🚙</div>
+        <div>
+          <div class="car-name">Chevrolet Tahoe</div>
+          <div class="car-type">Full-Size SUV &nbsp;·&nbsp; 8-Passenger capacity, 4 comfortable seats with full luggage room</div>
+          <p class="car-desc">On the North Shore, a car isn't optional — it's the infrastructure for the whole trip. The transit lines don't reach where you'll want to go, and the places worth finding require wheels: the Kahuku shrimp trucks, the remote beach parks past Sunset, the grocery run to stock the mini fridge, the detour up to the Dole Plantation on the way back from somewhere else. A Tahoe gives four people proper comfort plus serious cargo capacity for a week's worth of luggage, boogie boards, snorkel gear, and beach bags. You won't be negotiating trunk space at 7:00 a.m. with coffee in hand.</p>
+          <div class="car-note-pill">
+            <span style="flex-shrink:0;">ℹ️</span>
+            <span><strong>$1,234 for the full stay &mdash; paid directly at pickup, not billed through PMTP.</strong> A valid driver's license, credit card, and applicable age requirements apply at the rental counter. Ask us if you have questions before you arrive.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       PRICING
+  ════════════════════════════════ -->
+  <section class="pricing-outer">
+    <div class="wrap">
+      <p class="section-label">Your Investment</p>
+      <h2 class="section-title">Estimated Trip Total</h2>
+
+      <div class="pricing-bar">
+        <div class="pb-left">
+          <div class="pb-kicker">Estimated Total &mdash; Billed Through PMTP</div>
+          <div class="pb-total">Est. $9,744</div>
+          <div class="pb-per-person">$2,436 per person &nbsp;&middot;&nbsp; 4 travelers</div>
+        </div>
+        <div class="pb-right">
+          <div class="pb-line">Flights, round-trip (4 travelers) &nbsp;&nbsp;<strong>$3,744</strong></div>
+          <div class="pb-line">Accommodation, 10 nights &nbsp;&nbsp;<strong>$6,000</strong></div>
+          <div class="pb-car-footnote">+ Rental car (Chevrolet Tahoe) $1,234 &mdash; paid at pickup, billed separately</div>
+        </div>
+      </div>
+
+      <p class="rate-pledge">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+      <p class="pricing-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       WHAT'S NEXT + FORM
+  ════════════════════════════════ -->
+  <section class="form-outer">
+    <div class="wrap">
+
+      <div class="callout-box">
+        <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-title">Ready to Move Forward?</div>
+        <p class="form-intro">Have questions about the quote, want to adjust anything, or ready to lock it in? Fill out the form below and Lisa will be back to you within one business day.</p>
+
+        <div id="form-wrapper">
+          <form id="quote-form">
+            <input type="hidden" name="access_key" value="e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff">
+            <input type="hidden" name="subject" value="New quote response from Sample Sally — Oahu 2026">
+            <input type="hidden" name="from_name" value="PMTP Quote Page — Sally Oahu 2026">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="f-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="f-name" name="name" placeholder="Sample Sally" required>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="f-phone">Phone Number</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="(555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="f-travelers">Number of Travelers</label>
+                <input type="text" id="f-travelers" name="travelers" placeholder="4">
+              </div>
+              <div class="form-group full">
+                <label for="f-message">Questions or Notes</label>
+                <textarea id="f-message" name="message" placeholder="Any questions about the itinerary, room setup, flight details, or anything else — let us know here…"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">Send to Lisa &rarr;</button>
+          </form>
+        </div>
+
+        <div id="thank-you-message">
+          <div class="ty-icon">🌺</div>
+          <h3 class="ty-title">We've got it — thank you.</h3>
+          <p class="ty-body">Lisa will be in touch within one business day. In the meantime, start a list of everywhere you want to eat on the North Shore. Giovanni's garlic shrimp is mandatory — everything else is yours to discover.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer class="pmtp-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-mark">Point Me to Paradise Travel</div>
+          <div class="footer-agent-name">Lisa Darling</div>
+          <div class="footer-agent-title">Travel Advisor</div>
+          <div class="footer-links">
+            <a id="agent-email-link" href="#">—</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-pmtp-name">PMTP</div>
+          <div class="footer-tagline">Built for the way you actually travel.</div>
+        </div>
+      </div>
+      <div class="footer-rule"></div>
+      <p class="footer-disclaimer">This quote is prepared exclusively for Sample Sally by Lisa Darling, Travel Advisor, Point Me to Paradise Travel. Pricing reflects estimated costs as of the date of this document and is subject to change until all components are confirmed and fully booked. Rates are based on 4 travelers. This document is confidential and intended for the named client only. &copy; 2026 Point Me to Paradise Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Email assembly — @ never hardcoded in source
+    (function () {
+      var u = 'lisa';
+      var d = 'pointmetoparadise.com';
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('agent-email-link');
+      if (el) {
+        el.href = 'mailto:' + addr;
+        el.textContent = addr;
+      }
+    })();
+
+    // Form submission via fetch — hide form on success, show thank-you
+    (function () {
+      var form = document.getElementById('quote-form');
+      var btn  = document.getElementById('submit-btn');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btn.textContent = 'Sending\u2026';
+        btn.disabled = true;
+
+        var payload = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: payload
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data.success) {
+              document.getElementById('form-wrapper').style.display = 'none';
+              document.getElementById('thank-you-message').style.display = 'block';
+            } else {
+              btn.textContent = 'Send to Lisa \u2192';
+              btn.disabled = false;
+              alert('There was a problem submitting the form. Please try again or contact Lisa directly.');
+            }
+          })
+          .catch(function () {
+            btn.textContent = 'Send to Lisa \u2192';
+            btn.disabled = false;
+            alert('Something went wrong. Please try again or reach out to Lisa directly.');
+          });
+      });
+    })();
+  </script>
+
+</body>
+</html>
