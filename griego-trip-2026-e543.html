@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pensacola Beach — Jessica Griego | Point Me to Paradise Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale:    #C4E4E1;
+  --aqua-mist:    #EAF3F2;
+  --aqua:         #75AFB1;
+  --aqua-dark:    #4F8A8C;
+  --sand:         #ECE7DC;
+  --sand-light:   #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white:        #FFFFFF;
+  --paper:        #FBFDFD;
+  --ink:          #2B2420;
+  --ink-soft:     #6B6359;
+  --line:         #E5E9E8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+/* ─── HERO ─── */
+.pmtp-hero {
+  position: relative;
+  background-image: url('https://pensacolabeach.com/wp-content/uploads/2022/11/Brantman_210418_PensacolaBeach_Final_164.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  padding: 90px 32px 70px;
+  text-align: center;
+}
+.pmtp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(79,138,140,0.55) 0%, rgba(43,36,32,0.52) 100%);
+}
+.hero-inner { position: relative; z-index: 1; }
+.pmtp-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--aqua-pale);
+  margin-bottom: 22px;
+  display: block;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.12;
+  margin-bottom: 12px;
+}
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(17px, 2.5vw, 22px);
+  color: var(--aqua-pale);
+  margin-bottom: 28px;
+}
+.hero-meta {
+  display: inline-flex;
+  gap: 28px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 40px;
+  padding: 10px 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-meta span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.hero-meta span::before { content: attr(data-icon); margin-right: 6px; }
+
+/* ─── LAYOUT ─── */
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+
+section { margin-top: 48px; }
+
+/* ─── COMMITMENT BANDS ─── */
+.commitment-top {
+  background: var(--aqua-pale);
+  border-left: 4px solid var(--aqua-dark);
+  padding: 18px 22px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 40px;
+}
+.commitment-top p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+/* ─── SECTION HEADERS ─── */
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--aqua-dark);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 40px 0;
+}
+
+/* ─── FLIGHT CARD ─── */
+.flight-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.flight-header {
+  background: var(--aqua-mist);
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.flight-header .airline-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aqua-dark);
+  background: var(--white);
+  border: 1px solid var(--aqua);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.flight-header .cabin-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.flight-rows { padding: 0 22px; }
+.flight-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.flight-row:last-child { border-bottom: none; }
+.flight-time {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+.flight-airport {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.flight-mid {
+  text-align: center;
+}
+.flight-route-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.route-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--aqua);
+  flex-shrink: 0;
+}
+.route-line {
+  flex: 1;
+  height: 1px;
+  background: var(--aqua);
+  position: relative;
+}
+.route-line::after {
+  content: '✈';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--aqua-dark);
+}
+.flight-duration {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.flight-nonstop {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aqua-dark);
+}
+.flight-date-label {
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.flight-includes {
+  background: var(--sand-light);
+  padding: 12px 22px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.flight-includes span::before { margin-right: 4px; }
+
+/* ─── HOTEL SELECTOR ─── */
+.hotel-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+.hotel-tab-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid var(--line);
+  background: var(--white);
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  color: var(--ink-soft);
+  transition: all 0.2s;
+  border-bottom: none;
+}
+.hotel-tab-btn.active {
+  background: var(--aqua-mist);
+  border-color: var(--aqua);
+  color: var(--aqua-dark);
+  font-weight: 700;
+}
+.hotel-tab-btn:hover:not(.active) {
+  background: var(--aqua-mist);
+  border-color: var(--aqua);
+}
+
+.hotel-panel {
+  display: none;
+  background: var(--white);
+  border: 2px solid var(--aqua);
+  border-radius: 0 12px 12px 12px;
+  overflow: hidden;
+}
+.hotel-panel.active { display: block; }
+
+.hotel-photos {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  height: 240px;
+  gap: 3px;
+}
+.hotel-photo-main, .hotel-photo-side {
+  background-size: cover;
+  background-position: center;
+}
+.hotel-photo-side { min-height: 0; }
+@media (max-width: 600px) {
+  .hotel-photos { grid-template-columns: 1fr; height: 200px; }
+  .hotel-photo-side { display: none; }
+}
+
+.hotel-body { padding: 28px 28px 24px; }
+
+.hotel-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.hotel-location {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hotel-desc {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.amenity-item {
+  font-size: 13px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+.amenity-item::before {
+  content: '–';
+  color: var(--aqua);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── ROOM OPTION ─── */
+.room-option {
+  background: var(--aqua-mist);
+  border: 2px solid var(--aqua-pale);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.room-option:hover { border-color: var(--aqua); }
+.room-option.selected {
+  border-color: var(--aqua-dark);
+  background: var(--aqua-pale);
+}
+.room-option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.room-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  flex: 1;
+}
+.room-price-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--aqua-dark);
+  white-space: nowrap;
+}
+.room-price-basis {
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-weight: 400;
+  display: block;
+  text-align: right;
+}
+.room-detail {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  line-height: 1.55;
+}
+.room-selector-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.room-selector-radio input[type="radio"] { accent-color: var(--aqua-dark); width: 16px; height: 16px; }
+.room-selector-radio label { font-size: 13px; font-weight: 500; color: var(--aqua-dark); cursor: pointer; }
+
+/* ─── TRANSFER ─── */
+.transfer-note {
+  background: var(--sand-light);
+  border-left: 3px solid var(--gold-whisper);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 16px;
+}
+.transfer-note strong { color: var(--ink); }
+
+/* ─── PRICING BAR ─── */
+.pricing-bar {
+  background: var(--aqua-dark);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 32px 0 8px;
+}
+.pricing-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  opacity: 0.85;
+}
+.pricing-total {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.pricing-total-sub {
+  font-size: 11px;
+  opacity: 0.7;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 2px;
+}
+.pricing-beat-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--aqua-mist);
+  border-left: 3px solid var(--aqua);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 6px;
+}
+.pricing-disclaimer {
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+/* ─── COMMITMENT BOTTOM ─── */
+.commitment-bottom {
+  background: var(--aqua-mist);
+  border: 1px solid var(--aqua-pale);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 40px 0 32px;
+}
+.commitment-bottom p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+/* ─── CONTACT FORM ─── */
+.form-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin-top: 40px;
+}
+.form-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.form-section .form-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--aqua);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234F8A8C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.form-required { color: var(--aqua-dark); }
+.submit-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: var(--aqua-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 8px;
+}
+.submit-btn:hover { opacity: 0.88; }
+.submit-btn:disabled { opacity: 0.5; cursor: default; }
+.form-error {
+  background: #fde8e8;
+  border: 1px solid #f5c6c6;
+  color: #8b1a1a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: none;
+}
+.form-error.visible { display: block; }
+.thank-you {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.thank-you h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--aqua-dark);
+  margin-bottom: 10px;
+}
+.thank-you p { font-size: 15px; color: var(--ink-soft); }
+
+/* ─── RENTAL CAR CARD ─── */
+.car-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.car-header {
+  background: var(--aqua-mist);
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.car-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aqua-dark);
+  background: var(--white);
+  border: 1px solid var(--aqua);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.car-body {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 600px) { .car-body { grid-template-columns: 1fr; } }
+.car-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.car-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.car-specs { display: flex; flex-direction: column; gap: 6px; }
+.car-spec { font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 7px; }
+.car-spec::before { content: '✓'; color: var(--aqua-dark); font-weight: 700; }
+.car-pricing-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--aqua-mist);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.car-rate { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 600; color: var(--aqua-dark); margin-bottom: 4px; }
+.car-rate-label { font-size: 12px; color: var(--ink-soft); margin-bottom: 12px; }
+.car-note { font-size: 12px; color: var(--ink-soft); line-height: 1.55; border-top: 1px solid var(--line); padding-top: 10px; margin-top: 4px; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--sand-light);
+  padding: 36px 32px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid var(--line);
+}
+.footer-agency {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.footer-agent {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.footer-contact {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 2;
+}
+.footer-contact a { color: var(--aqua-dark); text-decoration: none; }
+.footer-legal {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  line-height: 1.7;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="pmtp-hero">
+  <div class="hero-inner">
+    <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+    <h1 class="hero-title">Pensacola Beach, Florida</h1>
+    <p class="hero-sub">A quote prepared for Jessica Griego &amp; family</p>
+    <div class="hero-meta">
+      <span data-icon="📅">July 19 – 23, 2026</span>
+      <span data-icon="👥">3 Adults · 1 Child (14)</span>
+      <span data-icon="🏖">4 Nights</span>
+      <span data-icon="✈️">IAH ⟷ PNS</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+<div class="page-wrap">
+
+  <!-- COMMITMENT 1 -->
+  <div class="commitment-top">
+    <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  </div>
+
+  <!-- ─── FLIGHTS ─── -->
+  <section>
+    <div class="section-label">Your Flights</div>
+    <h2 class="section-title">United Airlines · IAH ⟷ PNS</h2>
+    <div class="flight-card">
+      <div class="flight-header">
+        <span class="airline-badge">United Express</span>
+        <span class="cabin-tag">Economy Main Cabin · Refundable</span>
+      </div>
+      <div class="flight-rows">
+        <!-- Outbound -->
+        <div class="flight-row">
+          <div>
+            <div class="flight-time">8:00<span style="font-size:14px">am</span></div>
+            <div class="flight-airport">IAH</div>
+            <div class="flight-date-label">Sun, Jul 19 · Terminal B</div>
+          </div>
+          <div class="flight-mid">
+            <div class="flight-route-line">
+              <div class="route-dot"></div>
+              <div class="route-line"></div>
+              <div class="route-dot"></div>
+            </div>
+            <div class="flight-duration">1h 43m</div>
+            <div class="flight-nonstop">Nonstop · UA 4293</div>
+          </div>
+          <div style="text-align:right">
+            <div class="flight-time">9:43<span style="font-size:14px">am</span></div>
+            <div class="flight-airport">PNS</div>
+            <div class="flight-date-label">Sun, Jul 19</div>
+          </div>
+        </div>
+        <!-- Return -->
+        <div class="flight-row">
+          <div>
+            <div class="flight-time">4:48<span style="font-size:14px">pm</span></div>
+            <div class="flight-airport">PNS</div>
+            <div class="flight-date-label">Thu, Jul 23</div>
+          </div>
+          <div class="flight-mid">
+            <div class="flight-route-line">
+              <div class="route-dot"></div>
+              <div class="route-line"></div>
+              <div class="route-dot"></div>
+            </div>
+            <div class="flight-duration">1h 55m</div>
+            <div class="flight-nonstop">Nonstop · UA 4303</div>
+          </div>
+          <div style="text-align:right">
+            <div class="flight-time">6:43<span style="font-size:14px">pm</span></div>
+            <div class="flight-airport">IAH</div>
+            <div class="flight-date-label">Thu, Jul 23</div>
+          </div>
+        </div>
+      </div>
+      <div class="flight-includes">
+        <span>✓ 1 carry-on included</span>
+        <span>✓ 1 personal item included</span>
+        <span>✓ Seat selection included</span>
+        <span>✓ Refundable fare</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ─── RENTAL CAR ─── -->
+  <section>
+    <div class="section-label">Your Ground Transportation</div>
+    <h2 class="section-title">Rental Car · Midsize SUV</h2>
+    <div class="car-card">
+      <div class="car-header">
+        <span class="car-badge">Dollar Car Rental</span>
+        <span style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink-soft);">Pick up &amp; drop off at PNS · Jul 19–23</span>
+      </div>
+      <div class="car-body">
+        <div>
+          <div class="car-name">Nissan Rogue or Similar</div>
+          <div class="car-sub">Midsize SUV · seats up to 5 passengers</div>
+          <div class="car-specs">
+            <div class="car-spec">5 passengers</div>
+            <div class="car-spec">4 doors · Automatic transmission</div>
+            <div class="car-spec">Air conditioning</div>
+            <div class="car-spec">Unlimited mileage</div>
+            <div class="car-spec">Fuel policy: full-to-full</div>
+          </div>
+        </div>
+        <div class="car-pricing-col">
+          <div class="car-rate">$329</div>
+          <div class="car-rate-label">Total rental · included in your trip estimate</div>
+          <div class="car-note">
+            <strong>Insurance not included</strong> — available for purchase at the Dollar counter at PNS. Payment is made directly at pick-up. Rental car cost is reflected in the accommodation totals below.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transfer-note" style="margin-top:12px;">
+      Having a car unlocks the full coastline — Fort Walton Beach is about an hour's drive, Perdido Key State Park is minutes away, and Flora-Bama is reachable without a rideshare. Excursions will be added to your quote as they're confirmed.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ─── HOTEL OPTIONS ─── -->
+  <section>
+    <div class="section-label">Your Accommodation Options</div>
+    <h2 class="section-title">Choose Your Stay</h2>
+    <p style="font-size:14px; color:var(--ink-soft); margin-bottom:24px;">Three distinct properties — from a full-service resort to a quiet beachfront condo — each with a different position on the coast. Select one below to see details and pricing.</p>
+
+    <!-- Tab buttons -->
+    <div class="hotel-tabs">
+      <button class="hotel-tab-btn active" onclick="showHotel(1)" id="htab-1">Option 1 · Portofino Island Resort</button>
+      <button class="hotel-tab-btn" onclick="showHotel(2)" id="htab-2">Option 2 · Sans Souci</button>
+      <button class="hotel-tab-btn" onclick="showHotel(3)" id="htab-3">Option 3 · Ocean Breeze West</button>
+    </div>
+
+    <!-- ══ HOTEL PANEL 1 ══ -->
+    <div class="hotel-panel active" id="hpanel-1">
+      <div class="hotel-photos">
+        <div class="hotel-photo-main" style="background-image:url('https://images.trvl-media.com/lodging/1000000/920000/910100/910026/fe0f10d7.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/1000000/920000/910100/910026/a8bb0325.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/1000000/920000/910100/910026/791cf5b4.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+      </div>
+      <div class="hotel-body">
+        <h3 class="hotel-name">Portofino Island Resort</h3>
+        <div class="hotel-location">📍 10 Portofino Drive, Pensacola Beach · 38 min from PNS · Restaurants within walking distance</div>
+        <p class="hotel-desc">
+          Five towers perched at the convergence of the Gulf of Mexico and Santa Rosa Sound, Portofino Island Resort is the most amenity-rich choice in this quote. This is where a 14-year-old has plenty to do without anyone having to drive anywhere — the Adventure Beach center on the Gulf side puts kayaks, paddleboards, and surfboard rentals directly at your feet, while Adventure Cove on the Sound side runs water park-style inflatable slides. For adults, the full spa, tennis courts, and poolside dining handle the slower hours. Named among Southern Living's 10 Best Family-Friendly Beach Hotels in Florida, the property earns that designation through sheer density of on-site experience. Dining at Al Fresco restaurant, dolphin cruise departures, and bike trails round out the calendar — and with your rental car, the rest of the Emerald Coast is within easy reach.
+        </p>
+        <div class="amenities-grid">
+          <div class="amenity-item">Multiple outdoor pools &amp; whirlpool spas</div>
+          <div class="amenity-item">Adventure Beach: kayaking, paddleboarding, surfing</div>
+          <div class="amenity-item">Adventure Cove: water park, inflatable slides</div>
+          <div class="amenity-item">Full spa &amp; lifestyle center</div>
+          <div class="amenity-item">Al Fresco restaurant + poolside food &amp; drinks</div>
+          <div class="amenity-item">Five tennis courts</div>
+          <div class="amenity-item">Dolphin cruises &amp; bike trails on site</div>
+          <div class="amenity-item">Exclusive amenity access via Premier Island Management</div>
+          <div class="amenity-item">Beach service available</div>
+          <div class="amenity-item">Gulf views + Santa Rosa Sound views across towers</div>
+        </div>
+
+        <!-- Room Option -->
+        <div class="section-label" style="margin-bottom:10px;">Room Category</div>
+        <div class="room-option selected" id="room-1-1" onclick="selectRoom(1,1, 4633.88)">
+          <div class="room-option-header">
+            <div class="room-name">Deluxe 2 Bedroom / 2.5 Bath Condo · Waterview</div>
+            <div>
+              <div class="room-price-tag" id="display-price-1-1">Est. $4,963</div>
+              <span class="room-price-basis">Total · flights &amp; rental car incl.</span>
+            </div>
+          </div>
+          <div class="room-detail">
+            A two-bedroom, 2.5-bath condo with waterview exposure — room enough for three adults and one teenager without anyone sharing a bathroom at crunch time. Floor selection is not guaranteed at booking, though the resort's towers offer views from multiple elevations. Resort fees of $151.88 are due directly at the property upon check-in — not included in the rate above.
+          </div>
+          <div class="room-selector-radio">
+            <input type="radio" name="hotel-selection" id="r1-1" value="1-1" checked onchange="selectRoom(1,1,4633.88)">
+            <label for="r1-1">Select this option</label>
+          </div>
+        </div>
+
+        <div class="transfer-note">
+          <strong>Getting there:</strong> 38-minute drive from PNS in your rental car. Free secured, covered self-parking on site — wheelchair-accessible spaces available. Electric vehicle charging stations on property. Note: height restrictions apply in the parking structure.
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ HOTEL PANEL 2 ══ -->
+    <div class="hotel-panel" id="hpanel-2">
+      <div class="hotel-photos">
+        <div class="hotel-photo-main" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419800/83419743/1b93e5e5.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419800/83419743/362728d7.jpg?impolicy=fcrop&w=1200&h=800&quality=medium')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419800/83419743/c7abb581.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+      </div>
+      <div class="hotel-body">
+        <h3 class="hotel-name">Sans Souci by Southern Vacation Rentals · #108</h3>
+        <div class="hotel-location">📍 999 Fort Pickens Rd, Pensacola Beach · 30 min from PNS · 1-minute walk to beach</div>
+        <p class="hotel-desc">
+          The closest of the three options to Pensacola Beach's main activity corridor, Sans Souci puts you on Fort Pickens Road with a boardwalk that drops you onto the Gulf in under a minute. The complex sits adjacent to a golf course and right next to Santa Rosa Sound, so the views work in two directions. What you gain here over Portofino is simplicity and self-sufficiency — the condo comes with a fully equipped kitchen, in-unit washer/dryer, free parking, and Wi-Fi, which means grocery runs replace resort restaurant bills. Peg Leg Pete's, one of the more reliable seafood stops on the beach, is walkable. The Pensacola Beach Boardwalk and The Shell (an outdoor live music venue) are 1.7 miles down the strip — a short drive or a committed walk. Unit #108 is ground floor, with an ocean-view balcony.
+        </p>
+        <div class="amenities-grid">
+          <div class="amenity-item">Direct beachfront access via boardwalk</div>
+          <div class="amenity-item">Outdoor pool and hot tub on property</div>
+          <div class="amenity-item">Fitness center on property</div>
+          <div class="amenity-item">Fully equipped kitchen</div>
+          <div class="amenity-item">In-unit washer/dryer</div>
+          <div class="amenity-item">Free Wi-Fi &amp; free private parking</div>
+          <div class="amenity-item">Ocean-view balcony</div>
+          <div class="amenity-item">Bed linens and towels included</div>
+          <div class="amenity-item">Flat-screen TV</div>
+          <div class="amenity-item">Adjacent to golf course &amp; Santa Rosa Sound</div>
+        </div>
+
+        <!-- Room Option -->
+        <div class="section-label" style="margin-bottom:10px;">Room Category</div>
+        <div class="room-option selected" id="room-2-1" onclick="selectRoom(2,1,4105.14)">
+          <div class="room-option-header">
+            <div class="room-name">Condo · Multiple Beds · Balcony · Ocean View (#108)</div>
+            <div>
+              <div class="room-price-tag" id="display-price-2-1">Est. $4,434</div>
+              <span class="room-price-basis">Total · flights &amp; rental car incl. · No pets</span>
+            </div>
+          </div>
+          <div class="room-detail">
+            Ground-floor unit with a direct ocean-view balcony. Multiple beds accommodate your full group; the layout keeps sleeping arrangements flexible. Kitchen and laundry in-unit means you can stock up at a local market and skip restaurant meals on quieter evenings.
+          </div>
+          <div class="room-selector-radio">
+            <input type="radio" name="hotel-selection" id="r2-1" value="2-1" onchange="selectRoom(2,1,4105.14)">
+            <label for="r2-1">Select this option</label>
+          </div>
+        </div>
+
+        <div class="transfer-note">
+          <strong>Getting there:</strong> 30-minute drive from PNS in your rental car — the closest of the three properties to the airport. Limited free onsite parking available.
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ HOTEL PANEL 3 ══ -->
+    <div class="hotel-panel" id="hpanel-3">
+      <div class="hotel-photos">
+        <div class="hotel-photo-main" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419500/83419428/4413cc1c.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419500/83419428/0ba44bb8.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+        <div class="hotel-photo-side" style="background-image:url('https://images.trvl-media.com/lodging/84000000/83420000/83419500/83419428/66905ccd.jpg?impolicy=resizecrop&rw=1200&ra=fit')"></div>
+      </div>
+      <div class="hotel-body">
+        <h3 class="hotel-name">Ocean Breeze West by Southern Vacation Rentals</h3>
+        <div class="hotel-location">📍 14623 Perdido Key Drive, Pensacola · 49 min from PNS · Perdido Key beachfront</div>
+        <p class="hotel-desc">
+          Ocean Breeze West is the quietest and most isolated choice in this quote — and intentionally so. The property sits on Perdido Key, a narrower barrier island 49 minutes from PNS, where a 47-unit complex faces the Gulf with roughly 600 feet of vacant beach to the east. There is no street to cross — the Gulf-front pool and sun deck lead directly to the sand. Perdido Key State Park is an 8-minute walk; Flora-Bama Lounge, one of the Gulf Coast's more storied honky-tonks straddling the Florida-Alabama state line, is 7 minutes by car. Lost Key Golf Club is a 3-minute drive. The trade-off is distance from Pensacola Beach's dining and activity strip — you'll want a car or a willingness to stay local. The payoff is near-solitude on the water, and at $3,748.58, the lowest rate in this quote.
+        </p>
+        <div class="amenities-grid">
+          <div class="amenity-item">Gulf-front outdoor pool &amp; large sun deck</div>
+          <div class="amenity-item">Zero-street beach access — 1-minute walk to Gulf</div>
+          <div class="amenity-item">~600 ft of vacant beachfront to the east</div>
+          <div class="amenity-item">Fully equipped kitchen (fridge, stovetop, microwave, dishwasher)</div>
+          <div class="amenity-item">In-unit washer/dryer</div>
+          <div class="amenity-item">Free Wi-Fi &amp; free parking</div>
+          <div class="amenity-item">Air conditioning; ocean-view balcony</div>
+          <div class="amenity-item">8-min walk to Perdido Key State Park</div>
+          <div class="amenity-item">7-min drive to Flora-Bama Lounge</div>
+          <div class="amenity-item">Small, quiet complex — 47 units total</div>
+        </div>
+
+        <!-- Room Option -->
+        <div class="section-label" style="margin-bottom:10px;">Room Category</div>
+        <div class="room-option selected" id="room-3-1" onclick="selectRoom(3,1,3748.58)">
+          <div class="room-option-header">
+            <div class="room-name">Condo · 2 Bedroom · Balcony · Ocean View (#205)</div>
+            <div>
+              <div class="room-price-tag" id="display-price-3-1">Est. $4,078</div>
+              <span class="room-price-basis">Total · flights &amp; rental car incl. · No pets</span>
+            </div>
+          </div>
+          <div class="room-detail">
+            Second-floor unit with a king bed in the primary bedroom and two twin beds in the second bedroom — a clean setup for your group: two adults in the king, one adult and the teenager in the second room. Two full bathrooms. Ocean-view balcony faces the Gulf.
+          </div>
+          <div class="room-selector-radio">
+            <input type="radio" name="hotel-selection" id="r3-1" value="3-1" onchange="selectRoom(3,1,3748.58)">
+            <label for="r3-1">Select this option</label>
+          </div>
+        </div>
+
+        <div class="transfer-note">
+          <strong>Getting there:</strong> 49-minute drive from PNS in your rental car. Limited free onsite parking available — and with wheels, Flora-Bama and Perdido Key State Park are minutes away.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ─── PRICING ─── -->
+  <section>
+    <div class="section-label">Estimated Pricing</div>
+    <h2 class="section-title">Your Investment</h2>
+
+    <div class="pricing-beat-note">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+
+    <div class="pricing-bar" id="main-pricing-bar">
+      <div>
+        <div class="pricing-label">Estimated total · <span id="selected-option-label">Option 1 · Portofino Island Resort</span></div>
+        <div class="pricing-total" id="main-total-display">Est. $4,963</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:12px; opacity:0.75; font-family:'DM Sans',sans-serif; margin-bottom:4px;">✓ Flights included</div>
+        <div style="font-size:12px; opacity:0.75; font-family:'DM Sans',sans-serif;">✓ Rental car included</div>
+      </div>
+    </div>
+
+    <p class="pricing-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Flights and rental car ($329) are included in the estimated totals above. Portofino Island Resort option includes $151.88 in resort fees due at property. Rental car insurance is not included and is payable directly at the Dollar counter at PNS.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- COMMITMENT 4 -->
+  <div class="commitment-bottom">
+    <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+  </div>
+
+  <!-- ─── CONTACT FORM ─── -->
+  <div class="form-section">
+    <h2>Ready to Move Forward?</h2>
+    <p class="form-sub">Tell us which option catches your eye and we'll lock in the details.</p>
+
+    <div class="form-error" id="form-error">Something went wrong — please try again or email Lisa directly.</div>
+
+    <div id="form-container">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="f-name">Name <span class="form-required">*</span></label>
+          <input type="text" id="f-name" name="name" placeholder="Jessica Griego" required>
+        </div>
+        <div class="form-group">
+          <label for="f-email">Email <span class="form-required">*</span></label>
+          <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="f-phone">Phone <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone" placeholder="(xxx) xxx-xxxx">
+        </div>
+        <div class="form-group">
+          <label for="f-option">Which accommodation interests you?</label>
+          <select id="f-option" name="option_interest">
+            <option value="">— Select one —</option>
+            <option value="Option 1 - Portofino Island Resort">Option 1 · Portofino Island Resort</option>
+            <option value="Option 2 - Sans Souci">Option 2 · Sans Souci by Southern Vacation Rentals</option>
+            <option value="Option 3 - Ocean Breeze West">Option 3 · Ocean Breeze West</option>
+            <option value="Undecided - need help deciding">Not sure yet — help me decide</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="f-insurance">Travel insurance</label>
+        <select id="f-insurance" name="travel_insurance">
+          <option value="">— Select one —</option>
+          <option value="Yes - I'd like a quote">Yes — I'd like a quote</option>
+          <option value="No - not interested">No — not interested</option>
+          <option value="Already have coverage">Already have coverage</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="f-message">Questions or notes <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+        <textarea id="f-message" name="message" placeholder="Any questions, preferred room notes, or things we should know…"></textarea>
+      </div>
+      <button class="submit-btn" id="submit-btn" onclick="submitForm(event)">Send to Lisa →</button>
+    </div>
+
+    <div class="thank-you" id="thank-you">
+      <h3>We've got it — thank you!</h3>
+      <p>Lisa will be in touch shortly to confirm your selection and next steps.<br>Keep an eye on your inbox.</p>
+    </div>
+  </div>
+
+  <!-- ─── LEGAL ─── -->
+  <p style="font-size:11px; color:var(--ink-soft); font-style:italic; margin-top:24px; line-height:1.7;">
+    This quote is prepared exclusively for Jessica Griego and is not transferable. Pricing and availability are subject to change until components are fully confirmed and deposited. Resort fees, taxes, and gratuities not included unless noted. Point Me to Paradise Travel acts as an agent for the suppliers listed herein and assumes no liability for changes made directly by those suppliers.
+  </p>
+
+</div><!-- /page-wrap -->
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-agency">Point Me to Paradise Travel</div>
+  <div class="footer-agent">Lisa Darling · Travel Advisor</div>
+  <div class="footer-contact" id="footer-contact"></div>
+  <div class="footer-legal">
+    Quote prepared July 2026 · Prices in USD · For personal travel planning use only.<br>
+    All hotel photography shown is representative of the property. Specific room views and floors are subject to availability at time of confirmation.
+  </div>
+</footer>
+
+<script>
+// ─── Email obfuscation
+(function() {
+  var u = 'lisa';
+  var d = 'pointmeto' + 'paradise' + '.travel';
+  var sep = '\u0040';
+  var el = document.getElementById('footer-contact');
+  if (el) {
+    el.innerHTML = '<a href="mailto:' + u + sep + d + '">' + u + sep + d + '</a>';
+  }
+})();
+
+// ─── Hotel tab switcher
+var hotelPrices = { 1: 4962.88, 2: 4434.14, 3: 4077.58 };
+var hotelLabels = {
+  1: 'Option 1 · Portofino Island Resort',
+  2: 'Option 2 · Sans Souci',
+  3: 'Option 3 · Ocean Breeze West'
+};
+var activeHotel = 1;
+
+function showHotel(n) {
+  activeHotel = n;
+  for (var i = 1; i <= 3; i++) {
+    document.getElementById('htab-' + i).classList.toggle('active', i === n);
+    document.getElementById('hpanel-' + i).classList.toggle('active', i === n);
+  }
+  updatePricingBar(n, hotelPrices[n]);
+}
+
+function selectRoom(hotel, room, price) {
+  // Only one room per hotel in this quote, but future-proof
+  updatePricingBar(hotel, price);
+}
+
+function updatePricingBar(hotelN, price) {
+  var formatted = 'Est. $' + Math.round(price).toLocaleString('en-US');
+  document.getElementById('main-total-display').textContent = formatted;
+  document.getElementById('selected-option-label').textContent = hotelLabels[hotelN];
+}
+
+// ─── Form submission via fetch (never native POST)
+function submitForm(e) {
+  e.preventDefault();
+
+  var name = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var errorEl = document.getElementById('form-error');
+  errorEl.classList.remove('visible');
+
+  if (!name || !email) {
+    errorEl.textContent = 'Please fill in your name and email before submitting.';
+    errorEl.classList.add('visible');
+    return;
+  }
+
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  var formData = new FormData();
+  formData.append('access_key', 'e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff');
+  formData.append('subject', 'Quote Response \u2014 Jessica Griego | Pensacola Beach');
+  formData.append('from_name', 'Jessica Griego Quote \u2014 Point Me to Paradise');
+  formData.append('redirect', 'false');
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('phone', document.getElementById('f-phone').value.trim());
+  formData.append('option_interest', document.getElementById('f-option').value);
+  formData.append('travel_insurance', document.getElementById('f-insurance').value);
+  formData.append('message', document.getElementById('f-message').value.trim());
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.success) {
+      document.getElementById('form-container').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      errorEl.textContent = 'Submission failed. Please email Lisa directly.';
+      errorEl.classList.add('visible');
+      btn.disabled = false;
+      btn.textContent = 'Send to Lisa \u2192';
+    }
+  })
+  .catch(function() {
+    errorEl.textContent = 'Network error — please try again or email Lisa directly.';
+    errorEl.classList.add('visible');
+    btn.disabled = false;
+    btn.textContent = 'Send to Lisa \u2192';
+  });
+}
+</script>
+
+</body>
+</html>
