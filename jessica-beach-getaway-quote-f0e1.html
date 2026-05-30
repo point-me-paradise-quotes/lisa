@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Beach Getaway — Orange Beach vs. Pensacola Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:'DM Sans', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4 { font-family:'Playfair Display', serif; font-weight:500; color:var(--ink); line-height:1.2; }
+
+  .pmtp-page { max-width:1080px; margin:0 auto; background:var(--white); box-shadow:0 1px 40px rgba(79,138,140,0.07); }
+
+  /* ───── STICKY PRICING BAR (bar #1) ───── */
+  .pmtp-stickybar {
+    position:sticky; top:0; z-index:50;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding:14px 32px;
+    box-shadow:0 2px 14px rgba(79,138,140,0.06);
+  }
+  .pmtp-stickybar .sb-label {
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:18px; color:var(--ink-soft);
+  }
+  .pmtp-stickybar .sb-prop { font-weight:600; font-style:normal; color:var(--aqua-dark); font-family:'DM Sans',sans-serif; }
+  .pmtp-stickybar .sb-price {
+    font-family:'Playfair Display', serif; font-weight:600;
+    font-size:22px; color:var(--ink); white-space:nowrap;
+  }
+  .pmtp-stickybar .sb-price small { font-size:13px; color:var(--ink-soft); font-weight:400; }
+
+  /* ───── HERO ───── */
+  .pmtp-hero {
+    position:relative;
+    background-image:
+      linear-gradient(180deg, rgba(234,243,242,0.86) 0%, rgba(196,228,225,0.70) 100%),
+      url('https://images.trvl-media.com/lodging/84000000/83420000/83411000/83410994/3dd02999_cko.jpg');
+    background-size:cover; background-position:center;
+    padding:78px 32px 60px; text-align:center;
+  }
+  .pmtp-wordmark {
+    font-family:'Playfair Display', serif; font-size:11px; font-weight:600;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--aqua-dark);
+  }
+  .pmtp-hero .hero-rule { width:46px; height:2px; background:var(--gold-whisper); margin:22px auto 24px; border:0; }
+  .pmtp-hero h1 { font-size:clamp(34px, 5vw, 52px); font-weight:600; color:var(--ink); }
+  .pmtp-hero .hero-sub {
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:clamp(19px, 2.4vw, 24px); color:var(--ink); margin-top:14px; font-weight:500;
+  }
+  .pmtp-hero .hero-meta {
+    margin-top:18px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--ink-soft); font-weight:500;
+  }
+
+  /* ───── SECTIONS ───── */
+  .pmtp-section { padding:56px 40px; }
+  .band { background:var(--aqua-mist); }
+  .eyebrow {
+    font-family:'DM Sans', sans-serif; font-size:12px; font-weight:600;
+    letter-spacing:0.18em; text-transform:uppercase; color:var(--aqua-dark);
+    margin-bottom:14px;
+  }
+  .pmtp-section h2 { font-size:clamp(26px, 3.2vw, 34px); margin-bottom:18px; }
+  .lede { font-size:17px; color:var(--ink); max-width:62ch; }
+  .lede + .lede { margin-top:14px; }
+
+  /* ───── COMMITMENT CALLOUT ───── */
+  .commitment {
+    background:var(--aqua-pale);
+    border-radius:14px;
+    padding:26px 30px;
+    margin:0 40px 0;
+    position:relative;
+  }
+  .commitment p { font-size:16.5px; color:var(--ink); font-weight:500; max-width:70ch; }
+  .commitment .c-tag {
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    color:var(--aqua-dark); font-size:18px; display:block; margin-bottom:6px;
+  }
+
+  /* ───── OPTION CARDS ───── */
+  .options-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:14px; }
+  .opt-card {
+    background:var(--white); border:1px solid var(--line); border-radius:16px;
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+    cursor:pointer; position:relative;
+  }
+  .opt-card:hover { box-shadow:0 10px 30px rgba(79,138,140,0.12); transform:translateY(-2px); }
+  .opt-card.selected { border-color:var(--aqua); box-shadow:0 10px 34px rgba(79,138,140,0.18); }
+  .opt-card .opt-photo { width:100%; height:190px; object-fit:cover; display:block; background:var(--aqua-mist); }
+  .opt-badge {
+    position:absolute; top:14px; left:14px;
+    background:var(--white); color:var(--aqua-dark);
+    font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+    padding:6px 11px; border-radius:20px; box-shadow:0 2px 8px rgba(43,36,32,0.12);
+  }
+  .opt-fav { background:var(--aqua-dark); color:var(--white); }
+  .opt-body { padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .opt-loc { font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; }
+  .opt-name { font-size:21px; font-weight:600; margin:6px 0 4px; }
+  .opt-specs { font-family:'Cormorant Garamond', serif; font-style:italic; font-size:17px; color:var(--aqua-dark); margin-bottom:14px; }
+  .opt-price { font-family:'Playfair Display', serif; font-size:27px; font-weight:600; color:var(--ink); }
+  .opt-price small { display:block; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--ink-soft); font-weight:400; letter-spacing:0.04em; }
+  .opt-desc { font-size:14.5px; color:var(--ink); margin:16px 0 0; }
+  .opt-amen { list-style:none; margin:16px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:7px 14px; }
+  .opt-amen li { font-size:13px; color:var(--ink); position:relative; padding-left:20px; }
+  .opt-amen li::before { content:'✓'; position:absolute; left:0; color:var(--aqua); font-weight:700; }
+  .opt-choose {
+    margin-top:20px; width:100%; border:1px solid var(--aqua); background:var(--white); color:var(--aqua-dark);
+    font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.04em;
+    padding:12px; border-radius:10px; cursor:pointer; transition:all .18s ease;
+  }
+  .opt-choose:hover { background:var(--aqua-mist); }
+  .opt-card.selected .opt-choose { background:var(--aqua); color:var(--white); border-color:var(--aqua); }
+  .opt-card.selected .opt-choose::before { content:'✓  '; }
+
+  /* ───── SELECTION SUMMARY (pricing bar #2) ───── */
+  .summary {
+    margin-top:8px; background:var(--white); border:1px solid var(--aqua-pale);
+    border-radius:16px; padding:28px 30px;
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px;
+  }
+  .summary .sum-left .sum-eyebrow { font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--aqua-dark); font-weight:600; }
+  .summary .sum-prop { font-family:'Playfair Display',serif; font-size:24px; font-weight:600; margin-top:4px; }
+  .summary .sum-loc { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px; color:var(--ink-soft); }
+  .summary .sum-right { text-align:right; }
+  .summary .sum-price { font-family:'Playfair Display',serif; font-size:34px; font-weight:600; color:var(--ink); }
+  .summary .sum-note { font-size:12.5px; color:var(--ink-soft); }
+
+  .pricematch {
+    margin-top:22px; font-size:15px; color:var(--ink); max-width:74ch;
+    padding-left:18px; border-left:3px solid var(--aqua); 
+  }
+  .disclaimer-inline { margin-top:14px; font-size:13px; color:var(--ink-soft); font-style:italic; font-family:'Cormorant Garamond',serif; }
+
+  /* ───── AFTER-QUOTE BLOCK ───── */
+  .afterquote { background:var(--aqua-pale); border-radius:14px; padding:30px 34px; }
+  .afterquote .c-tag { font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--aqua-dark); font-size:19px; display:block; margin-bottom:8px; }
+  .afterquote p { font-size:16.5px; color:var(--ink); font-weight:500; max-width:74ch; }
+
+  /* ───── FORM ───── */
+  .form-wrap { max-width:620px; }
+  .form-wrap h2 { margin-bottom:8px; }
+  .form-wrap .lede { margin-bottom:26px; }
+  .pmtp-form label { display:block; font-size:13px; font-weight:600; letter-spacing:0.04em; color:var(--ink); margin:0 0 7px; }
+  .pmtp-form .req { color:var(--aqua-dark); }
+  .pmtp-form input, .pmtp-form textarea {
+    width:100%; font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink);
+    background:var(--white); border:1px solid var(--line); border-radius:10px;
+    padding:13px 15px; margin-bottom:18px; transition:border-color .18s ease;
+  }
+  .pmtp-form input:focus, .pmtp-form textarea:focus { outline:none; border-color:var(--aqua); }
+  .pmtp-form textarea { min-height:120px; resize:vertical; }
+  .pmtp-form button {
+    background:var(--aqua); color:var(--white); border:0; border-radius:10px;
+    font-family:'DM Sans',sans-serif; font-size:15px; font-weight:600; letter-spacing:0.04em;
+    padding:15px 34px; cursor:pointer; transition:background .18s ease;
+  }
+  .pmtp-form button:hover { background:var(--aqua-dark); }
+  .thanks { display:none; background:var(--aqua-pale); border-radius:14px; padding:34px; text-align:center; }
+  .thanks h3 { font-size:26px; margin-bottom:10px; }
+  .thanks p { font-size:16px; color:var(--ink); }
+
+  /* ───── FOOTER ───── */
+  .pmtp-footer { background:var(--sand-light); padding:46px 40px; text-align:center; border-top:1px solid var(--line); }
+  .pmtp-footer .f-name { font-family:'Playfair Display',serif; font-size:22px; font-weight:600; }
+  .pmtp-footer .f-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--aqua-dark); margin-top:2px; }
+  .pmtp-footer .f-contact { margin-top:14px; font-size:14.5px; color:var(--ink); }
+  .pmtp-footer .f-contact a { color:var(--aqua-dark); text-decoration:none; }
+  .pmtp-footer .f-contact a:hover { text-decoration:underline; }
+  .pmtp-footer .f-brand { margin-top:18px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-soft); }
+
+  .pmtp-disclaimer { background:var(--white); padding:24px 40px 46px; text-align:center; }
+  .pmtp-disclaimer p { font-size:12.5px; color:var(--ink-soft); max-width:78ch; margin:0 auto; line-height:1.7; }
+
+  @media (max-width:880px){
+    .options-grid { grid-template-columns:1fr; }
+    .pmtp-section { padding:44px 24px; }
+    .commitment, .afterquote-wrap { margin-left:24px; margin-right:24px; }
+    .pmtp-stickybar { padding:12px 20px; }
+    .pmtp-stickybar .sb-label { font-size:15px; }
+  }
+</style>
+</head>
+<body>
+<div class="pmtp-page">
+
+  <!-- STICKY PRICING BAR #1 -->
+  <div class="pmtp-stickybar">
+    <div class="sb-label">Your selection: <span class="sb-prop" id="sbProp">Pelican's Perch</span></div>
+    <div class="sb-price">Est. <span id="sbPrice">$2,212</span> <small>total</small></div>
+  </div>
+
+  <!-- HERO -->
+  <header class="pmtp-hero">
+    <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+    <hr class="hero-rule">
+    <h1>Your Beach Getaway</h1>
+    <p class="hero-sub">Three houses on the Gulf — laid side by side for you, Jessica.</p>
+    <div class="hero-meta">Orange Beach, AL &nbsp;·&nbsp; Pensacola Beach, FL</div>
+  </header>
+
+  <!-- TRIP OVERVIEW -->
+  <section class="pmtp-section">
+    <div class="eyebrow">The Comparison</div>
+    <h2>Same week, three very different ways to spend it</h2>
+    <p class="lede">Three places, side by side, so you can weigh them the way I do. You told me two bathrooms was the line in the sand for the family — every option here clears it. So the real question isn't whether they work; it's how you want the week to feel.</p>
+    <p class="lede">In a resort building, the pools, the elevator, and the front desk are handled for you. In a private house, the whole place is yours from the moment you walk in — no shared walls, no waiting on anyone. Here's how the three stack up.</p>
+  </section>
+
+  <!-- COMMITMENT #1 -->
+  <div class="commitment">
+    <span class="c-tag">Why book this through me</span>
+    <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  </div>
+
+  <!-- OPTIONS -->
+  <section class="pmtp-section">
+    <div class="eyebrow">Choose Your Place</div>
+    <h2>Tap an option to compare</h2>
+    <p class="lede">Select any one to see your running total update at the top and bottom of the page.</p>
+
+    <div class="options-grid">
+
+      <!-- OPTION 1 -->
+      <article class="opt-card" data-key="whitecap" data-name="White Cap Condos" data-loc="Orange Beach, Alabama" data-price="$2,943">
+        <img class="opt-photo" src="https://images.trvl-media.com/lodging/108000000/107200000/107197900/107197837/c655c48b.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="White Cap Condos, Orange Beach">
+        <span class="opt-badge">Most Space</span>
+        <div class="opt-body">
+          <div class="opt-loc">Orange Beach, Alabama</div>
+          <div class="opt-name">White Cap Condos</div>
+          <div class="opt-specs">3 bed · 2 bath · sleeps 10</div>
+          <div class="opt-price">Est. $2,943 <small>total, incl. taxes &amp; fees</small></div>
+          <p class="opt-desc">The roomiest of the three — beds for ten. The unit sits on an elevated floor, so the beach views and the privacy come built in, and the furnished balcony is set up for 7 a.m. coffee before anyone else is awake.</p>
+          <ul class="opt-amen">
+            <li>Beach views</li>
+            <li>Pool access</li>
+            <li>Furnished balcony</li>
+            <li>Full kitchen</li>
+            <li>Washer &amp; dryer</li>
+            <li>Sleeps 10</li>
+          </ul>
+          <button type="button" class="opt-choose">Choose this</button>
+        </div>
+      </article>
+
+      <!-- OPTION 2 -->
+      <article class="opt-card" data-key="harbour" data-name="Harbour Place 313" data-loc="Orange Beach, Alabama" data-price="$3,607">
+        <img class="opt-photo" src="https://images.trvl-media.com/lodging/129000000/128610000/128600200/128600136/4d74b977.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Harbour Place 313, Orange Beach">
+        <span class="opt-badge">Most Amenities</span>
+        <div class="opt-body">
+          <div class="opt-loc">Orange Beach, Alabama</div>
+          <div class="opt-name">Harbour Place 313</div>
+          <div class="opt-specs">3 bed · 2 bath · sleeps 8+</div>
+          <div class="opt-price">Est. $3,607 <small>total</small></div>
+          <p class="opt-desc">The resort experience, with the longest amenity list of the three: step straight onto the sand, swim indoors or out, soak in the hot tub. It's the most to do without leaving the property — and the highest price of the three.</p>
+          <ul class="opt-amen">
+            <li>Direct beach access</li>
+            <li>Indoor &amp; outdoor pools</li>
+            <li>Hot tub</li>
+            <li>Furnished balcony</li>
+            <li>Elevator access</li>
+            <li>Washer &amp; dryer</li>
+          </ul>
+          <button type="button" class="opt-choose">Choose this</button>
+        </div>
+      </article>
+
+      <!-- OPTION 3 — FAVORITE -->
+      <article class="opt-card" data-key="pelican" data-name="Pelican's Perch" data-loc="Pensacola Beach, Florida" data-price="$2,212">
+        <img class="opt-photo" src="https://images.trvl-media.com/lodging/84000000/83420000/83411000/83410994/3dd02999_cko.jpg" alt="Pelican's Perch, Pensacola Beach">
+        <span class="opt-badge opt-fav">★ My Pick</span>
+        <div class="opt-body">
+          <div class="opt-loc">Pensacola Beach, Florida</div>
+          <div class="opt-name">Pelican's Perch</div>
+          <div class="opt-specs">3 bed · 2 bath · entire home · sleeps 8</div>
+          <div class="opt-price">Est. $2,212 <small>total</small></div>
+          <p class="opt-desc">An entire private home — no shared walls, hallways, or elevators. Over 1,600 square feet to spread out in, where the whole family lands in one place: cook together, play cards after the sand, take coffee on the private balcony. It's also the lowest price here — about $731 under White Cap and roughly $1,400 under Harbour Place. For the mix of privacy, space, and value, this is the one I'd book.</p>
+          <ul class="opt-amen">
+            <li>Entire private home</li>
+            <li>2 full bathrooms</li>
+            <li>1,600+ sq ft</li>
+            <li>Full kitchen</li>
+            <li>Washer &amp; dryer</li>
+            <li>Private balcony</li>
+            <li>Free parking</li>
+            <li>Sleeps 8</li>
+          </ul>
+          <button type="button" class="opt-choose">Choose this</button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- SELECTION SUMMARY (pricing bar #2) -->
+    <div class="summary">
+      <div class="sum-left">
+        <div class="sum-eyebrow">Your Selection</div>
+        <div class="sum-prop" id="sumProp">Pelican's Perch</div>
+        <div class="sum-loc" id="sumLoc">Pensacola Beach, Florida</div>
+      </div>
+      <div class="sum-right">
+        <div class="sum-price">Est. <span id="sumPrice">$2,212</span></div>
+        <div class="sum-note">total · taxes &amp; fees included</div>
+      </div>
+    </div>
+
+    <!-- COMMITMENT #2 (near pricing) -->
+    <p class="pricematch">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+
+    <!-- COMMITMENT #3 (pricing disclaimer) -->
+    <p class="disclaimer-inline">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </section>
+
+  <!-- COMMITMENT #4 — AFTER-QUOTE -->
+  <section class="pmtp-section band afterquote-wrap">
+    <div class="afterquote">
+      <span class="c-tag">What's coming after this quote</span>
+      <p>A destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="pmtp-section">
+    <div class="form-wrap">
+      <div class="eyebrow">Next Step</div>
+      <h2>Tell me which one feels like your week</h2>
+      <p class="lede">Pick a favorite, ask a question, or send me back out to look — whatever you need. I'll take it from here.</p>
+
+      <form id="pmtpForm" class="pmtp-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Replace the value below with Lisa's Web3Forms access key -->
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="Beach Getaway Quote — Reply from Jessica">
+        <input type="hidden" name="from_name" value="PMTP Quote — Jessica">
+        <input type="hidden" name="selected_option" id="hiddenSelection" value="Pelican's Perch — Est. $2,212">
+
+        <label for="name">Name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Which one are you leaning toward? Any questions?"></textarea>
+
+        <button type="submit">Send to Lisa</button>
+      </form>
+
+      <div class="thanks" id="thanks">
+        <h3>Sent — thank you, Jessica.</h3>
+        <p>I've got your note and I'll be in touch shortly. In the meantime, feel free to reach me directly any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISOR FOOTER -->
+  <footer class="pmtp-footer">
+    <div class="f-name">Lisa Darling</div>
+    <div class="f-title">Travel Advisor</div>
+    <div class="f-contact">
+      <span id="advisorEmail"></span> &nbsp;·&nbsp; <a href="tel:+12815081623">(281) 508-1623</a>
+    </div>
+    <div class="f-brand">Point Me to Paradise Travel</div>
+  </footer>
+
+  <!-- DISCLAIMER -->
+  <div class="pmtp-disclaimer">
+    <p>Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Estimated totals include taxes and fees as quoted at the time of preparation and may adjust with dates, occupancy, and supplier terms.</p>
+  </div>
+
+</div>
+
+<script>
+  // ── Selection logic — keeps both pricing bars in sync ──
+  var cards = document.querySelectorAll('.opt-card');
+  var sbProp = document.getElementById('sbProp');
+  var sbPrice = document.getElementById('sbPrice');
+  var sumProp = document.getElementById('sumProp');
+  var sumLoc = document.getElementById('sumLoc');
+  var sumPrice = document.getElementById('sumPrice');
+  var hiddenSelection = document.getElementById('hiddenSelection');
+
+  function selectCard(card){
+    cards.forEach(function(c){ c.classList.remove('selected'); });
+    card.classList.add('selected');
+    var name = card.getAttribute('data-name');
+    var loc = card.getAttribute('data-loc');
+    var price = card.getAttribute('data-price');
+    sbProp.textContent = name;
+    sbPrice.textContent = price;
+    sumProp.textContent = name;
+    sumLoc.textContent = loc;
+    sumPrice.textContent = price;
+    hiddenSelection.value = name + ' — Est. ' + price;
+  }
+
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){ selectCard(card); });
+    var btn = card.querySelector('.opt-choose');
+    if(btn){ btn.addEventListener('click', function(e){ e.stopPropagation(); selectCard(card); }); }
+  });
+
+  // Default to the recommended option
+  var defaultCard = document.querySelector('.opt-card[data-key="pelican"]');
+  if(defaultCard){ selectCard(defaultCard); }
+
+  // ── Obfuscated advisor email (assembled at runtime) ──
+  var advisorEmail = 'Lisa' + '\u0040' + 'pointmetoparadise.com';
+  var emailSpan = document.getElementById('advisorEmail');
+  var a = document.createElement('a');
+  a.href = 'mailto:' + advisorEmail;
+  a.textContent = advisorEmail;
+  emailSpan.appendChild(a);
+
+  // ── Form submit (AJAX → thank-you, key never exposed in success state) ──
+  var form = document.getElementById('pmtpForm');
+  var thanks = document.getElementById('thanks');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch('https://api.web3forms.com/submit', {
+      method:'POST',
+      body:data,
+      headers:{ 'Accept':'application/json' }
+    }).then(function(res){ return res.json(); })
+      .then(function(){
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+        thanks.scrollIntoView({ behavior:'smooth', block:'center' });
+      })
+      .catch(function(){
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+      });
+  });
+</script>
+</body>
+</html>
