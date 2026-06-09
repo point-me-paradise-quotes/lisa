@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robin &amp; Luther — A Caribbean Week, Two Ways | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --aqua-pale:    #C4E4E1;
+    --aqua-mist:    #EAF3F2;
+    --aqua:         #75AFB1;
+    --aqua-dark:    #4F8A8C;
+    --sand:         #ECE7DC;
+    --sand-light:   #F4F1E9;
+    --gold-whisper: #D6C8A8;
+    --white:        #FFFFFF;
+    --paper:        #FBFDFD;
+    --ink:          #2B2420;
+    --ink-soft:     #6B6359;
+    --line:         #E5E9E8;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 500; color: var(--ink); margin: 0 0 .4em; letter-spacing: .01em; }
+  h1 { font-size: clamp(30px, 5.2vw, 50px); font-weight: 600; line-height: 1.08; }
+  h2 { font-size: clamp(24px, 3.6vw, 34px); }
+  h3 { font-size: clamp(19px, 2.4vw, 23px); }
+  p { margin: 0 0 1.05em; }
+  a { color: var(--aqua-dark); }
+
+  .tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--ink-soft); }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 26px; }
+  .section { padding: 58px 0; }
+  .band { background: var(--aqua-mist); }
+
+  /* ===== HERO ===== */
+  .pmtp-hero {
+    position: relative;
+    background-image: linear-gradient(180deg, rgba(251,253,253,.20) 0%, rgba(79,138,140,.42) 48%, rgba(43,36,32,.66) 100%), url('https://www.picarapearl.com/uploads/3/7/4/7/37471475/2202904.jpg?478');
+    background-size: cover;
+    background-position: center;
+    padding: 90px 32px 78px;
+    text-align: center;
+  }
+  .pmtp-hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+    background: var(--aqua);
+  }
+  .pmtp-wordmark {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink);
+    background: rgba(251,253,253,.92);
+    padding: 8px 16px; border-radius: 2px; margin-bottom: 26px;
+  }
+  .pmtp-hero h1 { color: var(--white); text-shadow: 0 2px 18px rgba(43,36,32,.45); max-width: 16ch; margin: 0 auto .3em; }
+  .pmtp-hero .tagline { color: #F2FBFA; font-size: clamp(18px, 2.6vw, 24px); text-shadow: 0 1px 10px rgba(43,36,32,.5); }
+  .hero-meta {
+    display: inline-flex; flex-wrap: wrap; gap: 10px 22px; justify-content: center;
+    margin-top: 26px; color: var(--white);
+    font-size: 14px; letter-spacing: .03em;
+    background: rgba(43,36,32,.30); padding: 12px 22px; border-radius: 40px;
+    backdrop-filter: blur(2px);
+  }
+  .hero-meta span { white-space: nowrap; }
+  .hero-meta b { font-weight: 600; }
+
+  /* ===== COMMITMENT CALLOUTS ===== */
+  .commit {
+    background: var(--aqua-pale);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin: 30px 0;
+  }
+  .commit p { margin: 0; font-size: 16.5px; color: var(--ink); }
+  .commit .kicker {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--aqua-dark); display: block; margin-bottom: 6px;
+  }
+
+  .lead { font-size: 18.5px; }
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .16em; font-size: 12px;
+    color: var(--aqua-dark); margin-bottom: 12px;
+  }
+
+  /* ===== AT A GLANCE ===== */
+  .glance {
+    display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 0;
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--white);
+    margin-top: 10px;
+  }
+  .glance > div { padding: 16px 18px; border-bottom: 1px solid var(--line); }
+  .glance .gh { background: var(--sand-light); font-weight: 600; }
+  .glance .row-label { font-weight: 600; color: var(--ink-soft); font-size: 14px; }
+  .glance .col-a { background: var(--paper); }
+  .glance .col-b { background: var(--paper); }
+  .glance .ship-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; }
+  .glance .ship-sub { font-family:'Cormorant Garamond',serif; font-style:italic; color: var(--ink-soft); font-size: 15px; }
+  .glance .win { display:inline-block; font-size: 11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color: var(--aqua-dark); background: var(--aqua-mist); padding: 3px 9px; border-radius: 20px; margin-top: 6px; }
+  .glance .last > div { border-bottom: none; }
+  @media (max-width: 720px) {
+    .glance { grid-template-columns: 1fr; }
+    .glance .row-label { background: var(--aqua-mist); }
+  }
+
+  .verdict {
+    background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--aqua);
+    border-radius: 12px; padding: 22px 26px; margin-top: 26px;
+  }
+  .verdict h3 { margin-bottom: .3em; }
+  .verdict p { margin-bottom: 0; }
+
+  /* ===== SAILING SELECTOR ===== */
+  .selector { display: flex; gap: 12px; flex-wrap: wrap; margin: 6px 0 28px; }
+  .selector button {
+    flex: 1 1 220px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+    text-align: left; cursor: pointer;
+    background: var(--white); color: var(--ink);
+    border: 1.5px solid var(--line); border-radius: 12px; padding: 14px 18px;
+    transition: all .18s ease;
+  }
+  .selector button .sel-line { font-family:'Cormorant Garamond',serif; font-style:italic; color: var(--ink-soft); font-size: 14px; display:block; }
+  .selector button .sel-price { font-weight:600; color: var(--aqua-dark); }
+  .selector button[aria-pressed="true"] {
+    border-color: var(--aqua); background: var(--aqua-mist);
+    box-shadow: 0 4px 16px rgba(79,138,140,.14);
+  }
+
+  /* ===== SAILING CARDS ===== */
+  .sail-card {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 18px; overflow: hidden; margin-bottom: 30px;
+  }
+  .sail-head { padding: 26px 30px 8px; }
+  .sail-head .line { font-family:'Cormorant Garamond',serif; font-style:italic; color: var(--aqua-dark); font-size: 18px; }
+  .sail-body { padding: 4px 30px 30px; }
+
+  .gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px; }
+  .gallery img { width: 100%; height: 100%; max-height: 280px; min-height: 150px; object-fit: cover; display: block; }
+  .gallery img:first-child { grid-row: span 2; max-height: 100%; }
+  @media (max-width: 640px){ .gallery { grid-template-columns: 1fr 1fr; } .gallery img:first-child { grid-column: span 2; grid-row: auto; } }
+
+  .features { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 22px; }
+  .features li { position: relative; padding-left: 22px; font-size: 15px; }
+  .features li::before { content: "›"; position: absolute; left: 4px; color: var(--aqua); font-weight: 700; }
+  @media (max-width: 560px){ .features { grid-template-columns: 1fr; } }
+
+  /* itinerary table */
+  table.itin { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+  table.itin th { text-align: left; font-family:'DM Sans',sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color: var(--ink-soft); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+  table.itin td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.itin tr:nth-child(even) td { background: var(--paper); }
+  table.itin .port { font-weight: 600; }
+  table.itin .sea { color: var(--ink-soft); font-style: italic; font-family:'Cormorant Garamond',serif; font-size: 16px; }
+
+  .pay-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .pay-grid > div { background: var(--aqua-mist); border-radius: 12px; padding: 16px 18px; }
+  .pay-grid .num { font-family:'Playfair Display',serif; font-size: 24px; font-weight: 600; color: var(--ink); }
+  .pay-grid .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); font-weight:600; }
+  .pay-grid .sub { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+  @media (max-width: 560px){ .pay-grid { grid-template-columns: 1fr; } }
+
+  .price-note {
+    background: var(--aqua-pale); border-radius: 12px; padding: 18px 22px; margin-top: 22px;
+    font-size: 15.5px;
+  }
+  .disclaimer-sm { font-size: 12.5px; color: var(--ink-soft); margin-top: 12px; }
+
+  .subhead-note { font-size: 13px; color: var(--ink-soft); }
+
+  /* ===== STICKY PRICING BAR ===== */
+  .sticky-bar {
+    position: sticky; bottom: 0; z-index: 40;
+    background: var(--white); border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 22px rgba(43,36,32,.08);
+  }
+  .sticky-inner { max-width: 1040px; margin: 0 auto; padding: 12px 26px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .sticky-inner .sb-ship { font-family:'Playfair Display',serif; font-weight:600; font-size: 16px; }
+  .sticky-inner .sb-ship small { display:block; font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; color: var(--ink-soft); font-size: 13px; }
+  .sticky-inner .sb-figs { display:flex; gap: 22px; align-items: baseline; flex-wrap: wrap; }
+  .sticky-inner .sb-total { font-family:'Playfair Display',serif; font-size: 26px; font-weight: 600; color: var(--aqua-dark); }
+  .sticky-inner .sb-mini { font-size: 13px; color: var(--ink-soft); }
+  .sticky-inner .sb-mini b { color: var(--ink); font-weight: 600; }
+  .sticky-cta {
+    font-family:'DM Sans',sans-serif; font-size: 15px; font-weight: 600; cursor: pointer;
+    background: var(--aqua); color: var(--white); border: none; border-radius: 30px; padding: 11px 24px;
+    transition: background .18s ease;
+  }
+  .sticky-cta:hover { background: var(--aqua-dark); }
+
+  /* ===== FORM ===== */
+  .form-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 30px 30px 34px; max-width: 640px; margin: 0 auto; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 540px){ .form-row { grid-template-columns: 1fr; } }
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; letter-spacing: .04em; margin-bottom: 6px; color: var(--ink); }
+  .field label .req { color: var(--aqua-dark); }
+  .field input, .field select, .field textarea {
+    width: 100%; font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--ink);
+    background: var(--paper); border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px;
+  }
+  .field textarea { min-height: 110px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--aqua); background: var(--white); }
+  .submit-btn {
+    width: 100%; font-family:'DM Sans',sans-serif; font-size: 16px; font-weight: 600; cursor: pointer;
+    background: var(--aqua); color: var(--white); border: none; border-radius: 30px; padding: 15px 24px; margin-top: 6px;
+    transition: background .18s ease;
+  }
+  .submit-btn:hover { background: var(--aqua-dark); }
+  .submit-btn:disabled { opacity: .6; cursor: default; }
+  .form-error { display:none; background:#FBECEA; color:#9A3B2E; border:1px solid #E7C3BC; border-radius:10px; padding:12px 16px; margin-bottom:16px; font-size:14.5px; }
+  .thanks { display:none; text-align:center; padding: 26px 10px; }
+  .thanks h3 { color: var(--aqua-dark); }
+  .thanks p { margin: 0 auto; max-width: 44ch; }
+
+  /* ===== FOOTER ===== */
+  .advisor { background: var(--sand-light); }
+  .advisor .wrap { padding-top: 44px; padding-bottom: 44px; }
+  .advisor-grid { display:flex; align-items:center; justify-content:space-between; gap: 24px; flex-wrap: wrap; }
+  .advisor .name { font-family:'Playfair Display',serif; font-size: 22px; font-weight: 600; }
+  .advisor .title { font-family:'Cormorant Garamond',serif; font-style:italic; color: var(--ink-soft); font-size: 17px; }
+  .advisor .contact { font-size: 14.5px; }
+  .advisor .contact a { color: var(--aqua-dark); text-decoration: none; }
+  .advisor .agency { font-family:'Playfair Display',serif; font-size: 11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color: var(--aqua-dark); }
+
+  .footnote { text-align:center; font-size: 12px; color: var(--ink-soft); padding: 24px 26px 40px; }
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="pmtp-hero">
+  <span class="pmtp-wordmark">Point Me to Paradise Travel</span>
+  <h1>A Caribbean Week, Two Ways</h1>
+  <p class="tagline">Same seven nights at sea &mdash; two very different ships to spend them on.</p>
+  <div class="hero-meta">
+    <span><b>Robin &amp; Luther</b></span>
+    <span>October 17&ndash;25, 2026</span>
+    <span>Cruise comparison</span>
+  </div>
+</header>
+
+<!-- ===================== OVERVIEW ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Your trip, side by side</div>
+    <h2>Two boats. One warm week. Your call.</h2>
+    <p class="lead tagline" style="font-size:21px; margin-bottom:1.1em;">Both sailings drop you into the Caribbean for seven nights of easy islands and warm water &mdash; the kind of stretch where you stop checking the clock somewhere around day three.</p>
+    <p>The difference isn&rsquo;t the ocean. It&rsquo;s the boat under you and the rhythm of the week. One leans loud, late, and full of places to go after dark. The other leans quiet and close to the islands. You told me what matters: the most going on at night, with plenty of venues to move between &mdash; and the fewest kids you can manage. Those two wishes don&rsquo;t land on the same ship, so I&rsquo;ve laid both out plainly below and pointed out where each one wins. No rush. Read it slow.</p>
+
+    <div class="commit">
+      <span class="kicker">Why book this with us</span>
+      <p>We don&rsquo;t book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you&rsquo;d hate doing &mdash; already done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AT A GLANCE ===================== -->
+<section class="section band">
+  <div class="wrap">
+    <div class="eyebrow">At a glance</div>
+    <h2>How the two stack up</h2>
+    <p style="max-width:62ch;">The things you actually care about, in one place &mdash; with the after-dark options and the onboard crowd up top, since that&rsquo;s where your head is.</p>
+
+    <div class="glance">
+      <div class="gh row-label">&nbsp;</div>
+      <div class="gh col-a">
+        <div class="ship-name">Norwegian Prima</div>
+        <div class="ship-sub">Sailing A &middot; Port Canaveral round-trip</div>
+      </div>
+      <div class="gh col-b">
+        <div class="ship-name">Rhapsody of the Seas</div>
+        <div class="ship-sub">Sailing B &middot; San Juan round-trip</div>
+      </div>
+
+      <div class="row-label">Evening entertainment</div>
+      <div class="col-a">The deeper bench. Broadway-style production shows, a comedy club most nights, live music spread across a row of lounges, and the audience game shows older crowds genuinely enjoy &mdash; Price Is Right, Supermarket Sweep &mdash; plus the casino. Always somewhere new to land after dinner.<div class="win">More to do &middot; your priority</div></div>
+      <div class="col-b">A smaller bench, but a full night. A different theater show nightly, ballroom-style dancing at the Shall We Dance Lounge, a piano bar, the Viking Crown up top, trivia and enrichment talks, and the casino. Enough to fill an evening &mdash; shows are good rather than spectacular.</div>
+
+      <div class="row-label">Onboard crowd &amp; kids</div>
+      <div class="col-a">Younger and busier. The waterslides, go-karts and kids&rsquo; clubs aren&rsquo;t the draw for you &mdash; but they&rsquo;re what fills the ship, so it skews family-heavy, with more noise and crowds, especially near the pools.</div>
+      <div class="col-b">Quieter and more grown-up. A destination-minded crowd, no waterpark or surf simulator. Mid-October sits outside school breaks, so you&rsquo;ll typically find fewer kids aboard.<div class="win">Fewer kids &middot; your priority</div></div>
+
+      <div class="row-label">The ship itself &amp; getting around</div>
+      <div class="col-a">Newer (2022) and large &mdash; about 3,100 guests across 20 decks. More to see, but more walking and more crowd to move through.</div>
+      <div class="col-b">Midsize and older (late &rsquo;90s, refreshed). Shorter distances, easy to find your way, calmer underfoot &mdash; the kind of ship you settle into fast.<div class="win">Easier at their pace</div></div>
+
+      <div class="row-label">Shape of the week</div>
+      <div class="col-a">4 ports + 2 sea days. Puerto Plata, St. Thomas, Tortola, and Norwegian&rsquo;s private island at Great Stirrup Cay.</div>
+      <div class="col-b">5 ports + 1 sea day. St. Thomas, Tortola, St. Maarten, Antigua, Dominica. More island time, less ship time.</div>
+
+      <div class="row-label">Your stateroom</div>
+      <div class="col-a">Interior, Deck 11 (cabin 11809). Pre-paid gratuities included.</div>
+      <div class="col-b">Inside, Deck 7 (cabin 7153). Pre-paid gratuities included. Nonrefundable deposit fare.</div>
+
+      <div class="last row-label">Estimated total</div>
+      <div class="last col-a"><span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--aqua-dark);">Est. $2,158</span><div class="sub" style="font-size:13px;color:var(--ink-soft);">$250 to hold &middot; balance June 20</div></div>
+      <div class="last col-b"><span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--aqua-dark);">Est. $1,480</span><div class="sub" style="font-size:13px;color:var(--ink-soft);">$500 to hold &middot; balance July 19</div></div>
+    </div>
+
+    <div class="verdict">
+      <h3>The honest short version</h3>
+      <p>Here&rsquo;s the honest version. It comes down to two things: how much you want going on at night, and how easy you want the ship to be to get around. <b>Prima</b> has the deeper entertainment bench &mdash; more shows, more live music, more places to land after dinner, so a dull evening isn&rsquo;t really on the table &mdash; but it&rsquo;s a big, busy ship with a fair bit of walking and a younger, family-heavy crowd. <b>Rhapsody</b> is smaller and far easier to move around, with a calmer crowd and fewer kids; the trade is fewer venues and shows that are enjoyable rather than jaw-dropping. If the most to do wins the trip, lean Prima. If an easy, unhurried ship that still has dancing and a show every night sounds better, lean Rhapsody. Whichever way you&rsquo;re leaning, we&rsquo;ll talk it through together before anything is booked.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OPTIONS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">The two sailings in full</div>
+    <h2>Pick a ship to see its plan</h2>
+    <p class="subhead-note">Tapping a ship below updates the running total at the bottom of the page. <em>Flights aren&rsquo;t included in these figures &mdash; details to follow separately.</em></p>
+
+    <div class="selector" id="selector">
+      <button id="btn-a" aria-pressed="true" onclick="selectSailing('a')">
+        Sailing A &middot; Norwegian Prima
+        <span class="sel-line">7 nights from Port Canaveral &middot; Oct 18&ndash;25</span>
+        <span class="sel-price">Est. $2,158 total</span>
+      </button>
+      <button id="btn-b" aria-pressed="false" onclick="selectSailing('b')">
+        Sailing B &middot; Rhapsody of the Seas
+        <span class="sel-line">7 nights from San Juan &middot; Oct 17&ndash;24</span>
+        <span class="sel-price">Est. $1,480 total</span>
+      </button>
+    </div>
+
+    <!-- ===== SAILING A ===== -->
+    <article class="sail-card">
+      <div class="sail-head">
+        <h3>Sailing A &mdash; Norwegian Prima</h3>
+        <span class="line">The newer, bigger one &mdash; built for people who like options.</span>
+      </div>
+      <div class="sail-body">
+        <div class="gallery">
+          <img src="https://parkwestgallery.b-cdn.net/wp-content/uploads/2022/09/reyjkavik-prima-0866-r3.jpg" alt="Norwegian Prima onboard space" loading="lazy">
+          <img src="https://www.ncl.com/sites/default/files/881x400_PRIMA-I4-IA-IB-IF-IX-Schematic.jpg" alt="Norwegian Prima interior stateroom layout" loading="lazy">
+          <img src="https://www.ncl.com/sites/default/files/820x460_Prima_Atrium_10072022.jpg" alt="Norwegian Prima atrium" loading="lazy">
+        </div>
+
+        <p style="margin-top:22px;">Prima launched in 2022 and carries around 3,100 guests, which makes the evenings the best part if entertainment is what you&rsquo;re after. Most nights you&rsquo;ve got Broadway-style production shows in the big three-story theater, a comedy club, live music threaded through a whole row of lounges, and the kind of audience game shows &mdash; Price Is Right, Supermarket Sweep &mdash; that are genuinely fun in a crowd. There&rsquo;s plenty to do after dinner without ever repeating yourself, which is really the whole point here: nobody&rsquo;s getting bored.</p>
+        <p>The flip side of all that ship is that it&rsquo;s big &mdash; twenty decks, a fair bit of walking, and a daytime energy that skews young and family-heavy. The go-karts and waterslides aren&rsquo;t for you, but they&rsquo;re what packs the place. So the question is honest and simple: if a full, varied evening matters more than a calm, easy-to-navigate ship, Prima is the one that keeps you entertained.</p>
+
+        <h4 style="margin-top:8px;">What you&rsquo;ll find most nights</h4>
+        <ul class="features">
+          <li>Broadway-style production shows, nightly</li>
+          <li>Live music across a row of lounges</li>
+          <li>The Improv at Sea &mdash; comedy most nights</li>
+          <li>Audience game shows (Price Is Right &amp; more)</li>
+          <li>Syd Norman&rsquo;s Pour House &mdash; live house band</li>
+          <li>Full casino &amp; late-night dancing</li>
+        </ul>
+
+        <h4 style="margin-top:26px;">Day by day</h4>
+        <table class="itin">
+          <thead><tr><th>Day</th><th>Port</th><th>Arrive</th><th>Depart</th></tr></thead>
+          <tbody>
+            <tr><td>Sun, Oct 18</td><td class="port">Port Canaveral (Orlando)</td><td>&mdash;</td><td>4:00 pm</td></tr>
+            <tr><td>Mon, Oct 19</td><td class="sea">At sea</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>Tue, Oct 20</td><td class="port">Puerto Plata, D.R.</td><td>9:00 am</td><td>4:00 pm</td></tr>
+            <tr><td>Wed, Oct 21</td><td class="port">St. Thomas</td><td>11:00 am</td><td>7:00 pm</td></tr>
+            <tr><td>Thu, Oct 22</td><td class="port">Tortola, B.V.I.</td><td>6:45 am</td><td>2:00 pm</td></tr>
+            <tr><td>Fri, Oct 23</td><td class="sea">At sea</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>Sat, Oct 24</td><td class="port">Great Stirrup Cay (private island)</td><td>10:30 am</td><td>5:30 pm</td></tr>
+            <tr><td>Sun, Oct 25</td><td class="port">Port Canaveral (Orlando)</td><td>7:00 am</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:26px;">Your stateroom</h4>
+        <p style="margin-bottom:.4em;">Interior stateroom, Deck 11 &mdash; cabin 11809, a short walk from the elevators. Pre-paid gratuities are already built in, so that&rsquo;s one less thing waiting for you at the end of the week.</p>
+
+        <div class="pay-grid">
+          <div><div class="lbl">Estimated total</div><div class="num">Est. $2,158</div><div class="sub">total for the sailing</div></div>
+          <div><div class="lbl">To hold</div><div class="num">$250</div><div class="sub">deposit</div></div>
+          <div><div class="lbl">Balance due</div><div class="num">$1,908</div><div class="sub">by June 20, 2026</div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== SAILING B ===== -->
+    <article class="sail-card">
+      <div class="sail-head">
+        <h3>Sailing B &mdash; Rhapsody of the Seas</h3>
+        <span class="line">The smaller, quieter soul &mdash; built around the islands, not the ship.</span>
+      </div>
+      <div class="sail-body">
+        <div class="gallery">
+          <img src="https://images.squarespace-cdn.com/content/v1/6599b19fca71f43ddf4d6a70/f8d9ec90-9b08-40e4-9d72-e98c0f167348/IMG_6466+Large.jpeg" alt="Rhapsody of the Seas onboard" loading="lazy">
+          <img src="https://a.storyblok.com/f/306333/1920x1080/8c53e03494/rhapsodyofthesea.jpg/m/1920x1080/filters:format(webp):quality(70)" alt="Rhapsody of the Seas at sea" loading="lazy">
+          <img src="https://www.taoticket.com/assets/images/navi/royal-caribbean-rhapsody-of-the-seas-02-Qw5tfHt.webp" alt="Rhapsody of the Seas ship" loading="lazy">
+        </div>
+
+        <p style="margin-top:22px;">Rhapsody dates to the late nineties and has been refreshed since, and the real appeal is how easy it is to just be aboard. It&rsquo;s a midsize ship &mdash; short distances, simple to find your way, no marathon walk to dinner. Evenings center on the theater, which runs a different show every night, and then a handful of lounges carry the rest: ballroom-style dancing at the Shall We Dance Lounge, a piano bar, the Viking Crown up top with the views and dancing after dark, trivia and enrichment talks through the day, and the casino. Honest note &mdash; the production shows are enjoyable rather than jaw-dropping, but between the dancing, the live music and the trivia there&rsquo;s enough to keep an evening moving.</p>
+        <p>And on the other thing you asked about: this is the calmer, more grown-up ship. A destination-minded crowd, and because mid-October falls outside the school-break weeks, you&rsquo;ll typically find fewer kids aboard. The week leans on five islands rather than the boat &mdash; more time ashore, less time on a busy pool deck.</p>
+
+        <h4 style="margin-top:8px;">What you&rsquo;ll find most nights</h4>
+        <ul class="features">
+          <li>Main theater &mdash; a different show every night</li>
+          <li>Shall We Dance Lounge &mdash; ballroom dancing, live music</li>
+          <li>Viking Crown Lounge &mdash; views by day, dancing after dark</li>
+          <li>Schooner piano bar &amp; the R Bar</li>
+          <li>Trivia, enrichment talks &amp; game shows</li>
+          <li>Casino Royale</li>
+        </ul>
+
+        <h4 style="margin-top:26px;">Day by day</h4>
+        <table class="itin">
+          <thead><tr><th>Day</th><th>Port</th><th>Arrive</th><th>Depart</th></tr></thead>
+          <tbody>
+            <tr><td>Sat, Oct 17</td><td class="port">San Juan, Puerto Rico</td><td>&mdash;</td><td>6:00 pm</td></tr>
+            <tr><td>Sun, Oct 18</td><td class="port">Charlotte Amalie, St. Thomas</td><td>8:00 am</td><td>5:00 pm</td></tr>
+            <tr><td>Mon, Oct 19</td><td class="port">Tortola, B.V.I.</td><td>8:00 am</td><td>5:00 pm</td></tr>
+            <tr><td>Tue, Oct 20</td><td class="port">Philipsburg, St. Maarten</td><td>8:00 am</td><td>5:00 pm</td></tr>
+            <tr><td>Wed, Oct 21</td><td class="port">St. John&rsquo;s, Antigua</td><td>8:00 am</td><td>5:00 pm</td></tr>
+            <tr><td>Thu, Oct 22</td><td class="port">Roseau, Dominica</td><td>8:00 am</td><td>5:00 pm</td></tr>
+            <tr><td>Fri, Oct 23</td><td class="sea">Cruising</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>Sat, Oct 24</td><td class="port">San Juan, Puerto Rico</td><td>6:00 am</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:26px;">Your stateroom</h4>
+        <p style="margin-bottom:.4em;">Inside stateroom, Deck 7 &mdash; cabin 7153, with pre-paid gratuities already built in, same as Prima &mdash; one less thing to settle at the end of the week. Worth knowing up front: the deposit on this fare is nonrefundable, so it&rsquo;s a commit-and-go rate. Lock it in only once you&rsquo;re sure this is the week.</p>
+
+        <div class="pay-grid">
+          <div><div class="lbl">Estimated total</div><div class="num">Est. $1,480</div><div class="sub">total for the sailing</div></div>
+          <div><div class="lbl">To hold</div><div class="num">$500</div><div class="sub">deposit (nonrefundable)</div></div>
+          <div><div class="lbl">Balance due</div><div class="num">$980.14</div><div class="sub">by July 19, 2026</div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- pricing commitment + disclaimer -->
+    <div class="price-note">
+      We check every component against public rates and meet or beat them. You&rsquo;re not paying a premium for our convenience &mdash; you&rsquo;re paying for the rest of what we do.
+    </div>
+    <p class="disclaimer-sm">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</section>
+
+<!-- ===================== AFTER-QUOTE COMMITMENT + FORM ===================== -->
+<section class="section band">
+  <div class="wrap">
+    <div class="commit" style="margin-top:0;">
+      <span class="kicker">What happens after you pick</span>
+      <p>What&rsquo;s coming after this quote: a destination guide built for your trip &mdash; PDF or interactive in-app, with Google Maps links to every place we send you &mdash; a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+
+    <h2 style="text-align:center; margin-top:34px;">Tell me which way you&rsquo;re leaning</h2>
+    <p class="tagline" style="text-align:center; font-size:19px; margin-bottom:24px;">A line back is all it takes &mdash; questions welcome, no decision required yet.</p>
+
+    <div class="form-card">
+      <div class="form-error" id="formError">Something didn&rsquo;t go through on our end. Mind trying once more, or email me directly?</div>
+
+      <form id="quoteForm">
+        <input type="hidden" name="access_key" value="e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff">
+        <input type="hidden" name="subject" value="Quote Response — Robin & Luther | Caribbean">
+        <input type="hidden" name="from_name" value="Robin & Luther Quote — Point Me to Paradise">
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="field">
+            <label for="option">Which sailing has your attention?</label>
+            <select id="option" name="option_interest">
+              <option value="Still comparing">Still comparing the two</option>
+              <option value="Norwegian Prima — Port Canaveral">Norwegian Prima &mdash; Port Canaveral</option>
+              <option value="Rhapsody of the Seas — San Juan">Rhapsody of the Seas &mdash; San Juan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="insurance">Travel insurance</label>
+          <select id="insurance" name="travel_insurance">
+            <option value="Yes — I'd like a quote">Yes &mdash; I&rsquo;d like a quote</option>
+            <option value="No — not interested">No &mdash; not interested</option>
+            <option value="Already have coverage">Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Anything you want me to know</label>
+          <textarea id="message" name="message" placeholder="Leanings, questions, dates that flex, who's traveling..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send it to Lisa</button>
+      </form>
+
+      <div class="thanks" id="thanks">
+        <h3>Got it &mdash; thank you.</h3>
+        <p>Your note is on its way to me. I&rsquo;ll read it properly and come back to you with next steps. No need to do anything else for now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADVISOR FOOTER ===================== -->
+<footer class="advisor">
+  <div class="wrap">
+    <div class="advisor-grid">
+      <div>
+        <div class="name">Lisa Darling</div>
+        <div class="title">Travel Advisor</div>
+      </div>
+      <div class="contact">
+        <div>Email: <a id="advisorEmail" href="#">&nbsp;</a></div>
+        <div>Phone: <a href="tel:+12815081623">(281) 508-1623</a></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="agency">Point Me to Paradise Travel</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== STICKY PRICING BAR ===================== -->
+<div class="sticky-bar">
+  <div class="sticky-inner">
+    <div class="sb-ship" id="sbShip">Norwegian Prima<small id="sbSub">7 nights &middot; Port Canaveral &middot; Oct 18&ndash;25</small></div>
+    <div class="sb-figs">
+      <div class="sb-total" id="sbTotal">Est. $2,158</div>
+      <div class="sb-mini">Hold for <b id="sbDeposit">$250</b></div>
+      <div class="sb-mini">Balance <b id="sbBalance">$1,908</b> &middot; <span id="sbDue">due June 20</span></div>
+    </div>
+    <button class="sticky-cta" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth',block:'center'})">Tell Lisa your pick</button>
+  </div>
+</div>
+
+<p class="footnote">Prepared for Robin &amp; Luther by Lisa Darling &middot; Point Me to Paradise Travel. Pricing and availability subject to change until fully booked; final pricing confirmed by your advisor.</p>
+
+<script>
+  /* ---- sailing data ---- */
+  var SAILINGS = {
+    a: { ship:'Norwegian Prima', sub:'7 nights · Port Canaveral · Oct 18–25', total:'Est. $2,158', deposit:'$250', balance:'$1,908', due:'due June 20' },
+    b: { ship:'Rhapsody of the Seas', sub:'7 nights · San Juan · Oct 17–24', total:'Est. $1,480', deposit:'$500', balance:'$980.14', due:'due July 19' }
+  };
+  var OPTION_FOR = { a:'Norwegian Prima — Port Canaveral', b:'Rhapsody of the Seas — San Juan' };
+
+  function selectSailing(key){
+    var s = SAILINGS[key];
+    /* sticky bar */
+    document.getElementById('sbShip').childNodes[0].nodeValue = s.ship;
+    document.getElementById('sbSub').textContent = s.sub;
+    document.getElementById('sbTotal').textContent = s.total;
+    document.getElementById('sbDeposit').textContent = s.deposit;
+    document.getElementById('sbBalance').textContent = s.balance;
+    document.getElementById('sbDue').textContent = s.due;
+    /* selector buttons */
+    document.getElementById('btn-a').setAttribute('aria-pressed', key === 'a');
+    document.getElementById('btn-b').setAttribute('aria-pressed', key === 'b');
+    /* keep the form's option select in sync */
+    var sel = document.getElementById('option');
+    for (var i=0; i<sel.options.length; i++){
+      if (sel.options[i].value === OPTION_FOR[key]) { sel.selectedIndex = i; break; }
+    }
+  }
+
+  /* ---- obfuscated advisor email, assembled at runtime ---- */
+  (function(){
+    var user = 'lisa';
+    var domain = 'pointmetoparadise.com';
+    var addr = user + '\u0040' + domain;
+    var a = document.getElementById('advisorEmail');
+    a.textContent = addr;
+    a.setAttribute('href', 'mailto:' + addr);
+  })();
+
+  /* ---- Web3Forms submission via fetch only (no native POST) ---- */
+  (function(){
+    var form = document.getElementById('quoteForm');
+    var errBox = document.getElementById('formError');
+    var btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      errBox.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var data = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(json){
+        if (json.success) {
+          form.style.display = 'none';
+          errBox.style.display = 'none';
+          document.getElementById('thanks').style.display = 'block';
+        } else {
+          throw new Error('submit failed');
+        }
+      })
+      .catch(function(){
+        btn.disabled = false;
+        btn.textContent = 'Send it to Lisa';
+        errBox.style.display = 'block';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
