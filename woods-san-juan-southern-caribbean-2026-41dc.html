@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Juan &amp; the Southern Caribbean — Hyacinth &amp; Tadarell Woods | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale:    #C4E4E1;
+  --aqua-mist:    #EAF3F2;
+  --aqua:         #75AFB1;
+  --aqua-dark:    #4F8A8C;
+  --sand:         #ECE7DC;
+  --sand-light:   #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white:        #FFFFFF;
+  --paper:        #FBFDFD;
+  --ink:          #2B2420;
+  --ink-soft:     #6B6359;
+  --line:         #E5E9E8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'DM Sans',sans-serif;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  font-size:16px;
+}
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; font-weight:600; line-height:1.25; }
+.wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+
+/* ---------- Hero ---------- */
+.pmtp-hero {
+  position:relative;
+  background:
+    linear-gradient(180deg, rgba(251,253,253,0.0) 0%, rgba(251,253,253,0.55) 78%, var(--paper) 100%),
+    radial-gradient(120% 90% at 50% 0%, var(--aqua-pale) 0%, var(--aqua-mist) 46%, var(--paper) 100%);
+  background-size:cover;
+  background-position:center;
+  padding:78px 32px 60px;
+  text-align:center;
+  overflow:hidden;
+}
+.pmtp-hero svg.hero-waves {
+  position:absolute; left:0; right:0; bottom:-2px; width:100%; height:90px; display:block; pointer-events:none;
+}
+.pmtp-wordmark {
+  font-family:'Playfair Display',serif;
+  font-size:11px; font-weight:600;
+  letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--aqua-dark);
+}
+.hero-rule { width:44px; height:1px; background:var(--aqua); margin:20px auto; opacity:0.7; }
+.pmtp-hero h1 { font-size:clamp(32px,5.2vw,50px); font-weight:500; color:var(--ink); }
+.hero-sub {
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500;
+  font-size:clamp(19px,2.6vw,24px); color:var(--aqua-dark); margin-top:10px;
+}
+.hero-meta { margin-top:26px; font-size:14px; color:var(--ink-soft); letter-spacing:0.04em; }
+.hero-meta strong { color:var(--ink); font-weight:600; }
+.hero-badges { margin-top:22px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1; }
+.badge {
+  background:var(--white); border:1px solid var(--line); border-radius:999px;
+  padding:7px 16px; font-size:13px; font-weight:500; color:var(--aqua-dark);
+  display:inline-flex; align-items:center; gap:7px;
+}
+.badge svg { width:14px; height:14px; stroke:var(--aqua); stroke-width:1.6; fill:none; }
+
+/* ---------- Sections ---------- */
+section.block { padding:56px 0; }
+section.band { background:var(--aqua-mist); }
+.eyebrow {
+  font-size:11px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--aqua-dark); margin-bottom:10px;
+}
+.block h2 { font-size:clamp(25px,3.4vw,32px); font-weight:500; margin-bottom:16px; }
+.lede { font-size:17px; color:var(--ink-soft); max-width:660px; }
+
+/* commitment callouts */
+.commit {
+  background:var(--aqua-pale); border-radius:12px;
+  padding:22px 26px; margin-top:30px;
+}
+.commit p { font-size:15.5px; color:var(--ink); }
+.commit .commit-tag {
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px;
+  color:var(--aqua-dark); display:block; margin-bottom:4px;
+}
+
+/* facts grid */
+.facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:30px; }
+.fact { background:var(--white); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+.fact .k { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; }
+.fact .v { font-family:'Playfair Display',serif; font-size:18px; font-weight:500; margin-top:6px; color:var(--ink); }
+
+/* flights */
+.flight-card { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:26px 28px; margin-top:22px; }
+.flight-card .fc-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+.flight-card .fc-title { font-family:'Playfair Display',serif; font-size:19px; font-weight:500; }
+.flight-card .fc-date { font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--aqua-dark); }
+.leg { display:grid; grid-template-columns:1fr auto 1fr; gap:12px; align-items:center; padding:14px 0; border-top:1px solid var(--line); }
+.leg .ap { }
+.leg .ap .t { font-family:'Playfair Display',serif; font-size:20px; font-weight:500; }
+.leg .ap .c { font-size:13px; color:var(--ink-soft); margin-top:2px; }
+.leg .mid { text-align:center; font-size:12px; color:var(--ink-soft); }
+.leg .mid svg { width:56px; height:14px; display:block; margin:0 auto 4px; stroke:var(--aqua); stroke-width:1.5; fill:none; }
+.leg .ap.right { text-align:right; }
+.fc-note { font-size:13.5px; color:var(--ink-soft); margin-top:12px; }
+
+/* hotel */
+.room-card { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:30px 32px; margin-top:30px; }
+.room-card h3 { font-size:21px; font-weight:500; }
+.room-card .room-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px; color:var(--aqua-dark); margin:4px 0 16px; }
+.room-list { list-style:none; margin-top:8px; }
+.room-list li { padding:8px 0 8px 26px; position:relative; font-size:15px; color:var(--ink); border-bottom:1px solid var(--line); }
+.room-list li:last-child { border-bottom:none; }
+.room-list li svg { position:absolute; left:0; top:11px; width:15px; height:15px; stroke:var(--aqua); stroke-width:1.8; fill:none; }
+
+/* itinerary */
+.itin { margin-top:34px; border-top:1px solid var(--line); }
+.itin-row {
+  display:grid; grid-template-columns:110px 1fr 150px;
+  gap:16px; padding:16px 4px; border-bottom:1px solid var(--line); align-items:baseline;
+}
+.itin-row .day { font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--aqua-dark); }
+.itin-row .port { font-family:'Playfair Display',serif; font-size:17px; font-weight:500; }
+.itin-row .port small { display:block; font-family:'DM Sans',sans-serif; font-size:13.5px; font-weight:400; color:var(--ink-soft); margin-top:2px; }
+.itin-row .times { font-size:13.5px; color:var(--ink-soft); text-align:right; }
+@media (max-width:560px){
+  .itin-row { grid-template-columns:1fr; gap:2px; }
+  .itin-row .times { text-align:left; }
+  .leg { grid-template-columns:1fr; text-align:left; }
+  .leg .ap.right { text-align:left; }
+  .leg .mid { text-align:left; }
+  .leg .mid svg { margin:0 0 4px; }
+}
+
+/* activities */
+.acts { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:30px; }
+.act { background:var(--white); border:1px solid var(--line); border-radius:12px; padding:20px 22px; }
+.act h4 { font-size:16px; font-weight:600; margin-bottom:6px; }
+.act p { font-size:14.5px; color:var(--ink-soft); }
+
+/* good to know */
+.know { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:30px; }
+.know-item { background:var(--white); border:1px solid var(--line); border-radius:12px; padding:20px 22px; }
+.know-item h4 { font-size:16px; font-weight:600; margin-bottom:6px; display:flex; align-items:center; gap:9px; }
+.know-item h4 svg { width:17px; height:17px; stroke:var(--aqua-dark); stroke-width:1.7; fill:none; flex:none; }
+.know-item p { font-size:14.5px; color:var(--ink-soft); }
+
+/* pricing */
+.price-card {
+  background:var(--white); border:1px solid var(--line); border-radius:16px;
+  padding:36px; margin-top:30px; text-align:center;
+}
+.price-card .basis { font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--ink-soft); }
+.price-card .amount { font-family:'Playfair Display',serif; font-size:clamp(38px,6vw,50px); font-weight:500; color:var(--ink); margin:8px 0 2px; }
+.price-card .per { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--aqua-dark); }
+.pay-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin-top:28px; text-align:left; }
+.pay { background:var(--aqua-mist); border-radius:12px; padding:18px 20px; }
+.pay .k { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--aqua-dark); font-weight:600; }
+.pay .v { font-family:'Playfair Display',serif; font-size:19px; font-weight:500; margin-top:5px; }
+.pay .d { font-size:13px; color:var(--ink-soft); margin-top:2px; }
+.disc { font-size:13px; color:var(--ink-soft); margin-top:22px; }
+
+/* form */
+.form-card { background:var(--white); border:1px solid var(--line); border-radius:16px; padding:36px; margin-top:30px; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-grid .full { grid-column:1 / -1; }
+@media (max-width:560px){ .form-grid { grid-template-columns:1fr; } }
+label { display:block; font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px; }
+input, select, textarea {
+  width:100%; font-family:'DM Sans',sans-serif; font-size:16px; color:var(--ink);
+  background:var(--paper); border:1px solid var(--line); border-radius:9px;
+  padding:12px 14px; outline:none; transition:border-color .15s;
+}
+input:focus, select:focus, textarea:focus { border-color:var(--aqua); }
+textarea { resize:vertical; min-height:96px; }
+.btn {
+  display:inline-block; font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600;
+  color:var(--white); background:var(--aqua); border:none; border-radius:999px;
+  padding:14px 38px; cursor:pointer; letter-spacing:0.02em; transition:background .15s;
+}
+.btn:hover { background:var(--aqua-dark); }
+.btn:focus-visible { outline:2px solid var(--aqua-dark); outline-offset:3px; }
+.thanks { display:none; text-align:center; padding:30px 10px; }
+.thanks h3 { font-size:24px; font-weight:500; margin-bottom:10px; }
+.thanks p { color:var(--ink-soft); }
+.form-err { display:none; font-size:14px; color:#9C4A3C; margin-top:14px; text-align:center; }
+
+/* footer */
+footer { background:var(--sand-light); padding:52px 24px 44px; text-align:center; margin-top:20px; }
+footer .f-name { font-family:'Playfair Display',serif; font-size:22px; font-weight:500; }
+footer .f-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px; color:var(--aqua-dark); margin-top:2px; }
+footer .f-links { margin-top:14px; font-size:15px; }
+footer .f-links a { color:var(--aqua-dark); text-decoration:none; font-weight:500; }
+footer .f-links a:hover { text-decoration:underline; }
+footer .f-agency { margin-top:18px; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; color:var(--ink-soft); }
+.legal { font-size:12.5px; color:var(--ink-soft); max-width:680px; margin:26px auto 0; }
+@media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-rule"></div>
+  <h1>San Juan &amp; the<br>Southern Caribbean</h1>
+  <p class="hero-sub">Prepared for Hyacinth &amp; Tadarell Woods</p>
+  <p class="hero-meta"><strong>Flights · Hotel · 7-Night Cruise</strong> &nbsp;·&nbsp; December 3–12, 2026 &nbsp;·&nbsp; Celebrity Constellation</p>
+  <div class="hero-badges">
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M2 16l20-6-4-2-4 2-8-4-2 1 6 5-6 2-2-1-1 1 4 2h1z" stroke-linejoin="round"/></svg>Round-trip air from Houston</span>
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13" stroke-linecap="round" stroke-linejoin="round"/></svg>Hotel across from the cruise port</span>
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cruise gratuities included</span>
+  </div>
+  <svg class="hero-waves" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,55 C200,20 400,80 600,50 C800,20 1000,75 1200,45 L1200,90 L0,90 Z" fill="#FBFDFD" opacity="0.9"/>
+    <path d="M0,70 C220,45 420,90 620,65 C820,42 1020,85 1200,60 L1200,90 L0,90 Z" fill="#FBFDFD"/>
+  </svg>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">Your Trip at a Glance</div>
+    <h2>Two nights in San Juan, then five islands by sea</h2>
+    <p class="lede">You fly into San Juan two days early — no race to the pier, no weather nerves. Your hotel sits directly across from the cruise port, so boarding day is a stroll, not a transfer. Then Celebrity Constellation takes over: St. Thomas, St. Maarten, Antigua, St. Lucia, and Barbados on five consecutive days, one full sea day, and back to San Juan for the flight home.</p>
+
+    <div class="facts">
+      <div class="fact"><div class="k">Depart Houston</div><div class="v">Thu, Dec 3, 2026</div></div>
+      <div class="fact"><div class="k">San Juan Hotel</div><div class="v">Hotel Rumbao · 2 nights</div></div>
+      <div class="fact"><div class="k">Cruise</div><div class="v">Constellation · Dec 5–12</div></div>
+      <div class="fact"><div class="k">Guests</div><div class="v">Two · Cabin 8108</div></div>
+    </div>
+
+    <div class="commit">
+      <span class="commit-tag">Why book with us</span>
+      <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLIGHTS ================= -->
+<section class="block band">
+  <div class="wrap">
+    <div class="eyebrow">Getting There &amp; Back</div>
+    <h2>Your flights</h2>
+    <p class="lede">American Airlines both ways, economy, connecting in Dallas–Fort Worth. Flying in on December 3 puts you in San Juan two full days before the ship sails.</p>
+
+    <div class="flight-card">
+      <div class="fc-head">
+        <div class="fc-title">Houston to San Juan</div>
+        <div class="fc-date">Thursday, December 3, 2026</div>
+      </div>
+      <div class="leg">
+        <div class="ap"><div class="t">5:44 a.m.</div><div class="c">Houston Hobby (HOU)</div></div>
+        <div class="mid"><svg viewBox="0 0 56 14"><path d="M2 7h44m0 0l-6-4m6 4l-6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>AA 5338 · 1 hr 26 min</div>
+        <div class="ap right"><div class="t">7:10 a.m.</div><div class="c">Dallas–Fort Worth (DFW)</div></div>
+      </div>
+      <div class="leg">
+        <div class="ap"><div class="t">8:09 a.m.</div><div class="c">Dallas–Fort Worth (DFW)</div></div>
+        <div class="mid"><svg viewBox="0 0 56 14"><path d="M2 7h44m0 0l-6-4m6 4l-6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>AA 3082 · 4 hr 37 min</div>
+        <div class="ap right"><div class="t">2:46 p.m.</div><div class="c">San Juan (SJU)</div></div>
+      </div>
+      <p class="fc-note">Both legs nonstop; roughly one-hour connection in Dallas. You land mid-afternoon — in time for hotel check-in at 4:00 p.m. and dinner in Old San Juan.</p>
+    </div>
+
+    <div class="flight-card">
+      <div class="fc-head">
+        <div class="fc-title">San Juan to Houston</div>
+        <div class="fc-date">Saturday, December 12, 2026</div>
+      </div>
+      <div class="leg">
+        <div class="ap"><div class="t">3:50 p.m.</div><div class="c">San Juan (SJU)</div></div>
+        <div class="mid"><svg viewBox="0 0 56 14"><path d="M2 7h44m0 0l-6-4m6 4l-6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>AA 3082 · 5 hr 44 min</div>
+        <div class="ap right"><div class="t">7:34 p.m.</div><div class="c">Dallas–Fort Worth (DFW)</div></div>
+      </div>
+      <div class="leg">
+        <div class="ap"><div class="t">10:41 p.m.</div><div class="c">Dallas–Fort Worth (DFW)</div></div>
+        <div class="mid"><svg viewBox="0 0 56 14"><path d="M2 7h44m0 0l-6-4m6 4l-6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>AA 5370 · 1 hr 17 min</div>
+        <div class="ap right"><div class="t">11:58 p.m.</div><div class="c">Houston Hobby (HOU)</div></div>
+      </div>
+      <p class="fc-note">The ship docks at 7:00 a.m. and your flight leaves at 3:50 p.m. — a relaxed morning to disembark, with time for one last walk through Old San Juan. Both legs nonstop, connecting in Dallas; home just before midnight. Checked baggage fees may apply on all flights.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOTEL ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">Nights One &amp; Two</div>
+    <h2>Hotel Rumbao, a Tribute Portfolio Hotel</h2>
+    <p class="lede">Two nights at the edge of Old San Juan, directly across from the cruise port — on boarding day, the ship is essentially across the street. Check-in Thursday, December 3 at 4:00 p.m.; check-out Saturday, December 5 at 11:00 a.m.</p>
+
+    <div class="room-card">
+      <h3>Deluxe Room · 1 King Bed · Bay View</h3>
+      <p class="room-sub">100 Brumbaugh Street, San Juan · non-smoking · two adults</p>
+      <ul class="room-list">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>King pillowtop bed with premium bedding, down duvet, and blackout drapes</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Room overlooking the bay</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Free WiFi (50+ Mbps) and 42-inch TV with premium channels</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Coffee/tea maker, electric kettle, room service (limited hours), refrigerator on request</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Private bathroom with shower/tub combination, slippers, and designer toiletries</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>In-room safe, iron and board, laptop workspace, climate-controlled A/C</li>
+      </ul>
+      <p class="fc-note" style="margin-top:16px;">An $84.00 resort fee (total for the stay) is collected by the property at check-in — it is not part of your package payment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ITINERARY ================= -->
+<section class="block band">
+  <div class="wrap">
+    <div class="eyebrow">Day by Day</div>
+    <h2>The full itinerary</h2>
+    <p class="lede">Every cruise port day runs 8:00 a.m. to 5:00 p.m. — a full nine hours ashore, five days in a row.</p>
+
+    <div class="itin">
+      <div class="itin-row">
+        <div class="day">Thu · Dec 3</div>
+        <div class="port">Fly Houston to San Juan<small>Land at 2:46 p.m., check in at Hotel Rumbao at 4:00 p.m. Old San Juan's cobblestones are steps away.</small></div>
+        <div class="times">Arrive 2:46 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Fri · Dec 4</div>
+        <div class="port">San Juan, on your schedule<small>A full free day — El Morro, the old city, or one of the optional excursions below.</small></div>
+        <div class="times">—</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Sat · Dec 5</div>
+        <div class="port">Board Celebrity Constellation<small>Check out at 11:00 a.m. and cross to the port. Priority check-in and embarkation lunch with Concierge Class.</small></div>
+        <div class="times">Sails 6:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Sun · Dec 6</div>
+        <div class="port">Charlotte Amalie, St. Thomas<small>Duty-free shopping downtown, or the Skyride up to Paradise Point for the harbor view.</small></div>
+        <div class="times">8:00 a.m. – 5:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Mon · Dec 7</div>
+        <div class="port">Philipsburg, St. Maarten<small>Dutch on one side, French on the other — the boardwalk and Front Street are steps from the pier.</small></div>
+        <div class="times">8:00 a.m. – 5:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Tue · Dec 8</div>
+        <div class="port">St. John's, Antigua<small>An island that claims a beach for every day of the year; Nelson's Dockyard for the history-minded.</small></div>
+        <div class="times">8:00 a.m. – 5:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Wed · Dec 9</div>
+        <div class="port">Castries, St. Lucia<small>The Pitons rise straight out of the sea on the island's west coast — worth the drive south.</small></div>
+        <div class="times">8:00 a.m. – 5:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Thu · Dec 10</div>
+        <div class="port">Bridgetown, Barbados<small>The southernmost call — rum distilleries, calm west-coast beaches, and a UNESCO-listed old town.</small></div>
+        <div class="times">8:00 a.m. – 5:00 p.m.</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Fri · Dec 11</div>
+        <div class="port">At Sea<small>The spa, the pool deck, a long lunch. You've earned it.</small></div>
+        <div class="times">—</div>
+      </div>
+      <div class="itin-row">
+        <div class="day">Sat · Dec 12</div>
+        <div class="port">San Juan, Puerto Rico<small>The ship arrives at 7:00 a.m.; disembarkation follows breakfast, then your 3:50 p.m. flight home to Houston.</small></div>
+        <div class="times">Arrives 7:00 a.m.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATEROOM ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">Your Week at Sea</div>
+    <h2>Concierge Class balcony — Cabin 8108</h2>
+    <p class="lede">Panorama Deck, with floor-to-ceiling sliding glass doors and a private veranda with lounge seating. Concierge Class adds a layer of service on top of the stateroom itself.</p>
+
+    <div class="room-card">
+      <h3>What Concierge Class includes</h3>
+      <p class="room-sub">Cabin 8108 · Panorama Deck · beds configured together · connecting cabin 8110</p>
+      <ul class="room-list">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Personalized concierge service throughout the sailing</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority check-in and an exclusive embarkation-day lunch</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Preferred seating times in the main and specialty restaurants</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Veranda with lounge seating behind floor-to-ceiling glass doors</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Accessible bathroom: roll-in shower with fold-down bench and hand-held showerhead, grab bars, raised toilet, lowered sink, vanity, and safe</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Open (Select) dining — dine when you like, table for two</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAN JUAN ACTIVITIES ================= -->
+<section class="block band">
+  <div class="wrap">
+    <div class="eyebrow">Optional · Friday, December 4</div>
+    <h2>Ways to spend your San Juan day</h2>
+    <p class="lede">Your free day before the cruise is a blank page. Any of these can be added to your package — ask Lisa for current pricing and she'll handle the booking.</p>
+
+    <div class="acts">
+      <div class="act">
+        <h4>Bio Bay night kayak, Fajardo</h4>
+        <p>Paddle Laguna Grande after dark, where microscopic dinoflagellates glow with every stroke. Transport from San Juan included.</p>
+      </div>
+      <div class="act">
+        <h4>El Yunque Rainforest &amp; Luquillo Beach</h4>
+        <p>Natural waterslides in the only tropical rainforest in the U.S. forest system, then an afternoon on Luquillo's calm sand.</p>
+      </div>
+      <div class="act">
+        <h4>Mixology class at Casa BACARDÍ</h4>
+        <p>A welcome cocktail at the Pavilion, the story behind the classics, and the fundamentals of building them yourself.</p>
+      </div>
+      <div class="act">
+        <h4>San Juan food tour</h4>
+        <p>Three hours of single-origin Puerto Rican coffee, chocolate, street food, and mofongo along the old city's cobblestone streets.</p>
+      </div>
+      <div class="act">
+        <h4>Sunset harbor boat ride</h4>
+        <p>An easy evening pontoon cruise around San Juan Bay as the light goes gold behind the city walls.</p>
+      </div>
+      <div class="act">
+        <h4>Round-trip airport transfer</h4>
+        <p>Private van service between SJU and your hotel, both directions — no taxi line on arrival day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOOD TO KNOW ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">Good to Know</div>
+    <h2>The practical details</h2>
+
+    <div class="know">
+      <div class="know-item">
+        <h4><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cruise gratuities: included</h4>
+        <p>Onboard gratuities for your cruise are included in the pricing below. No daily service charge will be added to your shipboard account.</p>
+      </div>
+      <div class="know-item">
+        <h4><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M5 3h14v6a7 7 0 01-14 0V3z" stroke-linecap="round" stroke-linejoin="round"/></svg>Drinks &amp; specialty dining: extra</h4>
+        <p>Beverage packages and specialty restaurants are not included and can be added at additional cost. Ask Lisa about pre-cruise pricing — it's usually better than booking on board.</p>
+      </div>
+      <div class="know-item">
+        <h4><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg>$84 resort fee at the hotel</h4>
+        <p>Hotel Rumbao collects an $84.00 resort fee (total) at check-in. Everything else at the hotel is prepaid through your package.</p>
+      </div>
+      <div class="know-item">
+        <h4><svg viewBox="0 0 24 24"><path d="M6 3h12v6a6 6 0 01-12 0V3zM9 21h6M12 15v6" stroke-linecap="round" stroke-linejoin="round"/></svg>Baggage fees</h4>
+        <p>Checked baggage fees may apply on your American Airlines flights and are paid to the airline directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="block band">
+  <div class="wrap">
+    <div class="eyebrow">Investment</div>
+    <h2>Pricing &amp; payment schedule</h2>
+
+    <div class="price-card">
+      <div class="basis">Complete trip total for two guests · flights, hotel, and cruise</div>
+      <div class="amount">Est. $4,938.19</div>
+      <div class="per">Cruise gratuities included · taxes and fees included except the $84 collected at the hotel</div>
+
+      <div class="pay-grid">
+        <div class="pay">
+          <div class="k">Flights + Hotel</div>
+          <div class="v">$2,700.13</div>
+          <div class="d">Due at booking to ticket flights and confirm Hotel Rumbao</div>
+        </div>
+        <div class="pay">
+          <div class="k">Cruise Deposit</div>
+          <div class="v">$500.00</div>
+          <div class="d">Due August 5, 2026 · 5:00 p.m. ET</div>
+        </div>
+        <div class="pay">
+          <div class="k">Cruise Balance</div>
+          <div class="v">$1,654.06</div>
+          <div class="d">Due September 6, 2026 · 5:00 p.m. ET</div>
+        </div>
+        <div class="pay">
+          <div class="k">At the Hotel</div>
+          <div class="v">$84.00</div>
+          <div class="d">Resort fee, collected by the property at check-in</div>
+        </div>
+      </div>
+
+      <p class="disc">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+    </div>
+
+    <div class="commit">
+      <span class="commit-tag">On price</span>
+      <p>We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT'S NEXT + FORM ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">Next Steps</div>
+    <h2>Ready when you are</h2>
+
+    <div class="commit" style="margin-top:22px;">
+      <span class="commit-tag">What's coming after this quote</span>
+      <p>What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </div>
+
+    <div class="form-card">
+      <div id="quoteForm">
+        <h3 style="font-size:22px;font-weight:500;margin-bottom:6px;">Confirm your details</h3>
+        <p style="color:var(--ink-soft);font-size:15px;margin-bottom:24px;">Send Lisa your confirmation and any questions — she'll follow up directly.</p>
+        <div class="form-grid">
+          <div>
+            <label for="f-name">Name *</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div>
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div>
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="f-ins">Travel insurance</label>
+            <select id="f-ins" name="travel_insurance">
+              <option value="" selected>Select one…</option>
+              <option value="Yes">Yes — send me a quote</option>
+              <option value="No">No, thank you</option>
+              <option value="Already have">I already have coverage</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" placeholder="Questions, excursion requests, celebrations we should know about…"></textarea>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:26px;">
+          <button type="button" class="btn" id="sendBtn">Send to Lisa</button>
+        </div>
+        <p class="form-err" id="formErr"></p>
+      </div>
+
+      <div class="thanks" id="thanksMsg">
+        <h3>Thank you — it's on its way.</h3>
+        <p>Lisa will be in touch shortly to lock everything in. In the meantime, start thinking about which island gets your first beach day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="f-name">Lisa Darling</div>
+  <div class="f-title">Travel Advisor</div>
+  <div class="f-links">
+    <a href="#" id="emailLink">Email Lisa</a>
+    &nbsp;·&nbsp;
+    <a href="tel:+12815081623">(281) 508-1623</a>
+  </div>
+  <div class="f-agency">Point Me to Paradise Travel</div>
+  <p class="legal">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Quote prepared July 6, 2026 for Hyacinth &amp; Tadarell Woods · Cruise confirmation #5708146 · Celebrity Cruises, Celebrity Constellation, departing December 5, 2026 · Air and hotel package pending booking. Checked baggage fees, incidentals, and optional excursions are additional.</p>
+</footer>
+
+<script>
+(function(){
+  // Assemble advisor email at runtime — never hardcoded in HTML
+  var u = 'lisa', d = 'pointmetoparadise.com';
+  var addr = u + '\u0040' + d;
+  var link = document.getElementById('emailLink');
+  link.href = 'mailto:' + addr;
+  link.textContent = addr;
+
+  // Contact form — JS fetch only
+  var btn = document.getElementById('sendBtn');
+  var err = document.getElementById('formErr');
+
+  btn.addEventListener('click', function(){
+    var name = document.getElementById('f-name');
+    var email = document.getElementById('f-email');
+    err.style.display = 'none';
+
+    if(!name.value.trim() || !email.value.trim() || email.value.indexOf('@') === -1){
+      err.textContent = 'Please fill in your name and a valid email so Lisa can reach you.';
+      err.style.display = 'block';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+
+    var payload = {
+      access_key: 'e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff',
+      redirect: false,
+      subject: 'Hyacinth Woods \u2014 San Juan & Southern Caribbean Quote Selections',
+      from_name: 'Hyacinth Woods Quote \u2014 Point Me to Paradise',
+      name: name.value.trim(),
+      email: email.value.trim(),
+      phone: document.getElementById('f-phone').value.trim(),
+      travel_insurance: document.getElementById('f-ins').value,
+      message: document.getElementById('f-msg').value.trim()
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if(data && data.success){
+        document.getElementById('quoteForm').style.display = 'none';
+        document.getElementById('thanksMsg').style.display = 'block';
+      } else {
+        throw new Error('submit failed');
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send to Lisa';
+      err.textContent = "Something didn't go through. Please try again, or call or email Lisa directly \u2014 her details are just below.";
+      err.style.display = 'block';
+    });
+  });
+})();
+</script>
+</body>
+</html>
