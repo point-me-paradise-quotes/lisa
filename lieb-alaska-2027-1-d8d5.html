@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alaska by Sea | The Lieb Family | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aqua-pale:    #C4E4E1;
+  --aqua-mist:    #EAF3F2;
+  --aqua:         #75AFB1;
+  --aqua-dark:    #4F8A8C;
+  --sand:         #ECE7DC;
+  --sand-light:   #F4F1E9;
+  --gold-whisper: #D6C8A8;
+  --white:        #FFFFFF;
+  --paper:        #FBFDFD;
+  --ink:          #2B2420;
+  --ink-soft:     #6B6359;
+  --line:         #E5E9E8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'DM Sans',sans-serif;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  font-size:16px;
+}
+h1,h2,h3,h4 { font-family:'Playfair Display',serif; font-weight:600; line-height:1.25; }
+.wrap { max-width:880px; margin:0 auto; padding:0 24px; }
+
+/* ---------- HERO ---------- */
+.pmtp-hero {
+  position:relative;
+  background-image:
+    linear-gradient(180deg, rgba(251,253,253,0.88) 0%, rgba(234,243,242,0.72) 45%, rgba(251,253,253,0.94) 100%),
+    url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1600&q=80');
+  background-size:cover;
+  background-position:center;
+  background-color:var(--aqua-mist);
+  padding:78px 32px 60px;
+  text-align:center;
+}
+.pmtp-wordmark {
+  font-family:'Playfair Display',serif;
+  font-size:11px; font-weight:600;
+  letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--aqua-dark);
+  margin-bottom:26px;
+}
+.hero-eyebrow {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:22px;
+  color:var(--aqua-dark);
+  margin-bottom:10px;
+}
+.pmtp-hero h1 {
+  font-size:clamp(34px, 5.5vw, 52px);
+  color:var(--ink);
+  margin-bottom:14px;
+}
+.hero-sub {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:20px;
+  color:var(--ink-soft);
+  max-width:560px; margin:0 auto 28px;
+}
+.hero-badges { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.hero-badge {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 18px;
+  font-size:13px; font-weight:500;
+  color:var(--aqua-dark);
+  letter-spacing:0.04em;
+}
+
+/* ---------- SECTIONS ---------- */
+section { padding:56px 0; }
+.band { background:var(--aqua-mist); }
+.section-eyebrow {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:20px;
+  color:var(--aqua-dark);
+  text-align:center; margin-bottom:6px;
+}
+h2 { font-size:clamp(26px,4vw,34px); text-align:center; margin-bottom:28px; }
+h3 { font-size:20px; margin-bottom:10px; }
+
+/* ---------- OVERVIEW ---------- */
+.facts {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));
+  gap:16px;
+  margin-bottom:32px;
+}
+.fact {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px 18px;
+  text-align:center;
+}
+.fact .label {
+  font-size:11px; font-weight:600;
+  letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--aqua-dark);
+  margin-bottom:6px;
+}
+.fact .value { font-family:'Playfair Display',serif; font-size:17px; font-weight:500; }
+.fact .sub { font-size:13px; color:var(--ink-soft); margin-top:3px; }
+
+.commitment {
+  background:var(--aqua-pale);
+  border-radius:14px;
+  padding:26px 30px;
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:21px;
+  color:var(--ink);
+  line-height:1.55;
+}
+.overview-copy { max-width:680px; margin:0 auto 32px; text-align:center; color:var(--ink-soft); }
+
+/* ---------- ITINERARY ---------- */
+.itin { list-style:none; max-width:720px; margin:0 auto; }
+.itin li {
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:20px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+.itin li:last-child { border-bottom:none; }
+.itin .day {
+  font-family:'Playfair Display',serif;
+  font-weight:600; font-size:15px;
+  color:var(--aqua-dark);
+}
+.itin .day span { display:block; font-family:'DM Sans',sans-serif; font-weight:400; font-size:13px; color:var(--ink-soft); }
+.itin .port { font-weight:600; font-size:16px; }
+.itin .time { font-size:14px; color:var(--aqua-dark); font-weight:500; margin-top:2px; }
+.itin .note { font-size:14px; color:var(--ink-soft); margin-top:5px; }
+
+/* ---------- INCLUDED ---------- */
+.inc-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:16px;
+  max-width:760px; margin:0 auto;
+}
+.inc {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:22px;
+  display:flex; gap:14px; align-items:flex-start;
+}
+.inc svg { flex-shrink:0; width:26px; height:26px; stroke:var(--aqua); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; margin-top:2px; }
+.inc .t { font-weight:600; font-size:15px; margin-bottom:3px; }
+.inc .d { font-size:14px; color:var(--ink-soft); }
+
+/* ---------- PRICING ---------- */
+.price-card {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  max-width:620px; margin:0 auto;
+  padding:38px 34px;
+  text-align:center;
+}
+.price-label {
+  font-size:12px; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--aqua-dark);
+  margin-bottom:8px;
+}
+.price-big {
+  font-family:'Playfair Display',serif;
+  font-size:48px; font-weight:600;
+  color:var(--ink);
+}
+.price-basis { font-size:14px; color:var(--ink-soft); margin-bottom:24px; }
+.pay-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  margin:24px 0;
+  text-align:left;
+}
+.pay {
+  background:var(--aqua-mist);
+  border-radius:10px;
+  padding:16px 18px;
+}
+.pay .amt { font-family:'Playfair Display',serif; font-size:20px; font-weight:600; }
+.pay .due { font-size:13px; color:var(--ink-soft); margin-top:3px; }
+.pay .tag { font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--aqua-dark); margin-bottom:4px; }
+.disclaimer-inline { font-size:13px; color:var(--ink-soft); margin-top:18px; }
+.rate-promise {
+  max-width:620px; margin:26px auto 0;
+  background:var(--aqua-pale);
+  border-radius:12px;
+  padding:20px 26px;
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size:19px; text-align:center; line-height:1.55;
+}
+
+/* ---------- GOOD TO KNOW ---------- */
+.know { max-width:720px; margin:0 auto; }
+.know-item { padding:18px 0; border-bottom:1px solid var(--line); }
+.know-item:last-child { border-bottom:none; }
+.know-item h3 { font-size:17px; margin-bottom:5px; }
+.know-item p { font-size:15px; color:var(--ink-soft); }
+
+/* ---------- FORM ---------- */
+.form-card {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  max-width:620px; margin:0 auto;
+  padding:38px 34px;
+}
+.form-card label {
+  display:block;
+  font-size:12px; font-weight:600;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--aqua-dark);
+  margin:18px 0 6px;
+}
+.form-card label:first-of-type { margin-top:0; }
+.form-card input, .form-card select, .form-card textarea {
+  width:100%;
+  font-family:'DM Sans',sans-serif;
+  font-size:16px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--paper);
+  color:var(--ink);
+}
+.form-card input:focus, .form-card select:focus, .form-card textarea:focus {
+  outline:2px solid var(--aqua);
+  outline-offset:1px;
+  border-color:var(--aqua);
+}
+.form-card textarea { min-height:110px; resize:vertical; }
+.btn {
+  display:inline-block;
+  width:100%;
+  margin-top:26px;
+  background:var(--aqua);
+  color:var(--white);
+  border:none; border-radius:999px;
+  font-family:'DM Sans',sans-serif;
+  font-size:16px; font-weight:600;
+  letter-spacing:0.04em;
+  padding:15px 32px;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+.btn:hover { background:var(--aqua-dark); }
+.btn:disabled { opacity:0.6; cursor:wait; }
+.thanks {
+  display:none;
+  text-align:center;
+  padding:30px 10px;
+}
+.thanks h3 { font-size:24px; margin-bottom:10px; }
+.thanks p { color:var(--ink-soft); }
+.form-err { display:none; margin-top:14px; font-size:14px; color:var(--aqua-dark); text-align:center; }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background:var(--sand-light);
+  padding:52px 24px;
+  text-align:center;
+}
+.f-name { font-family:'Playfair Display',serif; font-size:22px; font-weight:600; }
+.f-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--aqua-dark); margin-bottom:14px; }
+footer a { color:var(--aqua-dark); text-decoration:none; font-weight:500; }
+footer a:hover { text-decoration:underline; }
+.f-contact { font-size:15px; line-height:2; }
+.f-brand {
+  margin-top:22px;
+  font-family:'Playfair Display',serif;
+  font-size:11px; font-weight:600;
+  letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--aqua-dark);
+}
+.f-legal { font-size:12px; color:var(--ink-soft); max-width:620px; margin:18px auto 0; }
+
+@media (max-width:600px) {
+  .itin li { grid-template-columns:1fr; gap:4px; }
+  .pay-grid { grid-template-columns:1fr; }
+  .pmtp-hero { padding:60px 20px 48px; }
+  section { padding:44px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <div class="hero-eyebrow">Prepared for the Lieb family</div>
+  <h1>Alaska by Sea</h1>
+  <p class="hero-sub">Seven nights aboard Norwegian Bliss. Glaciers at Endicott Arm, whales off Icy Strait, and a late evening in Victoria on the way home.</p>
+  <div class="hero-badges">
+    <span class="hero-badge">May 22&ndash;29, 2027</span>
+    <span class="hero-badge">Round-trip Seattle</span>
+    <span class="hero-badge">Party of 4</span>
+    <span class="hero-badge">Balcony Stateroom</span>
+  </div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">The trip at a glance</div>
+    <h2>Your Week in Alaska</h2>
+    <p class="overview-copy">Norwegian Bliss was built for this run: an observation lounge wrapping the bow for glacier days, a go-kart track and Aqua Park for Emily and Christopher, and a balcony stateroom (12812) so the four of you can watch the Inside Passage slide by from your own rail.</p>
+    <div class="facts">
+      <div class="fact">
+        <div class="label">Ship</div>
+        <div class="value">Norwegian Bliss</div>
+        <div class="sub">7-day Alaska</div>
+      </div>
+      <div class="fact">
+        <div class="label">Dates</div>
+        <div class="value">May 22&ndash;29, 2027</div>
+        <div class="sub">Saturday to Saturday</div>
+      </div>
+      <div class="fact">
+        <div class="label">Stateroom</div>
+        <div class="value">Balcony, Deck 12</div>
+        <div class="sub">Category B4, Room 12812</div>
+      </div>
+      <div class="fact">
+        <div class="label">Sailing From</div>
+        <div class="value">Seattle</div>
+        <div class="sub">Returns to Seattle</div>
+      </div>
+    </div>
+    <div class="commitment">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing &mdash; already done.</div>
+  </div>
+</section>
+
+<!-- ================= ITINERARY ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="section-eyebrow">Day by day</div>
+    <h2>The Itinerary</h2>
+    <ul class="itin">
+      <li>
+        <div class="day">Day 1 <span>Sat, May 22</span></div>
+        <div>
+          <div class="port">Depart Seattle</div>
+          <div class="time">Ship sails at 3:00 p.m.</div>
+          <div class="note">Plan to be onboard no later than 1:00 p.m. Settle in, then find a spot on deck as you head north into Puget Sound.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 2 <span>Sun, May 23</span></div>
+        <div>
+          <div class="port">At Sea</div>
+          <div class="note">A full day to learn the ship. Go-karts, the Aqua Park, and the Observation Lounge up front, where the coastline starts turning wild.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 3 <span>Mon, May 24</span></div>
+        <div>
+          <div class="port">Sitka, Alaska</div>
+          <div class="time">10:00 a.m. &ndash; 6:00 p.m. &middot; Docked</div>
+          <div class="note">Russian-era history, Totem Park trails, and sea otter rafts in the sound. One of Alaska's most walkable ports.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 4 <span>Tue, May 25</span></div>
+        <div>
+          <div class="port">Endicott Arm &amp; Dawes Glacier, then Juneau</div>
+          <div class="time">Juneau: 12:30 p.m. &ndash; 9:30 p.m. &middot; Docked</div>
+          <div class="note">The morning is scenic cruising up Endicott Arm to the face of Dawes Glacier. Then a long afternoon and evening in Juneau: Mendenhall Glacier, the Mount Roberts Tramway, or whale watching out of Auke Bay.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 5 <span>Wed, May 26</span></div>
+        <div>
+          <div class="port">Icy Strait Point, Alaska</div>
+          <div class="time">6:00 a.m. &ndash; 3:00 p.m. &middot; Docked</div>
+          <div class="note">Home to some of the most reliable whale sightings in Southeast Alaska, plus the gondola up Hoonah Mountain and one of the world's longest ziplines.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 6 <span>Thu, May 27</span></div>
+        <div>
+          <div class="port">Ketchikan (Ward Cove), Alaska</div>
+          <div class="time">6:00 a.m. &ndash; 1:15 p.m. &middot; Docked</div>
+          <div class="note">An early start in the salmon capital. Creek Street, totem poles, and floatplane flights over Misty Fjords if you want to go big.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 7 <span>Fri, May 28</span></div>
+        <div>
+          <div class="port">Victoria, British Columbia</div>
+          <div class="time">8:00 p.m. &ndash; 11:59 p.m. &middot; Docked</div>
+          <div class="note">An evening call in Canada's garden city. The Inner Harbour and the illuminated Parliament Buildings are a short stroll from the pier.</div>
+        </div>
+      </li>
+      <li>
+        <div class="day">Day 8 <span>Sat, May 29</span></div>
+        <div>
+          <div class="port">Arrive Seattle</div>
+          <div class="time">Ship arrives at 6:00 a.m.</div>
+          <div class="note">Breakfast onboard, then disembark. Book flights home for early afternoon or later to keep the morning unhurried.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= INCLUDED ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Already in your fare</div>
+    <h2>What's Included</h2>
+    <div class="inc-grid">
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5.5 12a10 10 0 0 1 13 0"/><path d="M9 15.5a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="0.8"/></svg>
+        <div>
+          <div class="t">Wi-Fi for All Four</div>
+          <div class="d">A 150-minute Wi-Fi package for each guest.</div>
+        </div>
+      </div>
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M4 3v7a2 2 0 0 0 2 2v9"/><path d="M8 3v7"/><path d="M4 6h4"/><path d="M17 3c-2 2-2 5-2 8a2 2 0 0 0 2 2v8"/></svg>
+        <div>
+          <div class="t">Specialty Dining</div>
+          <div class="d">Three specialty restaurant meals for each of the four of you.</div>
+        </div>
+      </div>
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M8 3h8l-1.5 8a3 3 0 0 1-2.5 2.4V19h3v2H9v-2h3v-5.6A3 3 0 0 1 9.5 11z"/></svg>
+        <div>
+          <div class="t">Drinks for the Whole Family</div>
+          <div class="d">Unlimited open bar for Helene and Kevin, service charge already covered, plus a non-alcoholic beverage package for Emily and Christopher.</div>
+        </div>
+      </div>
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z"/></svg>
+        <div>
+          <div class="t">Excursion Credit</div>
+          <div class="d">A shore excursion credit on the lead guest's booking, ready to put toward the port day of your choice.</div>
+        </div>
+      </div>
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>
+        <div>
+          <div class="t">Service Charges Prepaid</div>
+          <div class="d">Daily service charges for all four guests are paid in advance. Nothing added to your onboard account.</div>
+        </div>
+      </div>
+      <div class="inc">
+        <svg viewBox="0 0 24 24"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>
+        <div>
+          <div class="t">Beds Together</div>
+          <div class="d">Your stateroom is flagged to have the beds pushed together before you board.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="section-eyebrow">The numbers</div>
+    <h2>Pricing &amp; Payments</h2>
+    <div class="price-card">
+      <div class="price-label">Trip Total</div>
+      <div class="price-big">Est. $6,367</div>
+      <div class="price-basis">Total for all four guests. Includes cruise fare, taxes, fees, port expenses, and every inclusion listed above.</div>
+      <div class="pay-grid">
+        <div class="pay">
+          <div class="tag">Deposit</div>
+          <div class="amt">$500.00</div>
+          <div class="due">Due by Saturday, July 25, 2026</div>
+        </div>
+        <div class="pay">
+          <div class="tag">Final Payment</div>
+          <div class="amt">$5,867.00</div>
+          <div class="due">Due by Friday, January 22, 2027</div>
+        </div>
+      </div>
+      <div class="disclaimer-inline">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+    </div>
+    <div class="rate-promise">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience &mdash; you're paying for the rest of what we do.</div>
+  </div>
+</section>
+
+<!-- ================= GOOD TO KNOW ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-eyebrow">Before you sail</div>
+    <h2>Good to Know</h2>
+    <div class="know">
+      <div class="know-item">
+        <h3>Travel documents</h3>
+        <p>This sailing calls in Victoria, Canada, so a valid passport is required for all four of you. Names on the booking must match travel documents exactly by the final payment date. Confirm passports are valid before January so there's plenty of time to renew if needed.</p>
+      </div>
+      <div class="know-item">
+        <h3>Online check-in</h3>
+        <p>Complete online check-in between 21 days and 3 days before sailing. We'll remind you when the window opens and walk you through it if you'd like.</p>
+      </div>
+      <div class="know-item">
+        <h3>Boarding day</h3>
+        <p>All guests must be onboard at least two hours before the 3:00 p.m. departure. If you're flying into Seattle, we recommend arriving the day before; ask us about a pre-cruise hotel night.</p>
+      </div>
+      <div class="know-item">
+        <h3>Shore excursions</h3>
+        <p>Whale watching at Icy Strait, Mendenhall Glacier in Juneau, floatplanes out of Ketchikan: tell us what sounds right and we'll match excursions to your excursion credit and your pace. Contact Lisa to reserve.</p>
+      </div>
+      <div class="know-item">
+        <h3>Travel insurance</h3>
+        <p>We strongly recommend protecting this trip. Lisa handles insurance quotes and purchases for you directly, so just say the word on the form below and she'll send options matched to your trip total.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEXT + FORM ================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="section-eyebrow">Ready when you are</div>
+    <h2>Lock It In</h2>
+    <div class="commitment" style="max-width:680px; margin:0 auto 36px;">What's coming after this quote: a destination guide built for your trip &mdash; PDF or interactive in-app, with Google Maps links to every place we send you &mdash; a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</div>
+
+    <div class="form-card">
+      <form id="pmtp-form">
+        <label for="f-name">Name *</label>
+        <input type="text" id="f-name" name="name" required autocomplete="name">
+
+        <label for="f-email">Email *</label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+
+        <label for="f-phone">Phone</label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+
+        <label for="f-ins">Travel insurance</label>
+        <select id="f-ins" name="travel_insurance">
+          <option value="" selected>Select one</option>
+          <option value="Yes, send me a quote">Yes, send me a quote</option>
+          <option value="No, thank you">No, thank you</option>
+          <option value="Already have coverage">Already have coverage</option>
+        </select>
+
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" placeholder="Questions, excursion ideas, anything at all."></textarea>
+
+        <button type="button" class="btn" id="pmtp-submit">Send to Lisa</button>
+        <div class="form-err" id="pmtp-err">Something didn't go through. Please try again, or reach Lisa directly using the contact details below.</div>
+      </form>
+      <div class="thanks" id="pmtp-thanks">
+        <h3>Thank you!</h3>
+        <p>Your note is on its way to Lisa. She'll be in touch shortly to answer questions and hold your stateroom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="f-name">Lisa Darling</div>
+  <div class="f-title">Travel Advisor</div>
+  <div class="f-contact">
+    <span id="adv-email"></span><br>
+    <a href="tel:+12815081623">(281) 508-1623</a>
+  </div>
+  <div class="f-brand">Point Me to Paradise Travel</div>
+  <p class="f-legal">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. This quote was prepared for the Lieb family for travel May 22&ndash;29, 2027.</p>
+</footer>
+
+<script>
+(function () {
+  // Advisor email assembled at runtime
+  var u = 'lisa';
+  var d = 'pointmetoparadise.com';
+  var addr = u + '\u0040' + d;
+  var el = document.getElementById('adv-email');
+  var a = document.createElement('a');
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+  el.appendChild(a);
+
+  // Form submission via fetch
+  var btn = document.getElementById('pmtp-submit');
+  var form = document.getElementById('pmtp-form');
+  var thanks = document.getElementById('pmtp-thanks');
+  var err = document.getElementById('pmtp-err');
+
+  btn.addEventListener('click', function () {
+    var name = document.getElementById('f-name');
+    var email = document.getElementById('f-email');
+    if (!name.value.trim() || !email.value.trim() || !email.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    err.style.display = 'none';
+
+    var payload = {
+      access_key: 'e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff',
+      redirect: false,
+      subject: 'Lieb Family \u2014 Alaska Quote Selections',
+      from_name: 'Lieb Family Quote \u2014 Point Me to Paradise',
+      name: name.value.trim(),
+      email: email.value.trim(),
+      phone: document.getElementById('f-phone').value.trim(),
+      travel_insurance: document.getElementById('f-ins').value,
+      message: document.getElementById('f-msg').value.trim()
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data && data.success) {
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+      } else {
+        throw new Error('submit failed');
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Send to Lisa';
+      err.style.display = 'block';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
