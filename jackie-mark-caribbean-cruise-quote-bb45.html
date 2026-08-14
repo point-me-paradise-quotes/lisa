@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackie &amp; Mark | Caribbean Cruise Quote | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --aqua-pale:#C4E4E1;
+  --aqua-mist:#EAF3F2;
+  --aqua:#75AFB1;
+  --aqua-dark:#4F8A8C;
+  --sand:#ECE7DC;
+  --sand-light:#F4F1E9;
+  --gold-whisper:#D6C8A8;
+  --white:#FFFFFF;
+  --paper:#FBFDFD;
+  --ink:#2B2420;
+  --ink-soft:#6B6359;
+  --line:#E5E9E8;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:17px;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:92px;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--ink);margin:0;line-height:1.18;}
+p{margin:0 0 18px;}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 32px;}
+.section{padding:64px 0;}
+.band{background:var(--aqua-mist);}
+.band-sand{background:var(--sand-light);}
+
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--aqua-dark);margin:0 0 14px;}
+.sub{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:23px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px;}
+.rule{width:54px;height:1px;background:var(--gold-whisper);border:0;margin:20px 0 26px;}
+h2.sec{font-size:33px;}
+
+/* ---------- HERO ---------- */
+.pmtp-hero{
+  position:relative;
+  background-color:var(--aqua-pale);
+  background-image:
+    linear-gradient(180deg, rgba(251,253,253,0.90) 0%, rgba(234,243,242,0.80) 45%, rgba(251,253,253,0.94) 100%),
+    url('https://unsplash.com/photos/tropical-resort-beach-with-turquoise-water-and-palm-trees-xGehJClmaAc/download?force=true&w=1920');
+  background-size:cover;
+  background-position:center;
+  padding:78px 32px 60px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.pmtp-wordmark{font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);}
+.pmtp-hero h1{font-size:52px;font-weight:600;margin:22px 0 0;letter-spacing:-0.01em;}
+.pmtp-hero .sub{font-size:26px;margin-top:14px;}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;margin-top:30px;}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 17px;font-size:13px;font-weight:500;letter-spacing:0.03em;}
+.chip svg{flex:none;}
+.prepared{margin-top:30px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;}
+
+/* ---------- PANELS ---------- */
+.card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:38px 36px;}
+.callout{background:var(--aqua-pale);border-radius:6px;padding:28px 30px;font-size:16.5px;line-height:1.66;}
+.callout-label{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--aqua-dark);display:block;margin-bottom:10px;}
+.callout p:last-child{margin-bottom:0;}
+
+/* ---------- OPTION CARDS ---------- */
+.opt{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:6px;
+  margin-bottom:26px;
+  overflow:hidden;
+  transition:border-color .18s ease, box-shadow .18s ease;
+}
+.opt.is-selected{border-color:var(--aqua);box-shadow:0 0 0 1px var(--aqua);}
+.opt-head{padding:32px 34px 26px;border-bottom:1px solid var(--line);}
+.opt-tag{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:12px;}
+.opt-title{display:flex;align-items:flex-start;gap:15px;}
+.opt-title svg{flex:none;margin-top:5px;}
+.opt-title h3{font-size:30px;}
+.opt-title .sub{font-size:20px;margin:5px 0 0;}
+.opt-price{
+  margin-top:22px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:18px;align-items:baseline;justify-content:space-between;
+}
+.opt-price .amt{font-family:'Playfair Display',serif;font-size:33px;font-weight:600;}
+.opt-price .basis{font-size:14px;color:var(--ink-soft);}
+.selector{
+  display:flex;align-items:center;gap:12px;
+  background:var(--aqua-mist);
+  border:1px solid var(--aqua-pale);
+  border-radius:4px;
+  padding:12px 18px;
+  cursor:pointer;
+  font-size:15px;font-weight:600;color:var(--aqua-dark);
+  letter-spacing:0.04em;
+  user-select:none;
+}
+.selector input{accent-color:var(--aqua-dark);width:17px;height:17px;margin:0;cursor:pointer;}
+.opt.is-selected .selector{background:var(--aqua-pale);}
+
+.opt-body{padding:30px 34px 34px;}
+.spec-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden;}
+.spec{background:var(--white);padding:18px 20px;}
+.spec-label{font-size:10.5px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:5px;}
+.spec-value{font-family:'Playfair Display',serif;font-size:18px;font-weight:500;line-height:1.32;}
+
+h4.mini{font-size:12px;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--aqua-dark);margin:34px 0 14px;}
+
+.itin{width:100%;border-collapse:collapse;font-size:16px;}
+.itin tr{border-bottom:1px solid var(--line);}
+.itin tr:last-child{border-bottom:0;}
+.itin td{padding:11px 0;vertical-align:top;}
+.itin .day{width:112px;font-weight:600;white-space:nowrap;}
+.itin .port{padding-right:14px;}
+.itin .time{width:180px;text-align:right;color:var(--ink-soft);font-size:15px;white-space:nowrap;}
+.itin tr.sea .port{color:var(--ink-soft);font-style:italic;}
+
+.list{list-style:none;margin:0;padding:0;}
+.list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:16.5px;border-bottom:1px solid var(--line);}
+.list li:last-child{border-bottom:0;}
+.list svg{flex:none;margin-top:5px;}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;}
+.tag{background:var(--aqua-mist);border-radius:4px;padding:6px 13px;font-size:14px;}
+
+/* ---------- PRICING ---------- */
+.price-bar{background:var(--white);border:1px solid var(--aqua-pale);border-radius:6px;padding:34px 36px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;}
+.price-label{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:8px;}
+.price-figure{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;line-height:1.1;letter-spacing:-0.01em;}
+.price-note{font-size:14px;color:var(--ink-soft);margin-top:8px;max-width:470px;}
+.price-dep{text-align:right;border-left:1px solid var(--line);padding-left:26px;}
+.price-dep .amt{font-family:'Playfair Display',serif;font-size:30px;font-weight:500;}
+.fineprint{font-size:14px;line-height:1.6;color:var(--ink-soft);margin-top:22px;}
+
+/* ---------- STICKY BAR ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--sand-light);border-top:1px solid var(--line);padding:14px 32px;}
+.sticky-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+.sticky-label{font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--aqua-dark);}
+.sticky-name{font-size:15px;font-weight:500;line-height:1.35;}
+.sticky-total{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;white-space:nowrap;}
+.sticky-cta{background:var(--aqua);color:var(--white);text-decoration:none;font-size:15px;font-weight:600;letter-spacing:0.04em;padding:12px 24px;border-radius:4px;white-space:nowrap;}
+.sticky-cta:hover{background:var(--aqua-dark);}
+
+/* ---------- FORM ---------- */
+.form-shell{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:40px 36px;}
+.field{margin-bottom:20px;}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:8px;}
+input[type=text],input[type=email],input[type=tel],select,textarea{
+  width:100%;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:13px 14px;line-height:1.4;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--aqua);background:var(--white);}
+textarea{min-height:118px;resize:vertical;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.btn{display:inline-block;width:100%;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;letter-spacing:0.05em;color:var(--white);background:var(--aqua);border:0;border-radius:4px;padding:16px 24px;cursor:pointer;transition:background .18s ease;}
+.btn:hover{background:var(--aqua-dark);}
+.thanks{display:none;background:var(--aqua-mist);border:1px solid var(--aqua-pale);border-radius:6px;padding:44px 36px;text-align:center;}
+.thanks h3{font-size:28px;margin-bottom:12px;}
+.thanks p{margin-bottom:0;color:var(--ink-soft);}
+
+/* ---------- FOOTER ---------- */
+.advisor{background:var(--sand-light);border-top:1px solid var(--line);padding:56px 32px 40px;text-align:center;}
+.advisor .name{font-family:'Playfair Display',serif;font-size:27px;font-weight:500;}
+.advisor .title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--ink-soft);margin-top:4px;}
+.advisor .contact{margin-top:16px;font-size:16px;}
+.advisor .contact a{color:var(--aqua-dark);text-decoration:none;}
+.advisor .contact a:hover{text-decoration:underline;}
+.advisor .agency{margin-top:22px;font-family:'Playfair Display',serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--aqua-dark);}
+.disclaimer{background:var(--sand-light);padding:0 32px 52px;text-align:center;}
+.disclaimer p{max-width:680px;margin:0 auto;font-size:13px;line-height:1.65;color:var(--ink-soft);}
+
+@media (max-width:760px){
+  .wrap{padding:0 22px;}
+  .pmtp-hero{padding:60px 22px 48px;}
+  .pmtp-hero h1{font-size:36px;}
+  .pmtp-hero .sub{font-size:21px;}
+  .section{padding:48px 0;}
+  h2.sec{font-size:27px;}
+  .card,.form-shell{padding:30px 22px;}
+  .opt-head{padding:26px 22px 22px;}
+  .opt-body{padding:26px 22px 30px;}
+  .opt-title h3{font-size:24px;}
+  .spec-grid{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;}
+  .price-bar{flex-direction:column;align-items:flex-start;padding:28px 22px;}
+  .price-figure{font-size:32px;}
+  .price-dep{text-align:left;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px;width:100%;}
+  .itin .day{width:84px;font-size:14px;}
+  .itin td{font-size:15px;}
+  .itin .time{width:auto;font-size:13.5px;}
+  .sticky{padding:11px 18px;}
+  .sticky-name{display:none;}
+  .sticky-total{font-size:21px;}
+  .sticky-cta{padding:11px 18px;font-size:14px;}
+  body{padding-bottom:78px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="pmtp-hero">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <h1>The Caribbean,<br>Island by Island</h1>
+  <p class="sub">Two Holland America sailings, February 2027</p>
+  <div class="hero-meta">
+    <span class="chip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F8A8C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/><path d="M5 15V9l7-3 7 3v6"/><path d="M12 6V3"/></svg>
+      Round trip from Fort Lauderdale
+    </span>
+    <span class="chip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F8A8C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      9 or 11 nights
+    </span>
+    <span class="chip">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F8A8C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/></svg>
+      Verandah stateroom
+    </span>
+  </div>
+  <div class="prepared">Prepared for Jackie &amp; Mark</div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Your Trip</p>
+    <h2 class="sec">Unpack once. Let the islands come to you.</h2>
+    <hr class="rule">
+    <p>Jackie, the first cruise answered the question. This one is the reward. You already know how the days work: slow coffee on the verandah while the ship eases into a new harbor, an afternoon that belongs to nobody but you, a dinner that ends whenever you decide it ends.</p>
+    <p>Both sailings below leave round trip from Fort Lauderdale in February 2027, both put you in a verandah stateroom with floor to ceiling doors onto your own balcony, and both include the Have It All package: Wi-Fi, specialty dining, a shore excursion credit, and a drink package. Each one also carries $300 in onboard credit to spend however you like.</p>
+    <p>The real choice is between two different Caribbeans. Option One runs the eastern chain: Sint Maarten, Antigua, Dominica, Martinique, St. Kitts, Tortola. Green mountains, French creole cooking, a new island almost every morning. Option Two runs south to the ABC islands: Bonaire, Curaçao, Aruba. Dutch colonial color, dry coastline, some of the calmest water in the region, and four full days at sea with nothing on the schedule.</p>
+
+    <div class="callout" style="margin-top:34px;">
+      <span class="callout-label">How we work</span>
+      <p>We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPTIONS ================= -->
+<section class="section band" id="options">
+  <div class="wrap">
+    <p class="eyebrow">Itinerary Experiences</p>
+    <h2 class="sec">Choose your sailing</h2>
+    <hr class="rule">
+    <p style="margin-bottom:32px;">Select either option and the pricing updates to match. Nothing is locked in until you tell us to go.</p>
+
+    <!-- OPTION A -->
+    <article class="opt" id="optA">
+      <div class="opt-head">
+        <div class="opt-tag">Option One</div>
+        <div class="opt-title">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18.5c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/><path d="M4.5 15.5 6 9.5l6-2.5 6 2.5 1.5 6"/><path d="M12 7V3.5M9.5 3.5h5"/></svg>
+          <div>
+            <h3>Eastern Caribbean on Rotterdam</h3>
+            <p class="sub">11 nights, February 2 to 13, 2027</p>
+          </div>
+        </div>
+        <div class="opt-price">
+          <div>
+            <div class="amt">$7,760</div>
+            <div class="basis">Total for the two of you</div>
+          </div>
+          <label class="selector" for="pickA">
+            <input type="radio" name="sailing" id="pickA" value="A">
+            <span>Select this sailing</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="opt-body">
+        <div class="spec-grid">
+          <div class="spec"><div class="spec-label">Ship</div><div class="spec-value">Holland America Rotterdam</div></div>
+          <div class="spec"><div class="spec-label">Sails</div><div class="spec-value">Fort Lauderdale, round trip</div></div>
+          <div class="spec"><div class="spec-label">Length</div><div class="spec-value">11 nights, 7 ports</div></div>
+          <div class="spec"><div class="spec-label">Stateroom</div><div class="spec-value">Verandah, 228 to 405 sq. ft.</div></div>
+          <div class="spec"><div class="spec-label">Departs</div><div class="spec-value">Tue, Feb 2 at 4:00 p.m.</div></div>
+          <div class="spec"><div class="spec-label">Returns</div><div class="spec-value">Sat, Feb 13 at 7:00 a.m.</div></div>
+        </div>
+
+        <h4 class="mini">Day by day</h4>
+        <table class="itin">
+          <tr><td class="day">Tue, Feb 2</td><td class="port">Fort Lauderdale, Florida</td><td class="time">Depart 4:00 p.m.</td></tr>
+          <tr class="sea"><td class="day">Wed, Feb 3</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr class="sea"><td class="day">Thu, Feb 4</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr><td class="day">Fri, Feb 5</td><td class="port">Sint Maarten</td><td class="time">8:00 a.m. to 5:00 p.m.</td></tr>
+          <tr><td class="day">Sat, Feb 6</td><td class="port">Antigua</td><td class="time">8:00 a.m. to 4:00 p.m.</td></tr>
+          <tr><td class="day">Sun, Feb 7</td><td class="port">Roseau, Dominica</td><td class="time">8:00 a.m. to 6:00 p.m.</td></tr>
+          <tr><td class="day">Mon, Feb 8</td><td class="port">Fort-de-France, Martinique</td><td class="time">7:00 a.m. to 6:00 p.m.</td></tr>
+          <tr><td class="day">Tue, Feb 9</td><td class="port">Basseterre, St. Kitts</td><td class="time">8:00 a.m. to 5:00 p.m.</td></tr>
+          <tr><td class="day">Wed, Feb 10</td><td class="port">Tortola, British Virgin Islands</td><td class="time">7:00 a.m. to 2:00 p.m.</td></tr>
+          <tr class="sea"><td class="day">Thu, Feb 11</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr><td class="day">Fri, Feb 12</td><td class="port">Half Moon Cay, Bahamas</td><td class="time">8:00 a.m. to 3:00 p.m.</td></tr>
+          <tr><td class="day">Sat, Feb 13</td><td class="port">Fort Lauderdale, Florida</td><td class="time">Arrive 7:00 a.m.</td></tr>
+        </table>
+
+        <h4 class="mini">What this itinerary gives you</h4>
+        <ul class="list">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Six islands in six consecutive days, each with a full day ashore. This is the itinerary if you want range and don't mind an early alarm.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Dominica and Martinique are the standouts: rain forest and waterfalls on one, and on the other a French island where the cooking is actually French, with creole behind it.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Rotterdam is a Pinnacle Class ship. The main theater wraps you in a two story panoramic screen, and there is an outdoor movie screen above the Lido pool.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Two sea days on the way out and one on the way home, so the pace is not relentless.</span></li>
+        </ul>
+
+        <h4 class="mini">Dining aboard</h4>
+        <div class="tagrow">
+          <span class="tag">The Dining Room</span>
+          <span class="tag">Pinnacle Grill steakhouse</span>
+          <span class="tag">Rudi's Sel de Mer, French brasserie</span>
+          <span class="tag">Tamarind, pan-Asian</span>
+          <span class="tag">Canaletto, Italian</span>
+          <span class="tag">Nami Sushi</span>
+          <span class="tag">Lido Market</span>
+          <span class="tag">Dive-In poolside grill</span>
+          <span class="tag">New York Deli &amp; Pizza</span>
+          <span class="tag">Gelato bar</span>
+          <span class="tag">24-hour in-room dining</span>
+        </div>
+
+        <h4 class="mini">Evenings and days at sea</h4>
+        <div class="tagrow">
+          <span class="tag">World Stage theater</span>
+          <span class="tag">Lincoln Center Stage chamber music</span>
+          <span class="tag">Rolling Stone Lounge</span>
+          <span class="tag">B.B. King's Blues Club</span>
+          <span class="tag">Billboard Onboard</span>
+          <span class="tag">Crow's Nest panoramic bar</span>
+          <span class="tag">Greenhouse Spa &amp; Salon</span>
+          <span class="tag">Adults-only Sea View Pool</span>
+          <span class="tag">Pickleball courts</span>
+          <span class="tag">Fitness center</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- OPTION B -->
+    <article class="opt" id="optB">
+      <div class="opt-head">
+        <div class="opt-tag">Option Two</div>
+        <div class="opt-title">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18.5c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/><path d="M4.5 15.5 6 9.5l6-2.5 6 2.5 1.5 6"/><path d="M12 7V3.5M9.5 3.5h5"/></svg>
+          <div>
+            <h3>Southern Caribbean on Nieuw Amsterdam</h3>
+            <p class="sub">9 nights, February 19 to 28, 2027</p>
+          </div>
+        </div>
+        <div class="opt-price">
+          <div>
+            <div class="amt">$5,980</div>
+            <div class="basis">Total for the two of you</div>
+          </div>
+          <label class="selector" for="pickB">
+            <input type="radio" name="sailing" id="pickB" value="B">
+            <span>Select this sailing</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="opt-body">
+        <div class="spec-grid">
+          <div class="spec"><div class="spec-label">Ship</div><div class="spec-value">Holland America Nieuw Amsterdam</div></div>
+          <div class="spec"><div class="spec-label">Sails</div><div class="spec-value">Fort Lauderdale, round trip</div></div>
+          <div class="spec"><div class="spec-label">Length</div><div class="spec-value">9 nights, 4 ports</div></div>
+          <div class="spec"><div class="spec-label">Stateroom</div><div class="spec-value">Verandah, 213 to 379 sq. ft.</div></div>
+          <div class="spec"><div class="spec-label">Departs</div><div class="spec-value">Fri, Feb 19 at 4:00 p.m.</div></div>
+          <div class="spec"><div class="spec-label">Returns</div><div class="spec-value">Sun, Feb 28 at 7:00 a.m.</div></div>
+        </div>
+
+        <h4 class="mini">Day by day</h4>
+        <table class="itin">
+          <tr><td class="day">Fri, Feb 19</td><td class="port">Fort Lauderdale, Florida</td><td class="time">Depart 4:00 p.m.</td></tr>
+          <tr class="sea"><td class="day">Sat, Feb 20</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr class="sea"><td class="day">Sun, Feb 21</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr><td class="day">Mon, Feb 22</td><td class="port">Bonaire</td><td class="time">12:00 p.m. to 11:00 p.m.</td></tr>
+          <tr><td class="day">Tue, Feb 23</td><td class="port">Curaçao</td><td class="time">8:00 a.m. to 9:00 p.m.</td></tr>
+          <tr><td class="day">Wed, Feb 24</td><td class="port">Aruba</td><td class="time">8:00 a.m. to 5:00 p.m.</td></tr>
+          <tr class="sea"><td class="day">Thu, Feb 25</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr class="sea"><td class="day">Fri, Feb 26</td><td class="port">At sea</td><td class="time"></td></tr>
+          <tr><td class="day">Sat, Feb 27</td><td class="port">Half Moon Cay, Bahamas</td><td class="time">8:00 a.m. to 3:00 p.m.</td></tr>
+          <tr><td class="day">Sun, Feb 28</td><td class="port">Fort Lauderdale, Florida</td><td class="time">Arrive 7:00 a.m.</td></tr>
+        </table>
+
+        <h4 class="mini">What this itinerary gives you</h4>
+        <ul class="list">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Four days at sea and four ports. If the point is rest rather than sightseeing, this is the one.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Two late nights ashore. Bonaire until 11:00 p.m. and Curaçao until 9:00 p.m. means dinner in town and a walk back along a lit waterfront, not a rushed 4:00 p.m. scramble to the gangway.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Willemstad, Curaçao is a UNESCO World Heritage site: rows of pastel Dutch colonial buildings right on the water.</span></li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#75AFB1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Two nights shorter and $1,780 less than Option One.</span></li>
+        </ul>
+
+        <h4 class="mini">Dining aboard</h4>
+        <div class="tagrow">
+          <span class="tag">The Dining Room</span>
+          <span class="tag">Pinnacle Grill steakhouse</span>
+          <span class="tag">Tamarind, pan-Asian</span>
+          <span class="tag">Canaletto, Italian</span>
+          <span class="tag">Nami Sushi</span>
+          <span class="tag">Lido Market</span>
+          <span class="tag">Dive-In poolside grill</span>
+          <span class="tag">New York Pizza</span>
+          <span class="tag">Explorations Café</span>
+          <span class="tag">24-hour in-room dining</span>
+        </div>
+
+        <h4 class="mini">Evenings and days at sea</h4>
+        <div class="tagrow">
+          <span class="tag">World Stage theater</span>
+          <span class="tag">Lincoln Center Stage chamber music</span>
+          <span class="tag">B.B. King's Blues Club</span>
+          <span class="tag">Billboard Onboard</span>
+          <span class="tag">Explorer's Lounge string quartet</span>
+          <span class="tag">Piano Bar</span>
+          <span class="tag">Crow's Nest</span>
+          <span class="tag">Silk Den saketini bar</span>
+          <span class="tag">Greenhouse Spa &amp; Salon</span>
+          <span class="tag">Adults-only Sea View Pool</span>
+          <span class="tag">Pickleball courts</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="callout">
+      <span class="callout-label">Included on either sailing</span>
+      <p>A verandah stateroom with a private balcony, a sitting area, and the Mariner's Dream bed. The Have It All package: Wi-Fi browsing, specialty dining, a shore excursion credit, and a drink package. Plus $300 in onboard credit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Your Investment</p>
+    <h2 class="sec">What it comes to</h2>
+    <hr class="rule">
+
+    <div class="price-bar">
+      <div>
+        <div class="price-label" id="barLabel">Estimated total</div>
+        <div class="price-figure" id="barTotal">Est. $5,980 &ndash; $7,760</div>
+        <div class="price-note" id="barNote">Select a sailing above and this figure updates. Both prices are totals for the two of you, not per person.</div>
+      </div>
+      <div class="price-dep">
+        <div class="price-label">Deposit to hold</div>
+        <div class="amt">$1,200</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:30px;">
+      <span class="callout-label">On value</span>
+      <p>We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+    </div>
+
+    <p class="fineprint">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+  </div>
+</section>
+
+<!-- ================= WHAT'S NEXT ================= -->
+<section class="section band-sand">
+  <div class="wrap">
+    <p class="eyebrow">After You Say Yes</p>
+    <h2 class="sec">What's coming after this quote</h2>
+    <hr class="rule">
+    <p>A destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+  </div>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="section band" id="reply">
+  <div class="wrap">
+    <p class="eyebrow">Next Step</p>
+    <h2 class="sec">Tell us which one</h2>
+    <hr class="rule">
+    <p style="margin-bottom:30px;">Send this back and Lisa will confirm availability, walk you through stateroom placement, and get the deposit deadline on your calendar.</p>
+
+    <div class="form-shell" id="formShell">
+      <form id="quoteForm" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="optionInterest">Which sailing interests you</label>
+            <select id="optionInterest">
+              <option value="Still deciding">Still deciding</option>
+              <option value="Option One: Eastern Caribbean on Rotterdam, 11 nights, Feb 2 to 13, 2027">Option One: Rotterdam, 11 nights</option>
+              <option value="Option Two: Southern Caribbean on Nieuw Amsterdam, 9 nights, Feb 19 to 28, 2027">Option Two: Nieuw Amsterdam, 9 nights</option>
+              <option value="Interested in both, would like to compare">Interested in both</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="insurance">Travel insurance</label>
+          <select id="insurance">
+            <option value="">Select one</option>
+            <option value="Yes">Yes, please quote it</option>
+            <option value="No">No thank you</option>
+            <option value="Already have">Already have coverage</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" placeholder="Questions, stateroom preferences, celebrations we should know about."></textarea>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">Send to Lisa</button>
+      </form>
+    </div>
+
+    <div class="thanks" id="thanks">
+      <h3>Thank you. This is on its way to Lisa.</h3>
+      <p>She will be in touch shortly to confirm availability and next steps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADVISOR FOOTER ================= -->
+<footer class="advisor">
+  <div class="name">Lisa Darling</div>
+  <div class="title">Travel Advisor</div>
+  <div class="contact">
+    <span id="advisorEmail"></span><br>
+    <a href="tel:+12815081623">+1 281-508-1623</a>
+  </div>
+  <div class="agency">Point Me to Paradise Travel</div>
+</footer>
+
+<div class="disclaimer">
+  <p>This quote was prepared for Jackie and Mark and is an estimate, not a confirmed booking. Pricing, availability, stateroom assignment, itinerary, and port times are subject to change until deposited and fully booked. Cruise line terms, cancellation policies, and payment deadlines apply. Final pricing confirmed by your advisor.</p>
+</div>
+
+<!-- ================= STICKY PRICING BAR ================= -->
+<div class="sticky">
+  <div class="sticky-inner">
+    <div>
+      <div class="sticky-label">Estimated total</div>
+      <div class="sticky-name" id="stickyName">Two sailings to choose from</div>
+    </div>
+    <div class="sticky-total" id="stickyTotal">$5,980 &ndash; $7,760</div>
+    <a href="#reply" class="sticky-cta">Reply to Lisa</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var addr = 'lisa' + '\u0040' + 'pointmetoparadise.com';
+  var link = document.createElement('a');
+  link.href = 'mailto:' + addr;
+  link.textContent = addr;
+  document.getElementById('advisorEmail').appendChild(link);
+
+  var OPTIONS = {
+    A: {
+      total: 7760,
+      label: 'Option One, Rotterdam, 11 nights',
+      name: 'Eastern Caribbean on Rotterdam, Feb 2 to 13, 2027',
+      note: 'Total for the two of you, not per person. Verandah stateroom, Have It All package, and $300 onboard credit included.',
+      form: 'Option One: Eastern Caribbean on Rotterdam, 11 nights, Feb 2 to 13, 2027'
+    },
+    B: {
+      total: 5980,
+      label: 'Option Two, Nieuw Amsterdam, 9 nights',
+      name: 'Southern Caribbean on Nieuw Amsterdam, Feb 19 to 28, 2027',
+      note: 'Total for the two of you, not per person. Verandah stateroom, Have It All package, and $300 onboard credit included.',
+      form: 'Option Two: Southern Caribbean on Nieuw Amsterdam, 9 nights, Feb 19 to 28, 2027'
+    }
+  };
+
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+
+  var barLabel   = document.getElementById('barLabel');
+  var barTotal   = document.getElementById('barTotal');
+  var barNote    = document.getElementById('barNote');
+  var stickyName = document.getElementById('stickyName');
+  var stickyTotal= document.getElementById('stickyTotal');
+  var optSelect  = document.getElementById('optionInterest');
+  var cardA = document.getElementById('optA');
+  var cardB = document.getElementById('optB');
+
+  function apply(key){
+    var o = OPTIONS[key];
+    if(!o){ return; }
+    barLabel.textContent = 'Estimated total, ' + o.label;
+    barTotal.textContent = 'Est. ' + money(o.total);
+    barNote.textContent = o.note;
+    stickyName.textContent = o.name;
+    stickyTotal.textContent = money(o.total);
+    cardA.className = 'opt' + (key === 'A' ? ' is-selected' : '');
+    cardB.className = 'opt' + (key === 'B' ? ' is-selected' : '');
+    optSelect.value = o.form;
+  }
+
+  var radios = document.querySelectorAll('input[name="sailing"]');
+  for(var i = 0; i < radios.length; i++){
+    radios[i].addEventListener('change', function(e){ apply(e.target.value); });
+  }
+
+  optSelect.addEventListener('change', function(){
+    if(optSelect.value === OPTIONS.A.form){
+      document.getElementById('pickA').checked = true;
+      apply('A');
+    } else if(optSelect.value === OPTIONS.B.form){
+      document.getElementById('pickB').checked = true;
+      apply('B');
+    }
+  });
+
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var name  = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+
+    if(!name || !email){
+      alert('Please add your name and email so Lisa can reach you.');
+      return;
+    }
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var payload = {
+      access_key: 'e2a4bdd6-5bef-4f4c-ab29-322a76e4e4ff',
+      redirect: false,
+      subject: 'Jackie and Mark \u2014 Caribbean Cruise Quote Selections',
+      from_name: 'Jackie and Mark Quote \u2014 Point Me to Paradise',
+      name: name,
+      email: email,
+      phone: document.getElementById('phone').value.trim(),
+      'Option interest': optSelect.value,
+      'Travel insurance': document.getElementById('insurance').value,
+      message: document.getElementById('message').value.trim()
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      if(data.success){
+        var shell = document.getElementById('formShell');
+        shell.parentNode.removeChild(shell);
+        var t = document.getElementById('thanks');
+        t.style.display = 'block';
+        t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send to Lisa';
+        alert('Something went wrong sending that. Please email Lisa directly and she will pick it up from there.');
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send to Lisa';
+      alert('Something went wrong sending that. Please email Lisa directly and she will pick it up from there.');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
