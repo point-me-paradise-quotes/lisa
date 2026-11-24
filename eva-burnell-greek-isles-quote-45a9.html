@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--PMTP_FRESH--><meta name="pmtp-build" content="mwqvchpsauz08i"><script>(function(){var V="mwqvchpsauz08i",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
+<!--PMTP_FRESH--><meta name="pmtp-build" content="mwu1n6ttouiwtc"><script>(function(){var V="mwu1n6ttouiwtc",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
 <meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex">
 <meta charset="UTF-8">
@@ -88,6 +88,33 @@ svg.ic{width:26px;height:26px;stroke:var(--aqua-deep);fill:none;stroke-width:1.4
 .perks li b{display:block;font-weight:600}
 .perks li span{color:var(--ink-soft);font-size:14.5px}
 
+/* OPTIONS */
+[data-opt=a] .ob{display:none!important}
+[data-opt=b] .oa{display:none!important}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:8px}
+.opt{position:relative;display:block;background:var(--white);border:1.5px solid var(--line);border-radius:18px;padding:24px 24px 22px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt:has(input:checked){border-color:var(--aqua-deep);background:linear-gradient(180deg,var(--white),var(--aqua-mist));box-shadow:0 18px 40px -28px rgba(46,139,139,.55)}
+.opt:has(input:focus-visible){outline:3px solid var(--aqua-pale);outline-offset:2px}
+.opt .tag{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--aqua-dark)}
+.opt h3{font-size:24px;margin:6px 0 4px}
+.opt .meta{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--aqua-dark);margin:0 0 12px}
+.opt .est{font-family:'Playfair Display',serif;font-size:30px;color:var(--ink);white-space:nowrap}
+.opt .est small{font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink-soft)}
+.opt .pick{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--aqua-deep)}
+.opt:has(input:checked) .pick::before{content:"Showing: "}
+.cmpwrap{overflow-x:auto;margin-top:30px;background:var(--white);border:1px solid var(--line);border-radius:16px}
+.cmp{margin:0;min-width:560px}
+.cmp th:first-child,.cmp td:first-child{width:22%;color:var(--ink-soft);font-weight:500}
+.cmp td{white-space:normal!important}
+.cmp tr.tot td{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink)}
+.cmp th.sel,.cmp td.sel{background:var(--aqua-mist)}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px max(5vw,16px);background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);box-shadow:0 -10px 30px -24px rgba(46,139,139,.5)}
+.sticky .sl{font-size:14px;color:var(--ink-soft);line-height:1.3}
+.sticky .sl b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:21px;color:var(--ink);white-space:nowrap}
+.sticky .btn{width:auto;padding:11px 22px;min-height:44px;font-size:15px;text-decoration:none;display:inline-flex;align-items:center}
+body{padding-bottom:78px}
+
 /* FLIGHTS */
 .status{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.03em;color:var(--aqua-dark);background:var(--aqua-pale);border-radius:999px;padding:6px 14px;margin-bottom:18px}
 .journey{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
@@ -169,6 +196,9 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   .times b{display:inline;margin-right:4px}
 }
 @media(max-width:600px){
+  .opts{grid-template-columns:minmax(0,1fr)}
+  .sticky .sl span{display:none}
+
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pillars,.inc{grid-template-columns:minmax(0,1fr)}
   .day{grid-template-columns:minmax(0,1fr);gap:8px}
@@ -181,7 +211,7 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
+<body data-opt="a">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -206,13 +236,13 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
 <header class="pmtp-hero">
   <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
   <p class="hero-for">A honeymoon quote prepared for Eva &amp; Burnell</p>
-  <h1>Athens and the Greek Isles</h1>
-  <p class="hero-dates">April 7 to 18, 2027 &nbsp;·&nbsp; 10 nights in Greece &nbsp;·&nbsp; 2 guests</p>
+  <h1>Your Aegean Honeymoon</h1>
+  <p class="hero-dates">April 2027 &nbsp;·&nbsp; 2 guests &nbsp;·&nbsp; two voyages to compare</p>
   <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>7 nights</b><span>at sea, Aegean cruise</span></div>
-    <div class="stat" role="listitem"><b>6 ports</b><span>Turkey, Rhodes, Crete, Cyclades</span></div>
-    <div class="stat" role="listitem"><b>7 tours</b><span>guided, one in every port</span></div>
-    <div class="stat" role="listitem"><b>Est. $14,095</b><span>total for two, with air</span></div>
+    <div class="stat" role="listitem"><b>Option A</b><span>Celestyal Journey, 7 nights, Athens round trip</span></div>
+    <div class="stat" role="listitem"><b>Est. $14,095</b><span>Option A, for two, with air</span></div>
+    <div class="stat" role="listitem"><b>Option B</b><span>Windstar Star Legend, 8 nights, Athens to Istanbul</span></div>
+    <div class="stat" role="listitem"><b>Est. $25,534</b><span>Option B, for two, with air</span></div>
   </div>
 </header>
 
@@ -221,26 +251,71 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
     <div class="ov">
       <div>
         <p class="eyebrow">Your trip at a glance</p>
-        <h2>Ten nights, one bag unpacked</h2>
+        <h2>Two ways to honeymoon in the Aegean</h2>
         <hr class="rule">
-        <p class="lede">You fly out of Houston on Wednesday, April 7, connect in London, and land in Athens on Thursday, April 8, at 3:15 p.m. A private driver takes you to your hotel in Piraeus, a few minutes from the cruise port. Two easy nights there let you shake off the flight before you board on Saturday afternoon.</p>
-        <p class="lede">For the next seven nights the ship does the moving, and you watch each new harbor come in from your own balcony. You wake in a new harbor each morning: Ephesus on the Turkish coast, medieval Rhodes, Crete, the Santorini caldera, Mykonos late into the night, Delos, and Milos. A guided tour is already reserved in every port, so the only decision each day is what to do with the afternoon. You finish with the Acropolis, one last night back at the same Piraeus hotel, and a private car to your flight home.</p>
+        <p class="lede">Both voyages leave in the same week of April, start in Athens, and sail between the Greek islands and the Turkish coast. In both you have a balcony suite and premium economy seats across the Atlantic. Where they differ is the ship, the route and how much is already paid for.</p>
+        <p class="lede"><b>Option A, Celestyal Journey</b>, April 7 to 18. Seven nights round trip from Athens to Ephesus, Rhodes, Crete, Santorini, Mykonos and Milos. A guided tour in every port, a honeymoon package, a drinks credit, two specialty dinners and spa treatments are already included, and you stay at the same Piraeus hotel before and after the cruise.</p>
+        <p class="lede"><b>Option B, Windstar Star Legend</b>, April 6 to 18. Eight nights on a small yacht-style ship from Athens through the Corinth Canal to Delphi, Santorini, Bodrum, Ephesus, Mykonos and Lemnos, ending in Istanbul. The suite is larger, and drinks, Wi-Fi and gratuities are included. Shore tours are extra, apart from a private Evening in Ephesus dinner. You spend two nights in Athens before and one at the Pera Palace in Istanbul after.</p>
+        <p class="lede">Choose either option below to see its full day-by-day plan, suite, flights and pricing.</p>
       </div>
       <div class="promise">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing: already done.<small>Lisa Darling, Point Me to Paradise.</small></div>
-    </div>
-    <div class="pillars">
-      <div class="pillar"><svg class="ic"><use href="#i-bed"/></svg><h4>2 nights before</h4><p>Piraeus hotel, Classic room, breakfast daily</p></div>
-      <div class="pillar"><svg class="ic"><use href="#i-ship"/></svg><h4>7-night cruise</h4><p>Celestyal Journey, Junior Balcony Suite, Deck 9</p></div>
-      <div class="pillar"><svg class="ic"><use href="#i-bed"/></svg><h4>1 night after</h4><p>Same Piraeus hotel, breakfast included</p></div>
-      <div class="pillar"><svg class="ic"><use href="#i-car"/></svg><h4>4 private transfers</h4><p>Airport, hotel and port, each way</p></div>
     </div>
   </div>
 </section>
 
-<section class="band mist" id="voyage">
+<section class="band mist" id="choose">
+  <div class="wrap">
+    <p class="eyebrow">Two voyages, one honeymoon</p>
+    <h2>Choose your voyage</h2>
+    <hr class="rule">
+    <div class="opts" role="radiogroup" aria-label="Choose an option">
+      <label class="opt"><input type="radio" name="opt" value="a" checked>
+        <span class="tag">OPTION A</span>
+        <h3>Celestyal Journey</h3>
+        <p class="meta">Athens round trip · April 7 to 18, 2027</p>
+        <div class="est">Est. $14,095 <small>for two, with air</small></div>
+        <span class="pick">7 nights, Junior Balcony Suite, 7 tours included</span>
+      </label>
+      <label class="opt"><input type="radio" name="opt" value="b">
+        <span class="tag">OPTION B</span>
+        <h3>Windstar Star Legend</h3>
+        <p class="meta">Athens to Istanbul · April 6 to 18, 2027</p>
+        <div class="est">Est. $25,534 <small>for two, with air</small></div>
+        <span class="pick">8 nights, Star Balcony Suite, all-inclusive onboard, tours extra</span>
+      </label>
+    </div>
+    <div class="cmpwrap">
+      <table class="cmp">
+        <thead><tr><th></th><th class="ca">Option A: Celestyal</th><th class="cb">Option B: Windstar</th></tr></thead>
+        <tbody>
+          <tr><td>Travel dates</td><td class="ca">April 7 to 18, 2027</td><td class="cb">April 6 to 18, 2027</td></tr>
+          <tr><td>Route</td><td class="ca">Athens round trip</td><td class="cb">Athens to Istanbul</td></tr>
+          <tr><td>Cruise</td><td class="ca">7 nights, Celestyal Journey</td><td class="cb">8 nights, Star Legend</td></tr>
+          <tr><td>Suite</td><td class="ca">Junior Balcony Suite, Deck 9</td><td class="cb">Star Balcony Suite, Deck 6</td></tr>
+          <tr><td>Suite size</td><td class="ca">About 226 sq. ft. (21 m²)</td><td class="cb">277 sq. ft. (26 m²)</td></tr>
+          <tr><td>Balcony</td><td class="ca">Private balcony</td><td class="cb">French doors to a narrow standing balcony; pull your chairs up to the open doors for open air</td></tr>
+          <tr><td>Flight seats</td><td class="ca">Premium economy on both Atlantic flights; economy within Europe</td><td class="cb">Premium economy on both Atlantic flights; economy within Europe</td></tr>
+          <tr><td>Ports</td><td class="ca">Kusadasi, Rhodes, Crete, Santorini, Mykonos, Milos</td><td class="cb">Corinth Canal, Delphi, Santorini, Bodrum, Kusadasi, Mykonos, Lemnos, Istanbul</td></tr>
+          <tr><td>Shore tours</td><td class="ca">7 guided tours included</td><td class="cb">Not included, booked separately port by port. Only the Evening in Ephesus dinner is included.</td></tr>
+          <tr><td>Drinks</td><td class="ca">About $1,320 drinks credit (€1,200)</td><td class="cb">Select beer, wine by the glass and cocktails included</td></tr>
+          <tr><td>Wi-Fi</td><td class="ca">Included, plus a 7-day pass each</td><td class="cb">Unlimited, included</td></tr>
+          <tr><td>Gratuities</td><td class="ca">Crew gratuities included</td><td class="cb">Included</td></tr>
+          <tr><td>Extras</td><td class="ca">Honeymoon package, 2 specialty dinners, spa package</td><td class="cb">Not included</td></tr>
+          <tr><td>Hotels</td><td class="ca">3 nights in Piraeus, same hotel</td><td class="cb">2 nights Athens, 1 night Istanbul</td></tr>
+          <tr><td>Transfers</td><td class="ca">4 private transfers</td><td class="cb">2 private port transfers; airport transfers being arranged</td></tr>
+          <tr class="tot"><td>Est. total for two</td><td class="ca">$14,095</td><td class="cb">$25,534</td></tr>
+          <tr><td>Per person</td><td class="ca">Est. $7,048</td><td class="cb">Est. $12,767</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="match" style="margin-top:22px"><b>On space:</b> the Windstar Star Balcony Suite is the larger room, 277 sq. ft. against about 226 on Celestyal, and its French doors open to a narrow standing balcony, so you enjoy the open air from chairs pulled up to the doors. The Celestyal suite is smaller but has a private balcony. On the flights, both options put you in premium economy for the two long Atlantic crossings, with wider seats and more legroom than economy. The short flights within Europe are economy on both; premium economy isn't offered on those planes.</div>
+  </div>
+</section>
+
+<section class="band oa" id="voyage">
   <div class="wrap">
     <p class="eyebrow">Day by day</p>
-    <h2>Your voyage</h2>
+    <h2>Option A: your voyage</h2>
     <ol class="days">
       <li class="day">
         <div class="date"><b>7</b><span>WED · APR</span></div>
@@ -318,10 +393,10 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   </div>
 </section>
 
-<section class="band" id="onboard">
+<section class="band mist oa" id="onboard">
   <div class="wrap">
     <p class="eyebrow">Where you'll stay</p>
-    <h2>Your suite and onboard extras</h2>
+    <h2>Option A: your suite and onboard extras</h2>
     <hr class="rule">
     <div class="two">
       <div class="card">
@@ -329,7 +404,10 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
         <h3 style="margin-top:12px">Celestyal Journey</h3>
         <dl class="kv">
           <dt>Suite</dt><dd>9211, Deck 9</dd>
-          <dt>Category</dt><dd>Junior Balcony Suite (SJA)</dd>
+          <dt>Category</dt><dd>Junior Balcony Suite (SJA), which Celestyal calls a Junior Dream Suite</dd>
+          <dt>Size</dt><dd>About 226 sq. ft. (21 m²)</dd>
+          <dt>Balcony</dt><dd>Private balcony</dd>
+          <dt>Layout</dt><dd>Sitting area, two lower beds and a sofa bed, plus access to the ship's suite lounge spaces and reserved suite seating in the main restaurants</dd>
           <dt>Cruise</dt><dd>7 nights, Piraeus round trip</dd>
           <dt>Dates</dt><dd>April 10 to 17, 2027</dd>
         </dl>
@@ -359,10 +437,10 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   </div>
 </section>
 
-<section class="band" id="flights">
+<section class="band oa" id="flights">
   <div class="wrap">
     <p class="eyebrow">Getting there and back</p>
-    <h2>Your flights</h2>
+    <h2>Option A: your flights</h2>
     <hr class="rule">
     <span class="status">Seats held, not ticketed · Record locator 6NPQNR</span>
     <div class="two">
@@ -383,15 +461,15 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
           <span class="tm">London Heathrow 2:40 p.m. to Houston (IAH) 7:10 p.m. · 10h 30m · Boeing 777-300ER</span></div>
       </div>
     </div>
-    <p class="note">Two checked bags per person. Both London connections stay inside Terminal 5. These flights are reserved and held under record locator 6NPQNR but not yet ticketed. Your seats on these flights are held; the fare can change until it is paid and tickets are issued.</p>
+    <p class="note"><b>Your seats:</b> premium economy on both Atlantic flights, with wider seats and more legroom than economy. The London to Athens flights are economy; premium economy isn't offered on those planes. Two checked bags per person. Both London connections stay inside Terminal 5. These flights are reserved and held under record locator 6NPQNR but not yet ticketed. Your seats on these flights are held; the fare can change until it is paid and tickets are issued.</p>
   </div>
 </section>
 
-<section class="band sandl" id="transfers">
+<section class="band sandl oa" id="transfers">
   <div class="wrap two">
     <div>
       <p class="eyebrow">Getting around</p>
-      <h2>Private transfers</h2>
+      <h2>Option A: private transfers</h2>
       <hr class="rule">
       <ul class="tlist">
         <li><em>Thu, Apr 8</em><span>Athens Airport to your Piraeus hotel</span></li>
@@ -408,10 +486,10 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   </div>
 </section>
 
-<section class="band" id="price">
+<section class="band oa" id="price">
   <div class="wrap">
     <p class="eyebrow">Your investment</p>
-    <h2>Pricing</h2>
+    <h2>Option A: pricing</h2>
     <hr class="rule">
     <div class="price">
       <div>
@@ -420,12 +498,11 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
           <div class="big">Est. $14,095</div>
           <div class="pp">That's <b>Est. $7,048 per person</b>, including airfare, port charges and fees.</div>
           <div class="pay">
-            <div><span>Deposit, due November 28, 2026</span><span>$820.00</span></div>
-            <div><span>Airfare, due at ticketing (held, not ticketed)</span><span>$5,488.38</span></div>
+            <div><span>Due November 28, 2026: deposit $820.00 plus full airfare $5,488.38</span><span>$6,308.38</span></div>
             <div><span>Final balance, due February 7, 2027</span><span>$7,786.84</span></div>
             <div><span>Total</span><span>$14,095.22</span></div>
           </div>
-          <p class="disc">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare is held but not ticketed, and the fare can change until it is paid.</p>
+          <p class="disc">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare is paid in full with your deposit; it is held but not ticketed, and the fare can change until it is paid.</p>
         </div>
         <div class="match">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience. You're paying for the rest of what we do.</div>
       </div>
@@ -473,6 +550,235 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   </div>
 </section>
 
+
+<section class="band ob" id="voyage-b">
+  <div class="wrap">
+    <p class="eyebrow">Day by day</p>
+    <h2>Option B: your voyage</h2>
+    <div class="match" style="margin:18px 0 0"><b>About shore excursions on Windstar:</b> tours are not included in this option. The one exception is the Evening in Ephesus dinner, which is complimentary for every guest. Everything else you choose port by port and pay for separately, and I'll book the tours you want before you sail. Compare this with Option A, where seven guided tours are already included.</div>
+    <ol class="days">
+      <li class="day">
+        <div class="date"><b>6</b><span>TUE · APR</span></div>
+        <div><h3>Depart Houston</h3><p class="where">Houston to Amsterdam, overnight</p>
+          <p>Premium economy across the Atlantic on KLM, arriving in Amsterdam early the next morning.</p></div>
+        <div class="times"><b>Departs</b>3:20 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>7</b><span>WED · APR</span></div>
+        <div><h3>Arrive in Athens</h3><p class="where">Athens Airport to Kolonaki</p>
+          <p>Your flight from Amsterdam lands at 4:30 p.m. Your hotel for two nights is the St. George Lycabettus (or similar) in Kolonaki, on the slopes of Lycabettus Hill with views toward the Acropolis.</p></div>
+        <div class="times"><b>Arrive</b>4:30 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>8</b><span>THU · APR</span></div>
+        <div><h3>A free day in Athens</h3><p class="where">Kolonaki and central Athens</p>
+          <p>Nothing scheduled. Kolonaki is one of the city's best neighborhoods for cafés and shops, and the Acropolis, Plaka and the National Archaeological Museum are a short ride away.</p></div>
+        <div class="times"><b>Open day</b></div>
+      </li>
+      <li class="day">
+        <div class="date"><b>9</b><span>FRI · APR</span></div>
+        <div><h3>Board the Star Legend</h3><p class="where">Piraeus</p>
+          <p>A private car takes you from the hotel to the port. Boarding begins at 1:00 p.m. and your all-inclusive package starts as soon as you step aboard.</p></div>
+        <div class="times"><b>Sails</b>5:00 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>10</b><span>SAT · APR</span></div>
+        <div><h3>Corinth Canal and Delphi</h3><p class="where">Itea, gateway to Delphi</p>
+          <p>Be on deck at 8:00 a.m. as the ship threads the Corinth Canal, a passage only small ships can make. In the afternoon you dock at Itea, the port for Delphi, once home to the oracle of Apollo.</p></div>
+        <div class="times"><b>Canal / Itea</b>8 a.m. · 3 to 9 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>11</b><span>SUN · APR</span></div>
+        <div><h3>A day at sea</h3><p class="where">Aegean Sea</p>
+          <p>A slow morning, the spa, the pool deck, and nowhere you need to be.</p></div>
+        <div class="times"><b>At sea</b></div>
+      </li>
+      <li class="day">
+        <div class="date"><b>12</b><span>MON · APR</span></div>
+        <div><h3>Santorini</h3><p class="where">Inside the caldera</p>
+          <p>A long day in port, with the ship staying until 9:00 p.m. so you can watch the evening light from the cliffs.</p></div>
+        <div class="times"><b>In port</b>8:00 a.m. to 9:00 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>13</b><span>TUE · APR</span></div>
+        <div><h3>Bodrum, Turkey</h3><p class="where">The Turkish Riviera</p>
+          <p>A whitewashed harbor town under the Castle of St. Peter, with the ship in port until 10:00 p.m.</p></div>
+        <div class="times"><b>In port</b>8:00 a.m. to 10:00 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>14</b><span>WED · APR</span></div>
+        <div><h3>Kusadasi and Ephesus</h3><p class="where">An evening only Windstar guests get</p>
+          <p>Explore Ephesus by day on your own or on a tour (tours are extra). Then, the highlight of the voyage:</p><div class="tour"><svg class="ic"><use href="#i-heart"/></svg><div><b>Evening in Ephesus</b><br>Included. A five-course, white-glove dinner with music from a trio of the Aegean Chamber Orchestra, held exclusively for Windstar guests.</div></div></div>
+        <div class="times"><b>In port</b>9:00 a.m. to 11:00 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>15</b><span>THU · APR</span></div>
+        <div><h3>Mykonos</h3><p class="where">The Cyclades</p>
+          <p>A full day in Mykonos town, its windmills and Little Venice. Delos, the sacred island of Apollo, is a short boat ride away on an optional tour.</p></div>
+        <div class="times"><b>In port</b>8:00 a.m. to 5:00 p.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>16</b><span>FRI · APR</span></div>
+        <div><h3>Myrina, Lemnos</h3><p class="where">A quiet Greek island</p>
+          <p>A morning on the island of Lemnos, with a hilltop castle above the harbor at Myrina.</p></div>
+        <div class="times"><b>In port</b>7:00 a.m. to noon</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>17</b><span>SAT · APR</span></div>
+        <div><h3>Istanbul</h3><p class="where">Pera Palace</p>
+          <p>You sail into Istanbul in the morning. A private car takes you to the Pera Palace (or similar), opened in 1892 for passengers of the Orient Express and within walking distance of Taksim Square and the old city.</p></div>
+        <div class="times"><b>Arrive</b>7:00 a.m.</div>
+      </li>
+      <li class="day">
+        <div class="date"><b>18</b><span>SUN · APR</span></div>
+        <div><h3>Fly home</h3><p class="where">Istanbul to Amsterdam to Houston</p>
+          <p>A very early start for your 5:50 a.m. flight to Amsterdam, then premium economy home to Houston, landing at 1:15 p.m. the same day.</p></div>
+        <div class="times"><b>Lands IAH</b>1:15 p.m.</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band mist ob" id="onboard-b">
+  <div class="wrap">
+    <p class="eyebrow">Where you'll stay</p>
+    <h2>Option B: your suite and hotels</h2>
+    <hr class="rule">
+    <div class="two">
+      <div class="card">
+        <svg class="ic"><use href="#i-ship"/></svg>
+        <h3 style="margin-top:12px">Windstar Star Legend</h3>
+        <dl class="kv">
+          <dt>Suite</dt><dd>626, Deck 6</dd>
+          <dt>Category</dt><dd>Star Balcony Suite (SBS1)</dd>
+          <dt>Size</dt><dd>277 sq. ft. (26 m²)</dd>
+          <dt>Balcony</dt><dd>French doors open to a narrow standing balcony. Pull your chairs up close, open the doors, and the sea air comes right into the suite.</dd>
+          <dt>Layout</dt><dd>Sitting area, queen bed or two twins, walk-in closet</dd>
+          <dt>Cruise</dt><dd>8 nights, Piraeus to Istanbul</dd>
+          <dt>Dates</dt><dd>April 9 to 17, 2027</dd>
+        </dl>
+        <hr class="rule">
+        <h3>Your hotels</h3>
+        <dl class="kv">
+          <dt>Athens</dt><dd>St. George Lycabettus (or similar), April 7 to 9 (2 nights)</dd>
+          <dt>Istanbul</dt><dd>Pera Palace (or similar), April 17 to 18 (1 night)</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Included onboard</h3>
+        <ul class="perks">
+          <li><svg class="ic"><use href="#i-cup"/></svg><div><b>All-inclusive drinks</b><span>Select beer, wine by the glass and cocktails throughout the voyage.</span></div></li>
+          <li><svg class="ic"><use href="#i-wifi"/></svg><div><b>Unlimited Wi-Fi</b><span>For both of you, the whole voyage.</span></div></li>
+          <li><svg class="ic"><use href="#i-gift"/></svg><div><b>Gratuities</b><span>Prepaid, so there's no service charge at the end.</span></div></li>
+          <li><svg class="ic"><use href="#i-heart"/></svg><div><b>Evening in Ephesus</b><span>A private five-course dinner ashore with live chamber music, for Windstar guests only.</span></div></li>
+          <li><svg class="ic"><use href="#i-ship"/></svg><div><b>Corinth Canal transit</b><span>A passage too narrow for large cruise ships.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band ob" id="flights-b">
+  <div class="wrap">
+    <p class="eyebrow">Getting there and back</p>
+    <h2>Option B: your flights</h2>
+    <hr class="rule">
+    <span class="status">Quoted only: not booked or confirmed</span>
+    <div class="two">
+      <div class="journey">
+        <h3>Houston to Athens <small>Tue, April 6</small></h3>
+        <div class="leg"><span class="fl">KLM 662</span><span class="cab">Premium economy</span>
+          <span class="tm">Houston (IAH) 3:20 p.m. to Amsterdam 7:45 a.m. (Apr 7) · 9h 25m · Boeing 787-10</span></div>
+        <div class="lay">4h 30m connection in Amsterdam</div>
+        <div class="leg"><span class="fl">KLM 1955</span><span class="cab">Economy</span>
+          <span class="tm">Amsterdam 12:15 p.m. to Athens 4:30 p.m. · 3h 15m · Airbus A321neo</span></div>
+      </div>
+      <div class="journey">
+        <h3>Istanbul to Houston <small>Sun, April 18</small></h3>
+        <div class="leg"><span class="fl">Delta 9376, operated by KLM</span><span class="cab">Economy</span>
+          <span class="tm">Istanbul (IST) 5:50 a.m. to Amsterdam 8:20 a.m. · 3h 30m · Boeing 737-700</span></div>
+        <div class="lay">1h 35m connection in Amsterdam</div>
+        <div class="leg"><span class="fl">Delta 9386, operated by KLM</span><span class="cab">Premium economy</span>
+          <span class="tm">Amsterdam 9:55 a.m. to Houston (IAH) 1:15 p.m. · 10h 20m · Boeing 787-10</span></div>
+      </div>
+    </div>
+    <p class="note"><b>Your seats:</b> premium economy on both Atlantic flights, with wider seats and more legroom than economy. The flights between Amsterdam and Athens or Istanbul are economy; premium economy isn't offered on those planes. Two checked bags per person. These flights are quoted, not booked or confirmed; schedules and fares can change until your airfare is paid and tickets are issued.</p>
+  </div>
+</section>
+
+<section class="band sandl ob" id="transfers-b">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Getting around</p>
+      <h2>Option B: transfers</h2>
+      <hr class="rule">
+      <ul class="tlist">
+        <li><em>Wed, Apr 7</em><span>Athens Airport to your hotel (being arranged by your advisor)</span></li>
+        <li><em>Fri, Apr 9</em><span>Hotel to the Piraeus cruise port, private car, included</span></li>
+        <li><em>Sat, Apr 17</em><span>Istanbul cruise port to the Pera Palace, private car, included</span></li>
+        <li><em>Sun, Apr 18</em><span>Hotel to Istanbul Airport, very early morning for your 5:50 a.m. flight (being arranged by your advisor)</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Good to know</h3>
+      <p style="font-size:15.5px">The two airport transfers aren't part of the Windstar package. I'll arrange them and confirm the details with your final documents, including where your driver will meet you in Athens.</p>
+      <p class="note">If your flight is delayed, message me and I'll move the pickup.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band ob" id="price-b">
+  <div class="wrap">
+    <p class="eyebrow">Your investment</p>
+    <h2>Option B: pricing</h2>
+    <hr class="rule">
+    <div class="price">
+      <div>
+        <div class="pricebar">
+          <div class="lab">Total for two guests</div>
+          <div class="big">Est. $25,534</div>
+          <div class="pp">That's <b>Est. $12,767 per person</b>, including airfare, taxes and fees.</div>
+          <div class="pay">
+            <div><span>Due November 28, 2026: deposit $608.70 plus full airfare $6,908.00</span><span>$7,516.70</span></div>
+            <div><span>Final balance, due January 7, 2027</span><span>$18,017.30</span></div>
+            <div><span>Total</span><span>$25,534.00</span></div>
+          </div>
+          <p class="disc">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Airfare is paid in full with your deposit; it is quoted, not booked or confirmed, and can change until it is paid.</p>
+        </div>
+        <div class="match">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience. You're paying for the rest of what we do.</div>
+      </div>
+      <div>
+        <div class="inc">
+          <div>
+            <h3>Included</h3>
+            <ul>
+              <li><svg class="ic"><use href="#i-check"/></svg>Air from Houston, home from Istanbul, premium economy across the Atlantic (quoted, not booked)</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>8-night cruise, Star Balcony Suite</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Government taxes and fees</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>All-inclusive drinks, unlimited Wi-Fi and gratuities onboard</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Evening in Ephesus private dinner</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>2 hotel nights in Athens, 1 in Istanbul</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>2 private port transfers</li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>Not included</h3>
+            <ul>
+              <li><svg class="ic"><use href="#i-minus"/></svg>Shore excursions, booked separately port by port (the Evening in Ephesus dinner is the only one included)</li>
+              <li><svg class="ic"><use href="#i-minus"/></svg>Airport transfers in Athens and Istanbul (being arranged)</li>
+              <li><svg class="ic"><use href="#i-minus"/></svg>Tips for drivers, tour guides and hotel staff</li>
+              <li><svg class="ic"><use href="#i-minus"/></svg>Personal expenses</li>
+              <li><svg class="ic"><use href="#i-minus"/></svg>Greek climate resilience fee, paid at hotel check-in in Athens</li>
+            </ul>
+          </div>
+        </div>
+        <h3 style="margin-top:30px">Cancellation</h3>
+        <p class="note" style="margin-top:4px">Windstar's published cancellation terms apply, counted from your April 9, 2027 sailing date. I'll send you the schedule with your deposit invoice, and I recommend travel insurance for this trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="band mist" id="contact">
   <div class="wrap">
     <p class="coming">What's coming after this quote: a destination guide built for your trip (PDF or interactive in-app, with Google Maps links to every place we send you), a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
@@ -488,6 +794,12 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
         <div class="field"><label for="f-name">Name <span class="req">*</span></label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-email">Email <span class="req">*</span></label><input type="email" id="f-email" name="email" autocomplete="email" required></div>
         <div class="field"><label for="f-phone">Phone</label><input type="tel" id="f-phone" name="phone" autocomplete="tel"></div>
+        <div class="field"><label for="f-opt">Which option interests you?</label>
+          <select id="f-opt" name="option_interest">
+            <option value="Option A: Celestyal Journey, Athens round trip">Option A: Celestyal Journey, Athens round trip</option>
+            <option value="Option B: Windstar Star Legend, Athens to Istanbul">Option B: Windstar Star Legend, Athens to Istanbul</option>
+            <option value="Still deciding">Still deciding</option>
+          </select></div>
         <div class="field"><label id="ins-l">Travel insurance</label>
           <div class="radios" role="radiogroup" aria-labelledby="ins-l">
             <label><input type="radio" name="travel_insurance" value="Yes"> Yes, please quote it</label>
@@ -508,6 +820,11 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   </div>
 </section>
 
+<div class="sticky" aria-live="polite">
+  <div class="sl"><span class="oa">Option A · Celestyal Journey</span><span class="ob">Option B · Windstar Star Legend</span><b class="oa">Est. $14,095 for two</b><b class="ob">Est. $25,534 for two</b></div>
+  <a class="btn" href="#contact">Send my choice</a>
+</div>
+
 <footer>
   <div class="adv-name">Lisa Darling</div>
   <div class="adv-title">Travel Advisor · Point Me to Paradise Travel</div>
@@ -515,7 +832,7 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
     <a id="adv-email" href="#"><svg class="ic" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"><use href="#i-mail"/></svg><span id="adv-email-t">Email Lisa</span></a>
     <a href="tel:+12815081623"><svg class="ic" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"><use href="#i-phone"/></svg>+1 281-508-1623</a>
   </div>
-  <p class="fine">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Prices are in U.S. dollars for two guests sharing one suite and include port charges and fees. Airfare is held under record locator 6NPQNR but not ticketed; the fare is subject to change until paid and ticketed. Hotel stays are reserved as part of the cruise line's land program, which may substitute a hotel of the same category. Transfer costs may be adjusted for fuel, exchange rate, tax or government changes, and are based on both guests traveling together on the same flights. This quote is not a travel document. All travel is subject to the cruise line's Conditions of Carriage.</p>
+  <p class="fine">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor. Prices are in U.S. dollars for two guests sharing one suite and include port charges, taxes and fees. Option A airfare is held under record locator 6NPQNR but not ticketed. Option B airfare is quoted, not booked or confirmed. All airfare is subject to change until paid and ticketed. Hotels may be substituted with hotels of the same category. Option A transfer costs may be adjusted for fuel, exchange rate, tax or government changes, and are based on both guests traveling together on the same flights. This quote is not a travel document. All travel is subject to each cruise line's terms and conditions.</p>
 </footer>
 
 <script>
@@ -524,6 +841,16 @@ footer{background:var(--sand-light);padding:48px max(5vw,18px) 40px;text-align:c
   const a = document.getElementById('adv-email');
   a.href = 'mailto:' + addr;
   document.getElementById('adv-email-t').textContent = addr;
+
+  const sel = document.getElementById('f-opt');
+  const setOpt = (v) => {
+    document.body.dataset.opt = v;
+    sel.selectedIndex = v === 'b' ? 1 : 0;
+    document.querySelectorAll('.cmp .ca').forEach(c => c.classList.toggle('sel', v === 'a'));
+    document.querySelectorAll('.cmp .cb').forEach(c => c.classList.toggle('sel', v === 'b'));
+  };
+  document.querySelectorAll('input[name=opt]').forEach(i => i.addEventListener('change', () => setOpt(i.value)));
+  setOpt('a');
 
   const form = document.getElementById('quoteForm');
   const btn = document.getElementById('f-btn');
